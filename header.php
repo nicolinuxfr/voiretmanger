@@ -57,6 +57,19 @@
 
 <title><?php echo $nomPage; ?></title>
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://voiretmanger.fr/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://voiretmanger.fr?s={search_term}",
+    "query-input": "required name=search_term"
+  }
+}
+</script>
+
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
