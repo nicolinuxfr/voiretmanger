@@ -307,14 +307,17 @@ input#s.case{
 .hentry header {position: relative; z-index: 1}
 .single .hentry {margin:0 0 33px 0; }
 
-/* -Entry/Page Title */
-#content .entry-title {font-size:26px; font-weight:200; line-height:28px; margin:0;font-family: "Helvetica Neue", Helvetica, sans-serif;}
+/* Titres archives */
+#content .entry-title {font-size:26px; font-weight:200; line-height:28px; margin:0;font-family: "Playfair Display", serif;}
 #content .page-title{
 	padding: 0 8px;
-	font: normal 12px/33px "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Playfair Display", serif;
+	font-size: 80px;
 	margin: 40px 0px 20px 0px;
+	line-height:1em;
 }
-#content .page-title span {display: block;font-size: 80px;text-align: center;font-weight: 100; font-family: "Helvetica Neue", Helvetica, sans-serif;}
+#content .page-title span {display: block;text-align: center;}
+
 #content header .archive-meta {margin: -44px 0 0; padding: 0 8px 0 16px;width: 367px; border-left: 1px dotted #CCC; }
 #content header .archive-meta p {padding: 0 0 11px}
 header .entry-date,
