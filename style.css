@@ -509,7 +509,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 
 #taxo-img img{
 	width: 100% !important;
-	margin: 0;
+	margin: 0 !important;
 	height:auto;
 }
 
@@ -566,18 +566,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 .af-default #content .entry-date {font-size:26px}
 
 
-/* PAGE D'ACCEUIL */
-.af-layout #content .hentry {display: block; float:left;clear:none;position:relative;clear:none;overflow:hidden}
-.af-layout #content .hentry header {position: absolute; z-index: 3; bottom:-10px;width: 100%;opacity: 0;}
-.af-layout #content .hentry:hover header{opacity: 1;transition: all 0.5s ease;}
-.af-layout #content .entry-image {position: absolute; top:0; left:0; z-index:1;display: block; padding:0;}
-.af-layout #content .entry-title {line-height: 28px;margin-bottom: 11px;position: relative; z-index: 3;padding: 5px;background-color: rgba(0, 0, 0, 0.5);	
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing:grayscale;
-	text-rendering: optimizeLegibility;}
-.af-layout #content .entry-title a{color: white;}
-.af-layout #content .entry-content a {font-weight: 950;text-decoration: none;}
-.af-layout #content .entry-utility {position: absolute; top:0; right:0; z-index: 5; margin: 0; display: inline-block; width: 145px; border-width: 0;}
+/* PAGE D'ACCEUIL */ .af-layout #content .hentry {display: block; float:left;clear:none;position:relative;clear:none;overflow:hidden} .af-layout #content .hentry header {position: absolute; z-index: 3; bottom:-10px;width: 100%;opacity: 0;} .af-layout #content .hentry:hover header{opacity: 1;transition: all 0.5s ease;} .af-layout #content .entry-image {position: absolute; top:0; left:0; z-index:1;display: block; padding:0;} .af-layout #content .entry-title {line-height: 28px;margin-bottom: 11px;position: relative; z-index: 3;padding: 5px;background-color: rgba(0, 0, 0, 0.5); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:grayscale; text-rendering: optimizeLegibility;} .af-layout #content .entry-title a{color: white;} .af-layout #content .entry-content a {font-weight: 950;text-decoration: none;} .af-layout #content .entry-utility {position: absolute; top:0; right:0; z-index: 5; margin: 0; display: inline-block; width: 145px; border-width: 0;}
 
 
 
