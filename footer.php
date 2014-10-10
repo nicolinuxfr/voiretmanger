@@ -24,8 +24,8 @@
 
 </div><!-- #wrapper -->
 
-<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/autofocus/js/jquery-1.11.1.min.js'></script>
-<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/autofocus/js/search.js'></script>
+<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/jquery-1.11.1.min.js'></script>
+<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
 
 
 <?php if (is_single()) { ?>
