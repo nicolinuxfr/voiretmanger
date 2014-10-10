@@ -51,7 +51,7 @@
 <meta property="og:description" content="<?php echo $extrait; ?>" />
 
 <link rel="image_src" href="<?php echo $iMage; ?>" />
-<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/autofocus/style.css" />
+<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
 <link rel="pingback" href="http://voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="http://voiretmanger.fr/favicon.ico" />
 
