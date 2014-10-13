@@ -1046,13 +1046,14 @@ and (max-device-width : 568px){
 	}
 	
 	.search_results li a{
-		font-size: 2em;
+		font-size: 1.1em;
+		line-height: 0.5em;
+		margin-bottom:3px;
+		
 	}
 	
 	.recherche .case:focus{
-		font-size: 35px;
 		padding: 10px;
-		line-height: 40px;
 	}
 	
 	#wpadminbar { 
@@ -1065,11 +1066,6 @@ and (max-device-width : 568px){
 
 	.search_results li{
 		padding: 0.3em 0.1em 0.3em 0.1em;
-	}
-
-
-	.search_results li a{
-		line-height: 1em;
 	}
 	
 	.single #content .header .entry-title{

@@ -10,10 +10,6 @@
 
 	<footer role="contentinfo">
 
-
-	
-
-
 		<div id="colophon">
 
 			<div id="site-info">Publié depuis 2008. Tous droits réservés.</div>
