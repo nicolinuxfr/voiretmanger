@@ -16,7 +16,7 @@
 
 		<div id="colophon">
 
-			<div id="site-info">Depuis 2008 <a href="http://voiretmanger.fr" title="À voir et à manger"><strong>À voir et à manger</strong></a>. Tous droits réservés.</div><!-- #site-info -->
+			<div id="site-info">© 2014 <a href="http://voiretmanger.fr" title="À voir et à manger"><strong>À voir et à manger</strong></a>. Tous droits réservés.</div><!-- #site-info -->
 			
 
 		</div><!-- #colophon -->
