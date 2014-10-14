@@ -250,18 +250,6 @@ function autofocus_setup() {
 	//add_image_size( 'fixed-post-thumbnail', 950, 600, true ); // Fixed Single Posts thumbnail size
 	add_image_size( 'full-post-thumbnail', 1600, 9999 ); // Full Single Posts thumbnail size
 
-
-	
-	// Make theme available for translation
-	// Translations can be filed in the /languages/ directory
-	load_theme_textdomain( 'autofocus', TEMPLATEPATH . '/languages' );
-
-	// Set Up localization
-	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );
-
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
 
