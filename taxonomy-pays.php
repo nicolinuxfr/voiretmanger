@@ -30,22 +30,9 @@
 					?>
 				</header>
 				
-			<?php
-	/* Since we called the_post() above, we need to
-	 * rewind the loop back to the beginning that way
-	 * we can run the loop properly, in full.
-	 */
+<?php
 	rewind_posts();
-
-	$archive_layout = of_get_option($shortname . '_archive_layout');
-
-	/* Run the loop for the archives page to output the posts. */
-	if ($archive_layout == 'images')
-		get_template_part( 'content', 'archives' );
-
-	else 
-		get_template_part( 'content', 'archives' );
-
+	get_template_part('liste', 'archives');
 ?>
 			<?php endif; ?>
 

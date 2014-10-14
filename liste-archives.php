@@ -1,6 +1,6 @@
 <?php
 /**
- * The loop that displays posts.
+ * Listes d'articles pour les archives (mois, jours, années…), les taxonomies, et tout le reste
  */
 
 global $posts, $shortname;
