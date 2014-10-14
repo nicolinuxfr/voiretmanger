@@ -221,19 +221,6 @@ require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
 //	Load AutoFocus Settings
 require_once(TEMPLATEPATH . '/inc/autofocus-shortcodes.php');
 
-//	Load AutoFocus Post Meta Options
-//require_once(TEMPLATEPATH . '/inc/autofocus-post-meta.php');
-
-//	Load AutoFocus Shortcode Instructions
-//require_once(TEMPLATEPATH . '/inc/autofocus-help.php');
-
-//Load php Flickr and set up Flickr API variable: http://phpflickr.com/
-//require_once(TEMPLATEPATH . '/inc/phpFlickr.php' );
-//$af_flickr = new phpFlickr( flickrApiKey() );
-
-//	Load AF+ Flickr Functions
-//require_once(TEMPLATEPATH . '/inc/autofocus-flickr.php');
-
 
 /**
  * Set the content width based on the theme's design and stylesheet.
