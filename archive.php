@@ -39,15 +39,6 @@ get_header(); ?>
 				<?php _e( 'Archives', 'autofocus' ); ?>
 <?php endif; ?>
 			</h1>
-
-<?php if ( is_category() ) : ?>
-				<?php
-					$category_description = category_description();
-					if ( ! empty( $category_description ) )
-						echo '<div class="archive-meta">' . $category_description . '</div>';
-				?>
-<?php endif; ?>
-
 		</header>
 
 <?php
