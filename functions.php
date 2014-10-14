@@ -212,15 +212,8 @@ if ( !function_exists( 'optionsframework_init' ) ) {
 
 }
 
-//	Load AutoFocus Image Functions
-//require_once(TEMPLATEPATH . '/inc/autofocus-images.php');
-
 //	Load AutoFocus WP Filters
 require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
-
-//	Load AutoFocus Settings
-require_once(TEMPLATEPATH . '/inc/autofocus-shortcodes.php');
-
 
 /**
  * Set the content width based on the theme's design and stylesheet.
