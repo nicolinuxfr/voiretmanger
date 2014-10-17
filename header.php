@@ -1,7 +1,7 @@
 <?php
 	if ( is_home() ) {
 		$nomPage = "À voir et à manger (Chez Nicoflo)";
-		$iMage = "http://voiretmanger.fr/blog.png";
+		$iMage = "https://voiretmanger.fr/blog.png";
 		$extrait = "À voir et à manger (Chez Nicoflo)";
 	
 	} else {
@@ -51,9 +51,9 @@
 <meta property="og:description" content="<?php echo $extrait; ?>" />
 
 <link rel="image_src" href="<?php echo $iMage; ?>" />
-<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
-<link rel="pingback" href="http://voiretmanger.fr/xmlrpc.php" />
-<link rel="shortcut icon" href="http://voiretmanger.fr/favicon.ico" />
+<link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
+<link rel="pingback" href="https://voiretmanger.fr/xmlrpc.php" />
+<link rel="shortcut icon" href="https://voiretmanger.fr/favicon.ico" />
 
 <title><?php echo $nomPage; ?></title>
 
@@ -97,7 +97,7 @@
 	<header class="header">
 		<section id="masthead">
 			<div id="branding" role="banner">		
-    <h1 id="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a>  </h1>
+    <h1 id="site-title"><a href="https://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a>  </h1>
 	<h2 id="site-description">Chez Nicoflo</h2>
 			</div>
 </section><!-- #masthead -->
