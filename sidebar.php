@@ -62,6 +62,8 @@
 
 
 ?>
+
+
 		  
 <div style="clear:both;">
 
@@ -157,6 +159,11 @@
 
 <?php } ?>
 
+<?php
+	echo do_shortcode(
+		'[jetpack-related-posts]'
+	);
+?>
 				
 <!-- Date publication et de dernière modification -->	
 						
