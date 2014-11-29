@@ -651,12 +651,16 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 /*	Comments
 -------------------------------------------------------------- */
 #comments {padding:0;
-	clear:both;float:none; position: relative; z-index: 2;text-align: justify;
-	max-width: 900px;
-	margin:auto;}
+	clear:both;float:none; position: relative; z-index: 2;
+	max-width: 920px;
+	margin:auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	text-rendering: optimizeLegibility;
+}
 #comments, 
 #comments input, 
-#comments textarea {line-height:28px;font-size: 22px;-webkit-hyphens: auto;-moz-hyphens: auto;autohyphens: auto;padding:0 20px;}
+#comments textarea {line-height:28px;font-size: 22px;padding:0 20px;}
 #comments code {font-size:12px; line-height:22px}
 #comments h3 {font-size:40px;line-height:42px;padding:0 8px; margin: 0;font-family: "Helvetica Neue",helvetica,sans-serif;font-weight: 100}
 #comments .commentlist {padding:0; margin: 0 0 66px; list-style:none;}
