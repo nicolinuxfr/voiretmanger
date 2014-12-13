@@ -72,7 +72,7 @@ body,
 input, 
 textarea{color:#999;font-size:12px;line-height:22px;}
 body {background-color:transparent;-webkit-text-size-adjust: auto;}
-hr{background-color:#e7e7e7; border:0; clear:both; height:1px; margin-bottom:18px}
+hr{background-color:#e7e7e7; border:0; clear:both;}
 
 /* Text elements */
 p{margin-bottom:18px;}
@@ -243,7 +243,7 @@ input#s.case{
 #content textarea{margin:0 0 22px; color:rgba(0, 0, 0, 0.6);}
 #content input.file, 
 #content input.button{margin-right:24px}
-#content hr {margin-bottom: 44px; border-style: dotted; border-width: 1px 0 0;}
+#content hr {border-style: dotted; border-width: 1px 0 0;}
 #content fieldset {border:1px solid #e7e7e7; margin:0 0 22px; padding:22px}
 #content fieldset legend{background:#fff; color:#000; font-weight:bold; padding:0 24px}
 #content label{font-size:12px}
@@ -253,7 +253,6 @@ input#s.case{
 #content sup a{color:white}
 #content p, 
 #content ul, 
-#content ol, 
 #content dd, 
 #content pre,
 #content address {margin-bottom: 0.5em;margin-top: 0.5em;}
@@ -445,8 +444,10 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 
 .single #content .footnotes{
 	font-size: 0.8em;
-	color: #666666;
+	line-height: 1.3;
+	margin: 0.5em 1em;
 }
+
 
 /* =Page Template || PAGES
 -------------------------------------------------------------- */

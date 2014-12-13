@@ -108,6 +108,7 @@
     	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 	</nav>
 
+<div class="au-hasard"><a href="http://voiretmanger.fr/au-hasard"><span class="dashicons dashicons-randomize"></span></a></div>
 
 <div class="recherche">
 		<form method="get" id="searchform"  action="<?php bloginfo('home'); ?>/"> 
