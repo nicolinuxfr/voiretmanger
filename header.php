@@ -108,8 +108,6 @@
     	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 	</nav>
 
-<div class="au-hasard"><a href="http://voiretmanger.fr/au-hasard"><span class="dashicons dashicons-randomize"></span></a></div>
-
 <div class="recherche">
 		<form method="get" id="searchform"  action="<?php bloginfo('home'); ?>/"> 
 		<input class="case" type="text" value="Chercher" placeholder="Chercher" id="s" name="s" onblur="if (this.value == '')  {this.value = 'Chercher';}"  onfocus="if (this.value == 'Chercher') {this.value = '';}" /> 
