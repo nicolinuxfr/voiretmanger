@@ -151,6 +151,17 @@ function filter_ptags_on_images($content){
 add_filter('the_content', 'filter_ptags_on_images');
 
 
+// Retrait catégorie archive du blog aux articles liés
+function jetpackme_filter_exclude_category( $filters ) {
+    $filters[] = array( 'not' =>
+      array( 'term' => array( 'category.slug' => 'archives-du-blog' ) )
+    );
+    return $filters;
+}
+add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
+
+
+
 // FIN DES AJOUTS PERSOS
 
 /**
