@@ -44,24 +44,14 @@ footer { margin-bottom:22px; clear:both; width:100%; }
 #site-info {}
 #site-generator {float:right; width:172px}
 
-/*
-TEMPLATE:Two columns (Default)
-DESCRIPTION:Two-column fixed layout with one sidebar right of content
-*/
+
 #container{float:left; margin:0; width:100%}
 #content{margin:0}
 #footer{clear:both; width:100%}
 
-/*
-TEMPLATE:One column, no sidebar
-DESCRIPTION:One centered column with no sidebar
-*/
+
 .one-column #content{margin:auto; clear: left;display: block;float: left;}
 
-/*
-TEMPLATE:Full width, no sidebar
-DESCRIPTION:Full width content with no sidebar; used for attachment pages
-*/
 .single-attachment #content{margin:0 auto; width:100%}
 
 
