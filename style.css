@@ -316,9 +316,12 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 .entry-content, 
 .entry-summary{clear:both; width:inherit;position: relative; z-index: 2}
 
-.entry-content p a{text-decoration: underline;
+.entry-content p a,
+.entry-content li a{
+	text-decoration: underline;
 	color:inherit;
 }
+
 .entry-content p a:active, 
 .entry-content p a:hover{color:#232323}
 
@@ -852,8 +855,9 @@ input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: ins
 	overflow: hidden;
 	padding: 10px;
 	margin-right: 10px;
-
 }
+
+.single #content .amazon a{	text-decoration: none !important;}
 
 .single #content .saga{overflow: hidden;}
 
