@@ -814,6 +814,8 @@ input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: ins
 	width: 100%;
 	font-size: 15px;
 	margin: 5px 0px 30px 0px;}
+	
+.single #content .entry-pers a{text-decoration:none;color:#424242;}
 
 .single #content .entry-pers .liste{
 	-webkit-column-count:2;   
@@ -839,6 +841,7 @@ input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: ins
 }
 .single #content .entry-pers .titre{margin-left:-10px;padding:5px 0px 5px 0px;color:white;background-color:#5e5e5e;text-align:center;font-weight: 200;	font-size:18px;
 	font-variant: small-caps;}
+	
 .single #content .entry-pers .titre a{
 	color: white;
 }	
@@ -994,6 +997,9 @@ text-align: center;
 .entry-content .jp-relatedposts .jp-relatedposts-post-context{display: none !important;}
 
 
+/* Modification module AZIndex */
+
+.azindex a{	text-decoration: none !important;}
 
 /*	ADAPTATIONS MOBILES  
 -------------------------------------------------------------- */
