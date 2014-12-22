@@ -24,6 +24,13 @@ get_header(); ?>
 		the_post();
 ?>
 		<header>
+	  		<?php print apply_filters( 'taxonomy-images-queried-term-image', '', array(
+	   							'after' => '</div>',
+	   							'before' => '<div id="taxo-img">',
+	   							'image_size' => 'full',
+	   							) );
+    
+	        ?>
 			<h1 class="page-title">
 <?php if ( is_day() ) : ?>
 				<?php printf( __( 'Tous les articles du jour : <span>%s</span>', 'autofocus' ), get_the_date() ); ?>
