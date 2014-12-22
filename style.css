@@ -1085,7 +1085,8 @@ and (max-device-width : 568px){
 		hyphens: auto;
 	}
 
-	.single #content .entry-content p{
+	.single #content .entry-content p,
+	.single #content .entry-content li{
 		font-size: 50px;
 		line-height: 70px;
 		text-align: left;
@@ -1110,7 +1111,10 @@ and (orientation : portrait) {
 /* Pour les images en 100% en dessous de 950px */
 @media only screen 
 and (max-width : 900px){
-	.single #content .entry-content p{padding: 0 20px;}
+	.single #content .entry-content p,
+	.single #content .entry-content ul{
+				padding: 0 20px;
+	}
 	
 	
 } 
