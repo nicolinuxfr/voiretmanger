@@ -71,7 +71,7 @@ function a_new_post( $new_status, $old_status, $post )
 	}
 	$postsArray = Array(); // un tableau vide
 	
-	$args = array('post_type' => 'post','posts_per_page' => -1);
+	$args = array('post_type' => 'post','posts_per_page' => -1, 'cat=-1818');
 	
 	$post_query = new WP_Query($args);
 	if($post_query->have_posts()) {
