@@ -33,7 +33,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="apple-mobile-web-app-title" content="Nicolinux" />
+<meta name="apple-mobile-web-app-title" content="Voir et manger" />
 <meta name="viewport" content="width=950, maximum-scale=1" />
 
 <meta name="description" content="<?php echo substr($extrait, 0, 160); ?>" />
