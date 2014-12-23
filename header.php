@@ -1,3 +1,5 @@
+<?php Header("Cache-Control: no-transform");?>
+
 <?php
 	if ( is_home() ) {
 		$nomPage = "À voir et à manger (Chez Nicoflo)";
