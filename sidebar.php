@@ -20,7 +20,6 @@
 					
 					?>
 	
-		<div class="partage-fond">
 
 			
 		<div class="partage">
@@ -35,9 +34,7 @@
 						<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
 					</ul>
 									
-					</div>
-
-</div>	
+			</div>
 
 <?php
 

@@ -397,14 +397,14 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 	padding: 0px 20px;
 	max-width: 100%;
 	border: 0;
-	font: normal 70px "Playfair Display", serif;
+	font: normal 5em "Playfair Display", serif;
 	font-weight: 400;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing:grayscale;
 	text-rendering: optimizeLegibility;
 }
-.single #content .header .entry-title em{font-size: 85px;font-weight:700;}
+.single #content .header .entry-title em{font-size: 1.5em;font-weight:700;}
 
 
 /* Réglages du texte des articles 
@@ -1004,43 +1004,35 @@ text-align: center;
 /*	ADAPTATIONS MOBILES  
 -------------------------------------------------------------- */
 
+
+
+/* Pour les images en 100% en dessous de 950px */
 @media only screen 
-and (min-width : 320px) 
-and (max-width : 568px) {
-		.single #content .entry-content p{
-		text-align: left;
-		padding: 0 50px;
+and (max-width : 900px){
+	
+	
+	.single #content .entry-content p,
+	.single #content .entry-content ul
+	.single #content .entry-content h2{
+				padding: 0 20px;
 	}
-	.single #content .entry-content{max-width: 100%;}
-}
+	
+	
+} 
 
-@media only screen and (max-width:640px) {
-    div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post {
-        width: 100% !important; }
-}
 
-/* Ajustements spécifiques à l'iPhone */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px){
-#site-title{
-	-webkit-text-size-adjust: 140%;
-}
+and (max-width : 640px){
 
-.menu{
-		-webkit-text-size-adjust: 300%;
-	}
+	.af-default #container {width:100%; overflow: hidden;}
 	
 	.af-layout #content .hentry header {opacity: 1}
-	
-	.single #content .entry-content{max-width: 100%;}
 	
 	
 	.recherche {
 		clear:both;
 		width:100%;
-		
-}
+	}
 	
 	.recherche .case{
 		width: 100%;
@@ -1061,38 +1053,45 @@ and (max-device-width : 568px){
 		margin-bottom:3px;
 		
 	}
-	
-	.recherche .case:focus{
-		padding: 10px;
-	}
-	
-	#wpadminbar { 
-		display:none !important;
-	}
-	
-	/* padding: 5px 0px;
-	background-color: rgba(231,231,231,0.95); */
-
 
 	.search_results li{
 		padding: 0.3em 0.1em 0.3em 0.1em;
 	}
 	
+	
+	.recherche .case:focus{
+		padding: 10px;
+	}
+
 	.single #content .header .entry-title{
-		-webkit-text-size-adjust: 100%;
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		hyphens: auto;
+		font-size:3.8em;
 	}
 
-	.single #content .entry-content p,
-	.single #content .entry-content li{
-		font-size: 50px;
-		line-height: 70px;
-		text-align: left;
-		padding: 0 50px;
-		}
+
+    div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post {
+        width: 100% !important; }
+
+	.partage{
+	width: auto;
+	height:auto;
+	}
+
+	.partage .titre{
+		width: 100%;
+	}
+
+
+	.partage ul li{
+		width: 100%;
+		margin-left: 0px;
+	}
+	
+	
 }
+
 
 /* iPads (portrait) ----------- */
 @media only screen 
@@ -1107,15 +1106,4 @@ and (orientation : portrait) {
 	
 }
 
-
-/* Pour les images en 100% en dessous de 950px */
-@media only screen 
-and (max-width : 900px){
-	.single #content .entry-content p,
-	.single #content .entry-content ul{
-				padding: 0 20px;
-	}
-	
-	
-} 
 
