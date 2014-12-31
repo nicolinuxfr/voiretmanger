@@ -1,5 +1,7 @@
 <?php
 
+add_filter( 'searchwp_debug', '__return_true' );
+
 // AJOUTS PERSOS
 add_action( 'init', 'create_my_taxonomies', 0 );
 
@@ -71,7 +73,7 @@ function a_new_post( $new_status, $old_status, $post )
 	}
 	$postsArray = Array(); // un tableau vide
 	
-	$args = array('post_type' => 'post','posts_per_page' => -1, 'cat=-1818');
+	$args = array('post_type' => 'post','posts_per_page' => -1, 'category__not_in' => array( 1818 ));
 	
 	$post_query = new WP_Query($args);
 	if($post_query->have_posts()) {
@@ -110,10 +112,6 @@ return $content;
 
 }
 
-function custom_excerpt_length( $length ) {
-	return 60;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 add_filter('the_excerpt_rss', 'rss_post_thumbnail');
 add_filter('the_content_feed', 'rss_post_thumbnail');
@@ -382,57 +380,6 @@ function af_author_info_avatar() {
  *	Previous / Next Excerpts
  *	- Thanks very much to Thin & Light (http://thinlight.org/) for this custom function!
  */
-function af_excerpt($text, $excerpt_length = 25) {
-	$text = str_replace(']]>', ']]&gt;', $text);
-	$text = strip_tags($text);
-	$text = preg_replace("/\[.*?]/", "", $text);
-	$words = explode(' ', $text, $excerpt_length + 1);
-	if (count($words) > $excerpt_length) {
-		array_pop($words);
-		array_push($words, '...');
-		$text = implode(' ', $words);
-	}	
-	return apply_filters('the_excerpt', $text);
-}
-
-//	Setup AF Post Excerpt
-function af_post_excerpt($post) {
-	$excerpt = ($post->post_excerpt == '') ? (af_excerpt($post->post_content))
-			: (apply_filters('the_excerpt', $post->post_excerpt));
-	return $excerpt;
-}
-
-//	Setup Previous Post Excerpt
-function previous_post_excerpt($in_same_cat = 1, $excluded_categories = '') {
-	if ( is_attachment() )
-		$post = &get_post($GLOBALS['post']->post_parent);
-	else
-		$post = get_previous_post($in_same_cat, $excluded_categories);
-
-	if ( !$post )
-		return;
-	$post = &get_post($post->ID);
-	//echo af_post_excerpt($post);
-	echo '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( $post->post_title ) . '">';
-	echo get_the_post_thumbnail($post->ID, 'bottom-thumbnail');
-    echo '</a>';
-}
-
-//	Setup Next Post Excerpt
-function next_post_excerpt($in_same_cat = 1, $excluded_categories = '') {
-	if ( is_attachment() )
-		$post = &get_post($GLOBALS['post']->post_parent);
-	else
-		$post = get_next_post($in_same_cat, $excluded_categories);
-
-	if ( !$post )
-		return;
-	$post = &get_post($post->ID);
-	//echo af_post_excerpt($post);
-	echo '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( $post->post_title ) . '">';
-	echo get_the_post_thumbnail($post->ID, 'bottom-thumbnail');
-	echo '</a>';
-}
 
 /**
  *	AutoFocus Navigation Above
