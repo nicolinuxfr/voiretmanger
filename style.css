@@ -565,6 +565,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 .af-layout #content 
 .hentry:hover header{opacity: 1;transition: all 0.5s ease;} 
 .af-layout #content .entry-image {position: absolute; top:0; left:0; z-index:1;display: block; padding:0;} 
+.af-layout #content .entry-image-small{display:none;}
 .af-layout #content .entry-title {line-height: 28px;margin-bottom: 11px;position: relative; z-index: 3;padding: 5px;background-color: rgba(0, 0, 0, 0.5); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:grayscale; text-rendering: optimizeLegibility;} 
 .af-layout #content .entry-title a{color: white;} 
 .af-layout #content .entry-content a {font-weight: 950;text-decoration: none;} .af-layout #content .entry-utility {position: absolute; top:0; right:0; z-index: 5; margin: 0; display: inline-block; width: 145px; border-width: 0;}
@@ -1008,7 +1009,7 @@ text-align: center;
 
 /* Pour les images en 100% en dessous de 950px */
 @media only screen 
-and (max-width : 900px){
+and (max-width : 950px){
 	
 	
 	.single #content .entry-content p,
@@ -1018,6 +1019,16 @@ and (max-width : 900px){
 	}
 	
 	
+	
+	/* Page d'accueil spéciale */
+	.af-layout #content .entry-image-small{display:block;}
+	.af-layout #content .entry-image{display:none;}
+	
+	.af-default #container {width:100%; overflow: hidden;}
+	.af-default #content {width:100%;margin:0;}
+	.af-default #content .hentry {width:100% !important;height:auto!important;margin:0!important; padding:0;}
+	.af-default #content .hentry img {width: 100%;margin:0!important;}
+	.af-layout #content .hentry header{bottom:0;}
 } 
 
 

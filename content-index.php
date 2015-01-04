@@ -41,6 +41,10 @@
 		<div class="entry-image">
 			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbs_perso[$i] );?></a>
 		</div>
+		
+		<div class="entry-image-small">
+			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbs_perso[1] );?></a>
+		</div>
 			
 
 		</article><!-- #post-## -->
