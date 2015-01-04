@@ -37,7 +37,7 @@ header,nav,section,article,aside,figure,footer { display:block; }
 header {vertical-align:middle; position:relative;}
 
 /* Structure the footer area */
-footer { margin-bottom:22px; clear:both; width:100%; }
+footer {clear:both; width:100%; }
 #footer-widget-area {overflow:hidden}
 #footer-widget-area .widget-area {float:left; margin:0; width:225px}
 #footer-widget-area #fourth {margin-right:0}
@@ -755,7 +755,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 -------------------------------------------------------------- */
 footer {position: relative; z-index:3}
 #footer{font-size:11px;}
-#colophon{padding:0 0 44px; font-size:11px;font-family: helvetica, 'Droid', sans-serif;font-weight: 100;text-align: center;}
+#colophon{padding:0; font-size:11px;font-family: helvetica, 'Droid', sans-serif;font-weight: 100;text-align: center;}
 #site-info {clear:none; padding: 0 8px;margin: auto;}
 
 
