@@ -4,7 +4,7 @@ Theme Name: À voir et à manger
 
 /* Police titres
 -------------------------------------------------------------- */
-@import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Dorsa);
+@import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Dorsa|Roboto:300italic,300);
 
 
 /* =Reset default browser CSS.
@@ -60,7 +60,7 @@ footer {clear:both; width:100%; }
 -------------------------------------------------------------- */
 body, 
 input, 
-textarea{color:#999;font-size:12px;line-height:22px;}
+textarea{color:#999;font-size:12px;}
 body {background-color:transparent;-webkit-text-size-adjust: auto;}
 hr{background-color:#e7e7e7; border:0; clear:both;}
 
@@ -114,14 +114,12 @@ code{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace}
 -------------------------------------------------------------- */
 #masthead {display:table; vertical-align:middle; position:relative; padding: 0;margin:auto;}
 #branding {
-	padding:0 16px 0 0; 
 	display:block; 
 }
 #site-title {
 	padding:0 8px; 
-	font-size:170px;
-	font-weight: 400; 
-	line-height:150px; 
+	font-size:20em;
+	line-height:1em; 
 	font-family: 'Dorsa', sans-serif;
 	text-transform: uppercase;
 	display: inline;
@@ -131,9 +129,8 @@ code{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace}
 #site-description {
 	padding:0 8px;
 	margin:0;
-	font-size:60px;
-	line-height:50px;
-	font-weight:200;
+	font-size:4em;
+	line-height:1em;
 	font-family: 'Dorsa', sans-serif;
 	display: inline;
 }
@@ -142,40 +139,36 @@ code{font-family:Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace}
 
 /* =Menu
 -------------------------------------------------------------- */
-#access {padding:0; margin:0; clear:right; display:inline; overflow:visible;float:left}
+#access {padding:0; margin:0; clear:right; display:inline; overflow:visible;float:left;margin-bottom: 1em;}
 #access .menu-header ul, 
 div.menu ul{list-style:none; margin:0}
 #access .menu-header li, 
 div.menu li{float:left; position:relative}
 
 .menu {
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-family: "Roboto", sans-serif;
 	display: inline;
 }
 .menu ul {margin:0; padding:0;}
 .menu li {display:inline; float:left;}
-.menu li a {padding:0 12px; margin:0; display:block; font-size:14px; line-height:22px; letter-spacing:0.025em;font-weight:200;}
-.menu li ul li a {padding:1px 8px 0; height:22px; font-size:11px; letter-spacing:0; font-weight:200;}
+.menu li a {
+	padding:0 12px; 
+	margin:0; 
+	display:block; 
+	font-size:1.6em;
+}
+.menu li ul li a {padding:0.4em;font-size: 1.4em;}
 .menu li ul li a:before {content:"\2014\00a0";}
 
 #access ul ul{display:none; position:absolute; top:22px; left:3px; float:left; width:172px; z-index:99999}
-#access ul ul li{min-width:172px}
+#access ul ul li{min-width:300px}
 #access ul ul ul{left:100%; top:0}
-#access ul ul a {background:#333; line-height:22px; max-width:172px; height:auto;background-color: white;}
+#access ul ul a {background:#333; line-height:1em; height:auto;background-color: white;}
 #access .sub-menu, 
 #access .children {border-style: dotted;border-width: 0 0 0 1px}
 #access li:hover >a, 
 #access ul ul:hover >a{ }
 #access ul li:hover >ul{display:block}
-#access ul li.current_page_item >a, 
-#access ul li.current-menu-ancestor >a, 
-#access ul li.current-menu-item >a, 
-#access ul li.current-menu-parent >a{ }
-* html #access ul li.current_page_item a, 
-* html #access ul li.current-menu-ancestor a, 
-* html #access ul li.current-menu-item a, 
-* html #access ul li.current-menu-parent a, 
-* html #access ul li a:hover{ }
 
 
 .recherche{
@@ -184,23 +177,21 @@ div.menu li{float:left; position:relative}
 }
 
 .recherche .case{
-	width: 245px;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 20px;
-	font-weight: 100;
+	width: 400px;
+	font-family: "Roboto", sans-serif;
+	font-size: 2em;
 	outline: 0;
 	margin: 0;
 	padding: 5px 0px;
 	background-color: rgba(231,231,231,0.95);
+	text-align:center;
 
 }
 
-input#s.case{
-	padding-left: 5px;
-}
+
 
 .search_results{
-	width:250px;
+	width:400px;
 	position:absolute;
 	right:0;
 	background-color: rgba(231,231,231,0.95);
@@ -386,7 +377,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 .single #content .entry-image img,
 .page #content .entry-image img {width: 100%;}
 
-.single #content .hentry {clear: both;float: none;margin: 0;padding: 0;position: relative;z-index: 3;}
+.single #content .hentry {clear: both;float: none;padding: 0;position: relative;z-index: 3;}
 .single #content .header {clear: both;float: right;margin: 0;width: 100%;display: block;border: 0;
 }
 
@@ -1001,39 +992,14 @@ text-align: center;
 
 
 
-/* Pour les images en 100% en dessous de 950px */
 @media only screen 
 and (max-width : 950px){
 	
 	
-	.single #content .entry-content p,
-	.single #content .entry-content ul
-	.single #content .entry-content h2{
-				padding: 0 20px;
-	}
+	#site-title{font-size:13em;}
 	
 	
-	
-	/* Page d'accueil spéciale */
-	.af-layout #content .entry-image-small{display:block;}
-	.af-layout #content .entry-image{display:none;}
-	
-	.af-default #container {width:100%; overflow: hidden;}
-	.af-default #content {width:100%;margin:0;}
-	.af-default #content .hentry {width:100% !important;height:auto!important;margin:0!important; padding:0;}
-	.af-default #content .hentry img {width: 100%;margin:0!important;}
-	.af-layout #content .hentry header{bottom:0;}
-} 
-
-
-@media only screen 
-and (max-width : 640px){
-
-	.af-default #container {width:100%; overflow: hidden;}
-	
-	.af-layout #content .hentry header {opacity: 1}
-	
-	
+	/* Champ de recherche à 100% */
 	.recherche {
 		clear:both;
 		width:100%;
@@ -1053,8 +1019,8 @@ and (max-width : 640px){
 	}
 	
 	.search_results li a{
-		font-size: 1.1em;
-		line-height: 0.5em;
+		font-size:2em;
+		line-height:1em;
 		margin-bottom:3px;
 		
 	}
@@ -1067,7 +1033,44 @@ and (max-width : 640px){
 	.recherche .case:focus{
 		padding: 10px;
 	}
+	
+	
+	/* Page d'accueil spéciale */
+	.af-layout #content .entry-image-small{display:block;}
+	.af-layout #content .entry-image{display:none;}
+	
+	.af-default #container {width:100%; overflow: hidden;}
+	.af-default #content {width:100%;margin:0;}
+	.af-default #content .hentry {width:100% !important;height:auto!important;margin:0!important; padding:0;}
+	.af-default #content .hentry img {width: 100%;margin:0!important;}
+	.af-layout #content .hentry header{bottom:0;}
+	
+	
+	/* Pour les images en 100% en dessous de 950px */
+	
+	.single #content .entry-content p,
+	.single #content .entry-content ul
+	.single #content .entry-content h2{
+				padding: 0 20px;
+	}
+	
+	
+} 
 
+
+
+
+
+
+@media only screen 
+and (max-width : 640px){
+
+	.af-default #container {width:100%; overflow: hidden;}
+	
+	.af-layout #content .hentry header {opacity: 1}
+	
+	#site-title{font-size:9em;}
+	
 	.single #content .header .entry-title{
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
