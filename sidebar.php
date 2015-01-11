@@ -12,29 +12,22 @@
 			<?php
 					$lien = get_permalink();
 					$titre = strip_tags(get_the_title());
-					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail_size' );
-					$excerpt = htmlentities(get_the_excerpt(), ENT_QUOTES, 'UTF-8');
-					$facebook_link  = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' . $lien . '&p[images][0]=' . $thumb[0] . '&p[title]=' . $titre . '&p[summary]=' . strip_tags($excerpt) ;
+					$facebook_link  = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' . $lien ;
 					$twitter_link  = 'http://twitter.com/share?url=' . $lien . '&text=' . $titre ;
-					$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - '. $lien;
-					
-					?>
-	
-
+					$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - '. $lien ;
+			?>
 			
 		<div class="partage">
-					
 					
 			<div class="titre">Partager</div> 
 										
 					<ul>
 						<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Mail</li></a>
-
 						<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Twitter</li></a>
 						<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
 					</ul>
 									
-			</div>
+		</div>
 
 <?php
 
