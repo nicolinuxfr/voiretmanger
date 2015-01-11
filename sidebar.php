@@ -5,29 +5,23 @@
 ?>
 
 
-
-
 <!-- Fonctions de partage -->	
-
-			<?php
-					$lien = get_permalink();
-					$titre = strip_tags(get_the_title());
-					$facebook_link  = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' . $lien ;
-					$twitter_link  = 'http://twitter.com/share?url=' . $lien . '&text=' . $titre ;
-					$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - '. $lien ;
-			?>
-			
-		<div class="partage">
-					
-			<div class="titre">Partager</div> 
-										
-					<ul>
-						<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Mail</li></a>
-						<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Twitter</li></a>
-						<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
-					</ul>
-									
-		</div>
+	<?php
+		$lien = get_permalink();
+		$titre = strip_tags(get_the_title());
+		$facebook_link  = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' . $lien ;
+		$twitter_link  = 'http://twitter.com/share?url=' . $lien . '&text=' . $titre ;
+		$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - '. $lien ;
+	?>
+	
+<div class="partage">	
+	<div class="titre">Partager</div> 			
+			<ul>
+				<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Mail</li></a>
+				<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Twitter</li></a>
+				<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
+			</ul>				
+</div>
 
 <?php
 
