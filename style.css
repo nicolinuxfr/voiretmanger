@@ -905,13 +905,6 @@ iframe#jetpack_remote_comment {
 #respond{padding-left: 15px}
 
 
-.partage-fonds{
-	background: url(images/fond.png) no-repeat -10px 0;
-	background-size: 850px 41px;
-	width: 850px;
-	height:41px;
-}
-
 .partage{
 	float: none;
 	display: block;
@@ -921,7 +914,6 @@ iframe#jetpack_remote_comment {
 	font-family: "Helvetica Neue",helvetica,serif;
 	height: 35px;
 	width: auto;
-	
 }
 
 
@@ -934,7 +926,6 @@ iframe#jetpack_remote_comment {
 	text-align:center;
 	font-size:18px;
 	font-variant: small-caps;
-
 }
 
 .partage ul {
@@ -947,14 +938,13 @@ iframe#jetpack_remote_comment {
 .partage ul li{
 	padding:5px 0px 5px 0px;
 	width: 25%;
-	 width: calc(100% / 4);
+	width: calc(100% / 4);
 	display: inline-block;
 	text-align: center;
 	font-size: 17px;
 	background-color:#5e5e5e;
 	float:left;
 }
-
 
 .partage ul li:hover{
 	background-color: white;
