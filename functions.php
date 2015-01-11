@@ -256,7 +256,6 @@ function autofocus_setup() {
 	set_post_thumbnail_size( 400, 400, true ); // Default thumbnail size
 	add_image_size( 'archive-thumbnail', 900, 500, true ); // Archives thumbnail size
 	add_image_size( 'bottom-thumbnail', 900, 500, true ); // Images du bas thumbnail size
-	//add_image_size( 'fixed-post-thumbnail', 950, 600, true ); // Fixed Single Posts thumbnail size
 	add_image_size( 'full-post-thumbnail', 1600, 9999 ); // Full Single Posts thumbnail size
 
 	// Add default posts and comments RSS feed links to head
