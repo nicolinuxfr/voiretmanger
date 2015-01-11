@@ -151,17 +151,7 @@
 				
 <!-- Date publication et de dernière modification -->	
 						
-					<div class="date-perso">Article publi&eacute; le <span style="color:black;display:inline;"> <?php echo get_the_date(); ?></span> 
-					
-					<?php
-	
-						$publication = get_the_date();
-						$modification = the_modified_date('', '', '', FALSE);
-					
-					 if ($publication != $modification ) {  
-					 echo '(derni&egrave;re modification le ' . $modification . ')';  
-					 } ?>
-					</div>
+					<div class="date-perso">Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> (derni&egrave;re modification le <?php echo the_modified_date('', '', '', FALSE); ?>)</span> </div>
 
 </div>
 
