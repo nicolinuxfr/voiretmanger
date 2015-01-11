@@ -929,6 +929,7 @@ iframe#jetpack_remote_comment {
 	padding:5px 0px 5px 0px;
 	background-color:#5e5e5e;
 	width: 25%;
+    width: calc(100% / 4);
 	float: left;
 	text-align:center;
 	font-size:18px;
@@ -938,20 +939,20 @@ iframe#jetpack_remote_comment {
 
 .partage ul {
 	list-style: none;
-	margin: 0;
+	margin: 0!important;
 	padding: 0 !important;
-	
+	margin-top: 0;
 }
 
 .partage ul li{
 	padding:5px 0px 5px 0px;
 	width: 25%;
+	 width: calc(100% / 4);
 	display: inline-block;
 	text-align: center;
 	font-size: 17px;
 	background-color:#5e5e5e;
-	margin-left: -3px;
-
+	float:left;
 }
 
 
@@ -996,7 +997,10 @@ text-align: center;
 .entry-content .jp-relatedposts .jp-relatedposts-post{}
 .entry-content .jp-relatedposts .jp-relatedposts-post-title,
 .entry-content .jp-relatedposts .jp-relatedposts-post-context{display: none !important;}
-
+.entry-content div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post{
+	width: 33.33% ;
+	width: calc(100% / 3) ;
+}
 
 /* Modification module AZIndex */
 
