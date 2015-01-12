@@ -95,59 +95,53 @@
 <!-- Taxonomie perso, articles liés et autres articles dans la catégorie -->
 <div class="liste">
 	<ul>
-			<?php echo get_the_term_list( $post->ID, 'festival', '<li>Festival : ', ', ','</li>');  ?>	
+			<?php echo get_the_term_list( $post->ID, 'festival', '<li><strong>Festival</strong> : ', ', ','</li>');  ?>	
 		
-			<?php echo get_the_term_list( $post->ID, 'saga', '<li>Saga : ', ', ','</li>'); ?>
+			<?php echo get_the_term_list( $post->ID, 'saga', '<li><strong>Saga</strong> : ', ', ','</li>'); ?>
 
 			<?php 
 				if( get_post_meta($post->ID, 'original', true) ) { ?>
-			<li>Titre original : <span style="color:black;display:inline;"><em><?php echo get_post_meta($post->ID, 'original', true); ?></em></span></li> 
+			<li><strong>Titre original</strong> : <span style="color:black;display:inline;"><em><?php echo get_post_meta($post->ID, 'original', true); ?></em></span></li> 
 			<?php } ?>	
 
 
 
 			<?php 
 			 if( in_category('cinema') ) { ?>
-				<?php echo get_the_term_list( $post->ID, 'createur', '<li>R&eacute;alisateur : ', ', ','</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'createur', '<li><strong>R&eacute;alisateur</strong> : ', ', ','</li>') ?>
 			<?php } elseif ( in_category('musique') ) { ?>
-				<?php echo get_the_term_list( $post->ID, 'createur', '<li>Artiste : ', ', ','</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'createur', '<li><strong>Artiste</strong> : ', ', ','</li>') ?>
 			<?php } elseif ( in_category(array('scenes', 'livres')) ) { ?>
-				<?php echo get_the_term_list( $post->ID, 'createur', '<li>Auteur : ', ', ','</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'createur', '<li><strong>Auteur</strong> : ', ', ','</li>') ?>
 			<?php } else { ?>
-				<?php echo get_the_term_list( $post->ID, 'createur', '<li>Cr&eacute;ateur : ', ', ','</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'createur', '<li><strong>Cr&eacute;ateur</strong> : ', ', ','</li>') ?>
 			<?php } ?>
 			
-			<?php echo get_the_term_list( $post->ID, 'annee', '<li>Ann&eacute;e : ', ', ','</li>'); ?>
-			<?php echo get_the_term_list( $post->ID, 'pays', '<li>Nationalit&eacute; : ', ', ','</li>');  ?>
-			<?php echo get_the_term_list( $post->ID, 'acteur', '<li>Acteurs : ', ', ','</li>');  ?>			
+			<?php echo get_the_term_list( $post->ID, 'annee', '<li><strong>Ann&eacute;e</strong> : ', ', ','</li>'); ?>
+			<?php echo get_the_term_list( $post->ID, 'pays', '<li><strong>Nationalit&eacute;</strong> : ', ', ','</li>');  ?>
+			<?php echo get_the_term_list( $post->ID, 'acteur', '<li><strong>Acteurs</strong> : ', ', ','</li>');  ?>			
 
 		<?php 
 			 if( has_tag('theatre') ) { ?>
-				<li><?php echo get_the_term_list( $post->ID, 'lieu', 'Th&eacute;&acirc;tre : ') ?></li>
-				<li><?php echo get_the_term_list( $post->ID, 'metteurenscene', 'Metteur en sc&egrave;ne : ', ', ') ?></li>
+				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Th&eacute;&acirc;tre</strong> : ') ?></li>
+				<li><?php echo get_the_term_list( $post->ID, 'metteurenscene', '<strong>Metteur en sc&egrave;ne</strong> : ', ', ') ?></li>
 			<?php } elseif ( has_tag('concert') ) { ?>
-				<li><?php echo get_the_term_list( $post->ID, 'lieu', 'Salle : ') ?></li>
+				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Salle</strong> : ') ?></li>
 			<?php } elseif ( has_tag('opera') ) { ?>
-				<li><?php echo get_the_term_list( $post->ID, 'lieu', 'Op&eacute;ra : ') ?></li>
-				<li><?php echo get_the_term_list( $post->ID, 'metteurenscene', 'Metteur en sc&egrave;ne : ', ', ') ?></li>
+				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Op&eacute;ra</strong> : ') ?></li>
+				<li><?php echo get_the_term_list( $post->ID, 'metteurenscene', '<strong>Metteur en sc&egrave;ne</strong> : ', ', ') ?></li>
 			<?php } else { ?>
-				<?php echo get_the_term_list( $post->ID, 'lieu', '<li>Salle : ', ', ','</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'lieu', '<li><strong>Salle</strong> : ', ', ','</li>') ?>
 			<?php } ?>	
 			
-			<?php echo get_the_term_list( $post->ID, 'chef', '<li>Chef d\'orchestre : ', ', ','</li>') ?>
+			<?php echo get_the_term_list( $post->ID, 'chef', '<li><strong>Chef d\'orchestre</strong> : ', ', ','</li>') ?>
 			
-			<?php echo get_the_tag_list('<li>Tags : ',', ','</li>'); ?>
+			<?php echo get_the_tag_list('<li><strong>Tags</strong> : ',', ','</li>'); ?>
 		</ul>
 </div>
 </div>
 
 <?php } ?>
-
-<?php
-	echo do_shortcode(
-		'[jetpack-related-posts]'
-	);
-?>
 				
 <!-- Date publication et de dernière modification -->	
 						
