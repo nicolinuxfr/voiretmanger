@@ -183,8 +183,8 @@ div.menu li{float:left; position:relative}
 	outline: 0;
 	margin: 0;
 	padding: 5px 0px;
-	background-color: rgba(231,231,231,0.95);
 	text-align:center;
+	color:#424242;
 }
 
 
@@ -381,9 +381,9 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 .single #content .header .entry-title,
 .page #content .header .entry-title {
 	letter-spacing: -1px; 
-	margin:17px 0px 22px 0px; 
-	padding: 0px 20px;
-	max-width: 100%;
+	margin:0.4em auto; 
+	padding: 0px 0.3em;
+	max-width: 20em;
 	border: 0;
 	font: normal 5em "Playfair Display", serif;
 	font-weight: 400;
@@ -686,7 +686,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 	font-family: "Roboto", sans-serif;
 	margin-top: 0.5em;
 }
-#comments .commentlist .comment-meta {font-size:11px; padding:0;font-family: helvetica,sans-serif;font-weight: 100}
+#comments .commentlist .comment-meta {font-size:0.5em; padding:0;font-family: "Roboto",sans-serif;}
 #comments .commentlist .comment-meta a {text-decoration:none}
 #comments .commentlist .comment-body ul,
 #comments .commentlist .comment-body ol {list-style:disc;margin-left:16px;}
