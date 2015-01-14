@@ -259,9 +259,10 @@ div.menu li{float:left; position:relative}
 }
 #content h3 {
 	margin: 30px 0 5px;
-	font: 400 30px/22px "Playfair Display", "Droid Serif", serif;
+	font: 2em/1em "Playfair Display", "Droid Serif", serif;
 	color: #898989;
 	padding: 0;
+	font-style: italic;
 }
 #content h4 {margin: 30px 0 5px;
 	font: small-caps 400 25px/20px Georgia, "Droid Serif", serif;
