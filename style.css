@@ -183,8 +183,8 @@ div.menu li{float:left; position:relative}
 	outline: 0;
 	margin: 0;
 	padding: 5px 0px;
+	background-color: rgba(231,231,231,0.95);
 	text-align:center;
-	color:#424242;
 }
 
 
@@ -235,7 +235,10 @@ div.menu li{float:left; position:relative}
 #content ul, 
 #content dd, 
 #content pre,
-#content address {margin-bottom: 0.5em;margin-top: 0.5em;}
+#content address {
+	margin: 0.5em auto;
+	max-width: 850px;
+}
 #content blockquote {margin:0;padding:8px 8px 0;border:1px dotted #CCC;border-width:0px 0px 0px 1px;font-style:italic;font-size:25px;letter-spacing:0.025em;font-family: Georgia, "Droid Serif", serif;-webkit-hyphens: auto;-moz-hyphens: auto;hyphens: auto;}
 #content blockquote blockquote {margin-left:8px}
 #content blockquote p{margin-bottom: 22px !important;}
@@ -258,11 +261,12 @@ div.menu li{float:left; position:relative}
 	font: normal 55px "Playfair Display", serif;
 }
 #content h3 {
-	margin: 30px 0 5px;
+	margin: 1em auto 0.3em auto;
 	font: 2em/1em "Playfair Display", "Droid Serif", serif;
 	color: #898989;
 	padding: 0;
 	font-style: italic;
+	max-width: 850px;
 }
 #content h4 {margin: 30px 0 5px;
 	font: small-caps 400 25px/20px Georgia, "Droid Serif", serif;
@@ -410,13 +414,6 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 	-moz-osx-font-smoothing:grayscale;
 	text-rendering: optimizeLegibility;
 }
-
-.single #content .entry-content p,
-.page #content .entry-content p{
-	margin: 0.5em auto;
-	max-width: 850px;
-}
-
 
 .single #content footer {}
 .single #content footer .entry-utility {width: 200px;}
@@ -860,10 +857,8 @@ input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: ins
 } 
 .single #content .entry-pers hr{margin:0;}
 .single #content .amazon{
-	overflow: hidden;
-	padding: 10px;
-	margin-right: 10px;
-	max-width: 900px;
+	padding: 0 2em;
+	max-width: 850px;
 	margin:auto;
 }
 
@@ -934,6 +929,7 @@ input[type="url"] { background: #f9f9f9; border: 1px solid #ccc; box-shadow: ins
 	margin: 0!important;
 	padding: 0 !important;
 	margin-top: 0;
+	max-width: 100% !important;
 }
 
 .partage ul li{
