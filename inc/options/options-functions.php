@@ -1,19 +1,4 @@
 <?php
-
-/** 
- * Add Favicon
- */
-function af_favicon() {
-	global $shortname;
-	if (of_get_option( $shortname . '_custom_favicon') != '') {
-        echo '<link rel="shortcut icon" href="' . of_get_option($shortname . '_custom_favicon')  . '"/>'."\n";
-    }
-	else { ?>
-		<link rel="shortcut icon" href="<?php echo bloginfo('template_directory') ?>/images/favicon.ico" />
-<?php }
-}
-add_action('wp_head', 'af_favicon');
-
 /** 
  * Add a Custom Logo
  */
