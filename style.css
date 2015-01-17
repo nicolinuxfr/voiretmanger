@@ -645,52 +645,51 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 
 /*	Comments
 -------------------------------------------------------------- */
-#comments {padding:0;
+#comments {
+	padding:0;
 	clear:both;float:none; position: relative; z-index: 2;
 	max-width: 920px;
 	margin:auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing:grayscale;
 	text-rendering: optimizeLegibility;
+	line-height: 1.5;
+	font-size: 2em;
+	list-style:none;
 }
-#comments, 
+
 #comments input, 
 #comments textarea {line-height:28px;font-size: 22px;}
 #comments code {font-size:12px; line-height:22px}
 #comments #comments-title {
 		font-size: 2em;
-		line-height: 1em;
-		padding: 0 8px;
+		line-height: 1.4em;
+		padding: 0;
 		margin: 0;
-		font-family: "Roboto",sans-serif;
 }
-#comments .commentlist {padding:0; margin: 0 0 66px; list-style:none;}
-#comments .commentlist ol, 
-#comments .commentlist ul {list-style:none;margin:0;padding:0;}
-#comments .commentlist ol {border-top:1px dotted #000; border-bottom:none; margin:0 0 22px 0}
-#comments .commentlist li {background:transparent; border-top:1px dotted #000; position:relative}
-#comments .commentlist li.alt {background:transparent}
-#comments .commentlist li.bypostauthor {border-top:1px dotted #000;margin-top:-1px;}
-#comments .commentlist li.bypostauthor .avatar {border:3px solid #000;}
-#comments .commentlist ul li {border:1px dotted #000;border-width: 1px 0 0;}
-#comments .commentlist li .avatar {position:absolute;top:11px; right:16px; width:50px; height:50px}
-#comments .commentlist ul.children li.depth-2,
-#comments .commentlist ul.children li.depth-3,
-#comments .commentlist ul.children li.depth-4 {margin-left:2em;}
-#comments .commentlist .comment-author { 
+#comments  ol, 
+#comments  ul {list-style:none;margin:0;padding:0;}
+#comments  ol {margin:0 0 22px 0}
+#comments  li {background:transparent; border-top:1px dotted #000; position:relative}
+#comments  ul li {border:1px dotted #000;border-width: 1px 0 0;}
+#comments  li .avatar {position:absolute;top:11px; right:16px; width:50px; height:50px}
+#comments  ol.children li.depth-2,
+#comments  ol.children li.depth-3,
+#comments  ol.children li.depth-4 {margin-left:2em;}
+#comments  .comment-author { 
 	font-size: 1.2em;
 	line-height: 1em;
 	padding: 0;
 	font-family: "Roboto", sans-serif;
 	margin-top: 0.5em;
 }
-#comments .commentlist .comment-meta {font-size:0.5em; padding:0;font-family: "Roboto",sans-serif;}
-#comments .commentlist .comment-meta a {text-decoration:none}
-#comments .commentlist .comment-body ul,
-#comments .commentlist .comment-body ol {list-style:disc;margin-left:16px;}
-#comments .commentlist .comment-body li {display:list-item;border:none;margin:0;padding:0;}
-#comments .commentlist .comment-body blockquote {margin:0 0 0 16px;font-style:italic;font-size:14px;font-family: Georgia, "Droid Serif", serif;}
-#comments .commentlist .comment-body blockquote p{margin-bottom: 22px !important;}
+#comments  .comment-meta {font-size:0.5em; padding:0;font-family: "Roboto",sans-serif;}
+#comments  .comment-meta a {text-decoration:none}
+#comments  .comment-body ul,
+#comments  .comment-body ol {list-style:disc;margin-left:16px;}
+#comments  .comment-body li {display:list-item;border:none;margin:0;padding:0;}
+#comments  .comment-body blockquote {margin:0 0 0 16px;font-style:italic;font-size:14px;font-family: Georgia, "Droid Serif", serif;}
+#comments  .comment-body blockquote p{margin-bottom: 22px !important;}
 #comments .comment-edit-link {text-align: center; padding: 0 5px; display:inline-block; font-size: 9px; line-height: 18px; text-transform: uppercase; background: red; color: #FFF}
 #comments .comment-edit-link:after {content:"\270E";font-size:13px;line-height:6px;margin-left:3px;}
 #comments .reply {text-align:right;font-size:14px;font-family: Georgia, "Droid Serif", serif;}
@@ -1045,7 +1044,7 @@ and (max-width : 950px){
 				padding: 0 20px;
 	}
 	
-	#comments .commentlist .comment-body p{padding: 0 20px;}
+	#comments  .comment-body p{padding: 0 20px;}
 	
 } 
 
@@ -1109,9 +1108,9 @@ and (max-width : 640px){
 		columns:1;
 	}
 	
-	#comments .commentlist ul.children li.depth-2,
-	#comments .commentlist ul.children li.depth-3,
-	#comments .commentlist ul.children li.depth-4 {margin-left:0.5em;}
+	#comments  ol.children li.depth-2,
+	#comments  ol.children li.depth-3,
+	#comments  ol.children li.depth-4 {margin-left:0.5em;}
 	
 	
 }

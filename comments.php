@@ -13,40 +13,37 @@
 
 <?php if ( have_comments() ) : ?>
 
-<?php /* numbers of pings and comments */
-$ping_count = $comment_count = 0;
-foreach ( $comments as $comment )
-	get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
+<?php 
+	$comment_count = get_comments_number();	
+	if ( $comment_count > 1 && $comment_count < 21 ): 		
+    $numberdic = array("Zéro", "Un", "Deux","Trois", "Quatre", "Cinq", "Six", "Sept", "Huit", "Neuf", "Dix", "Onze", "Douze", "Treize", "Quatorze", "Quinze", "Seize", "Dix-sept", "Dix-huit", "Dix-neuf", "Vingt");
+    $comment_count = $numberdic[$comment_count]; 
 ?>
+	
+	<h3 id="comments-title"><?php printf(__('%s commentaires', 'autofocus'), $comment_count) ?></h3>
+	
+<?php else: ?>
+	
+	<h3 id="comments-title"><?php printf($comment_count > 1 ? __('%d commentaires', 'autofocus') : __('Un commentaire', 'autofocus'), $comment_count) ?></h3>
+	
+<?php endif; ?>
 
-	<?php if ( ! empty($comments_by_type['comment']) ) : ?>
+	<ol class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				) );
+			?>
+		</ol><!-- .comment-list -->
+			
+<?php endif; // end have_comments() ?>
 
-			<h3 id="comments-title"><?php printf($comment_count > 1 ? __('%d commentaires', 'autofocus') : __('Un commentaire', 'autofocus'), $comment_count) ?></h3>
 
-			<ol class="commentlist">
-				<?php wp_list_comments( array( 'callback' => 'autofocus_comment', 'type' => 'comment' ) ); ?>
-			</ol>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<div class="navigation">
-				<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Commentaires plus anciens', 'autofocus' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Commentaires plus récents <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
-			</div><!-- .navigation -->
-		<?php endif; // check for comment navigation ?>
-
-	<?php endif; /* if ( $comment_count ) */ ?>
-
-<?php else : // or, if we don't have comments:
-
-	/* If there are no comments and comments are closed,
-	 * let's leave a little note, shall we?
-	 */
-	if ( ! comments_open() ) :
-?>
+<?php if ( ! comments_open() ) :?>
 	<p class="nocomments"><?php _e( 'Les commentaires sont ferm&eacute;s.', 'autofocus' ); ?></p>
 <?php endif; // end ! comments_open() ?>
 
-<?php endif; // end have_comments() ?>
 
 <?php 
 
