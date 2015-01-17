@@ -5,6 +5,21 @@
 ?>
 
 
+<?php 
+	if(function_exists('pronamic_google_maps')) {
+    pronamic_google_maps(array(
+        'width' => 900 ,
+        'height' => 400 ,
+            'map_options' => array(
+			'navigationControl' => false,
+			'scrollwheel' => false,
+			'mapTypeControl' => false,
+			'scrollwheel' => false
+            ), 
+    ));
+} ?>
+
+
 <!-- Fonctions de partage -->	
 	<?php
 		$lien = get_permalink();
@@ -23,75 +38,7 @@
 			</ul>				
 </div>
 
-<?php
-
-    $posts_titles = array();
- 
-    if ( class_exists( 'Jetpack_RelatedPosts' ) && method_exists( 'Jetpack_RelatedPosts', 'init_raw' ) ) {
-        $related = Jetpack_RelatedPosts::init_raw()
-            -> get_for_post_id(
-                get_the_ID(),
-                array( 'size' => 3 )
-            );
- 
-        if ( $related ) {
-            foreach ( $related as $result ) {
-                $related_post = get_post( $result[ 'id' ] );
-                $posts_titles[] = $related_post->post_title;
-            }
-        }
-    }
- 
-   /** return implode( ', ', $posts_titles ); */
-
-
-?>
-
-
-		  
-<div style="clear:both;">
-
-<!-- Cas particulier des restaurants -->
-
-<?php if( in_category('restaurant') ) { ?>
-
-<div class="entry-pers">
-
-
-<div>
-<?php 
-	if(function_exists('pronamic_google_maps')) {
-	echo '<div class="titre">Plan d\'accès</div>';
-    pronamic_google_maps(array(
-        'width' => 900 ,
-        'height' => 400 ,
-            'map_options' => array(
-			'navigationControl' => false,
-			'scrollwheel' => false,
-			'mapTypeControl' => false,
-			'scrollwheel' => false
-            ), 
-    ));
-} ?>
-
-</div>
-
-
-
-</div>
-
-
-<!-- Cas général -->
-
-<?php } else { ?>
-
-
-
-<div class="entry-pers">
-					
-		
-								
-						
+<div class="entry-pers">		
 <!-- Taxonomie perso, articles liés et autres articles dans la catégorie -->
 <div class="liste">
 	<ul>
@@ -103,8 +50,6 @@
 				if( get_post_meta($post->ID, 'original', true) ) { ?>
 			<li><strong>Titre original</strong> : <span style="color:black;display:inline;"><em><?php echo get_post_meta($post->ID, 'original', true); ?></em></span></li> 
 			<?php } ?>	
-
-
 
 			<?php 
 			 if( in_category('cinema') ) { ?>
@@ -136,12 +81,12 @@
 			
 			<?php echo get_the_term_list( $post->ID, 'chef', '<li><strong>Chef d\'orchestre</strong> : ', ', ','</li>') ?>
 			
-			<?php echo get_the_tag_list('<li><strong>Tags</strong> : ',', ','</li>'); ?>
+			<?php if (! in_category('À manger') ) :
+				echo get_the_tag_list('<li><strong>Tags</strong> : ',', ','</li>'); 
+			endif; ?>
 		</ul>
 </div>
 </div>
-
-<?php } ?>
 				
 <!-- Date publication et de dernière modification -->	
 						
@@ -150,26 +95,3 @@
 </div>
 
 <!-- Fin des modifs -->			
-		
-
-<?php if ( is_active_sidebar( 'singlular-widget-area' ) ) : ?>
-	
-		<aside id="singlular-sidebar" class="widget-area" role="complementary">
-			<ul class="xoxo">
-
-<?php
-
-	if ( ! dynamic_sidebar( 'singlular-widget-area' ) ) : ?>
-
-		<?php dynamic_sidebar( 'singlular-widget-area' ); ?>
-
-<?php endif; // end Singlular Widget Area ?>
-
-			</ul>
-			
-		</aside><!-- #singlular-sidebar .widget-area -->
-
-
-
-<?php endif; // end singlular sidebar check ?>
-
