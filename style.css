@@ -526,27 +526,35 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 /* =AutoFocus Staggered/Default Image Display
 -------------------------------------------------------------- */
 /* Default / Staggered Layout */
-.af-default #container {width:950px; overflow: hidden;}
-.af-default #content {width:950px;margin:auto;}
-.af-default #content .hentry {height:350px;margin:0 4px 4px 0; padding:0;}
-.af-default #content .hentry img {width: 100%;}
-.af-default #content .hentry.p1 {width:100%;margin: 0 0 4px;height: 450px}
-.af-default #content .hentry.p2 {width:596px;}
-.af-default #content .hentry.p3 {width:350px;margin: 0 0 4px;}
-.af-default #content .hentry.p4 {width:350px;}
-.af-default #content .hentry.p5 {width:596px;margin: 0 0 4px;}
-.af-default #content .hentry.p6 {width:314px;}
-.af-default #content .hentry.p7 {width:314px;}
-.af-default #content .hentry.p8 {width:314px;margin: 0 0 4px;}
-.af-default #content .hentry.p9 {width:596px;}
-.af-default #content .hentry.p10 {width:350px;margin: 0 0 4px;}
-.af-default #content .hentry.p11 {width:677px;}
-.af-default #content .hentry.p12 {width:269px;margin: 0 0 4px;}
-.af-default #content .hentry header {padding: 22px 0 0}
-.af-default #content .entry-title{font-size:2.8em}
+.af-layout #container {width:950px; overflow: hidden;}
+.af-layout #content {width:950px;margin:auto;}
+.af-layout #content .hentry {height:350px;margin:0 4px 4px 0; padding:0;}
+.af-layout #content .hentry img {width: 100%;}
+.af-layout #content .hentry.p1 {width:100%;margin: 0 0 4px;height: 450px}
+.af-layout #content .hentry.p2 {width:596px;}
+.af-layout #content .hentry.p3 {width:350px;margin: 0 0 4px;}
+.af-layout #content .hentry.p4 {width:350px;}
+.af-layout #content .hentry.p5 {width:596px;margin: 0 0 4px;}
+.af-layout #content .hentry.p6 {width:314px;}
+.af-layout #content .hentry.p7 {width:314px;}
+.af-layout #content .hentry.p8 {width:314px;margin: 0 0 4px;}
+.af-layout #content .hentry.p9 {width:596px;}
+.af-layout #content .hentry.p10 {width:350px;margin: 0 0 4px;}
+.af-layout #content .hentry.p11 {width:677px;}
+.af-layout #content .hentry.p12 {width:269px;margin: 0 0 4px;}
+.af-layout #content .hentry header {padding: 22px 0 0}
+.af-layout #content .entry-title{font-size:2.8em}
 
 
-/* PAGE D'ACCEUIL */ .af-layout #content .hentry {display: block; float:left;clear:none;position:relative;clear:none;overflow:hidden} 
+/* PAGE D'ACCEUIL */ 
+.af-layout #content .hentry {
+	display: block;
+	float:left;
+	clear:none;
+	position:relative;
+	clear:none;
+	overflow:hidden
+} 
 .af-layout #content .hentry header {
 	position: absolute;
 	z-index: 3;
@@ -1027,13 +1035,13 @@ and (max-width : 950px){
 	.af-layout #content .entry-image-small{display:block;}
 	.af-layout #content .entry-image{display:none;}
 	
-	.af-default #container {width:100%; overflow: hidden;}
-	.af-default #content {width:100%;margin:0;}
-	.af-default #content .hentry {width:100% !important;height:auto!important;margin:0!important; padding:0;}
-	.af-default #content .hentry img {width: 100%;margin:0!important;}
+	.af-layout #container {width:100%; overflow: hidden;}
+	.af-layout #content {width:100%;margin:0;}
+	.af-layout #content .hentry {width:100% !important;height:auto!important;margin:0!important; padding:0;}
+	.af-layout #content .hentry img {width: 100%;margin:0!important;}
 	.af-layout #content .hentry header{bottom:0;}
 	
-	.af-default #content .entry-title{font-size:2.3em;}
+	.af-layout #content .entry-title{font-size:2.3em;}
 	
 	
 	/* Pour les images en 100% en dessous de 950px */
@@ -1044,7 +1052,7 @@ and (max-width : 950px){
 				padding: 0 20px;
 	}
 	
-	#comments  .comment-body p{padding: 0 20px;}
+	#comments .comment-body p{padding: 0 20px;}
 	
 } 
 
@@ -1056,7 +1064,7 @@ and (max-width : 950px){
 @media only screen 
 and (max-width : 640px){
 
-	.af-default #container {width:100%; overflow: hidden;}
+	.af-layout #container {width:100%; overflow: hidden;}
 	
 	.af-layout #content .hentry header {opacity: 1}
 	

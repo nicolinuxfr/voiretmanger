@@ -32,22 +32,6 @@ get_header(); ?>
 
 			</div><!-- #content -->
 			
-			<?php
-			$sticky = get_option( 'sticky_posts' );
-			$args = array(
-			'posts_per_page' => 1,
-			'post__in'  => $sticky,
-			'ignore_sticky_posts' => 1
-			);
-			query_posts( $args );
-
-			if ( $sticky[0] ) {
-				// insert here your stuff...
-				echo('oo')
-				}
-			
-			?>
-			
 		</div><!-- #container -->
 
 <?php get_footer(); ?>
