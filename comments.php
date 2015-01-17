@@ -20,11 +20,11 @@
     $comment_count = $numberdic[$comment_count]; 
 ?>
 	
-	<h3 id="comments-title"><?php printf(__('%s commentaires', 'autofocus'), $comment_count) ?></h3>
+	<h3 id="comments-title"><?php printf(__('%s commentaires'), $comment_count) ?></h3>
 	
 <?php else: ?>
 	
-	<h3 id="comments-title"><?php printf($comment_count > 1 ? __('%d commentaires', 'autofocus') : __('Un commentaire', 'autofocus'), $comment_count) ?></h3>
+	<h3 id="comments-title"><?php printf($comment_count > 1 ? __('%d commentaires') : __('Un commentaire'), $comment_count) ?></h3>
 	
 <?php endif; ?>
 
