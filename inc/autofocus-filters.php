@@ -22,35 +22,7 @@ add_filter( 'body_class', 'af_body_classes' );
  *	Adds the 'autofocus' class to the BODY for AF animation and displays
  *	Uses these classes to display the Grid and Staggered layouts
  */
-function af_layout_class($class = '') {
-	global $posts, $shortname;
-	$home_layout = of_get_option($shortname . '_home_layout');
-	$archive_layout = of_get_option($shortname . '_archive_layout');
 
-	// Create classes array
-	$af_classes = array();
-	
-	// Which layout is being used?
-	if ( $archive_layout == 'default' && ( is_archive() || is_search() ) ) {
-		$af_classes[] = 'normal-layout';
-	} else {
-		$af_classes[] = 'af-layout';
-	}
-	
-	if ( ( is_home() && $home_layout == 'default' ) )
-		$af_classes[] = 'af-default';
-	elseif ( ( is_home() && $home_layout == 'grid' ) ) 
-		$af_classes[] = 'af-grid';
-
-	if ( $home_layout == 'default' && $archive_layout == 'images' && ( is_archive() || is_search() ) ) 
-		$af_classes[] = 'af-default';
-	elseif ( $home_layout == 'grid' && $archive_layout == 'images' && ( is_archive() || is_search() ) )	
-		$af_classes[] = 'af-grid';
-
-	// Output classes
-	$class_str = implode( ' ', $af_classes );
-	echo $class_str;
-}
 
 /**
  *	Adds post count and sticky classes to post_class
@@ -137,24 +109,6 @@ function autofocus_remove_gallery_css( $css ) {
 	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
 }
 add_filter( 'gallery_style', 'autofocus_remove_gallery_css' );
-
-/**
- * Filter the default gallery display to include rel=fancybox-ID
- * Source: http://wordpress.org/support/topic/add-relxyz-to-gallery-link
- */
-function add_fancy_box_rel($content) {
-	global $post, $shortname;
-
-	if ( is_single() && ( of_get_option($shortname . '_fancybox' ) == TRUE ) ) {
-		$pattern = "/<a(.*?)href=('|\")([^>]*).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>(.*?)<\/a>/i";
-		$replacement = '<a$1href=$2$3.$4$5 rel="fancybox-'.$post->ID.'"$6>$7</a>';
-		$content = preg_replace($pattern, $replacement, $content);
-	}
-
-	return $content;
-}
-add_filter('the_content', 'add_fancy_box_rel', 12);
-add_filter('get_comment_text', 'add_fancy_box_rel');
 
 /**
  * Customise the AutoFocus Two comments fields with HTML5 form elements

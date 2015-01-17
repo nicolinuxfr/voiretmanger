@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-		<div id="container" class="<?php af_layout_class(); ?>">
+		<div id="container" class="normal-layout">
 			<div id="content" role="main">
 
 <?php

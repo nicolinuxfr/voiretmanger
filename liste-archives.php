@@ -2,11 +2,6 @@
 /**
  * Listes d'articles pour les archives (mois, jours, années…), les taxonomies, et tout le reste
  */
-
-global $posts, $shortname;
-$home_layout = of_get_option($shortname . '_home_layout');
-$archive_layout = of_get_option($shortname . '_archive_layout');
-
 ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>

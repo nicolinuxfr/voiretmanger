@@ -4,7 +4,7 @@
 <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 
 
-		<div id="container" class="<?php af_layout_class(); ?>">
+		<div id="container" class="normal-layout">
 			<div id="content" role="main">
 			
 	<?php query_posts($query_string . '&posts_per_page=50&orderby=slug&order=ASC'); ?>

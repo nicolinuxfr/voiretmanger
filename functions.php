@@ -172,11 +172,6 @@ add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_cat
  * The first function, autofocus_setup(), sets up the theme by registering support
  * for various features in WordPress, such as post thumbnails, navigation menus, and the like.
  *
- * When using a child theme (see http://codex.wordpress.org/Theme_Development and
- * http://codex.wordpress.org/Child_Themes), you can override certain functions
- * (those wrapped in a function_exists() call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before the parent
- * theme's file, so the child theme functions would be used.
  */
 
 /**
@@ -190,36 +185,11 @@ define('THEMEAUTHOR', $themeData['Author']);
 define('THEMEURI', $themeData['URI']);
 define('VERSION', $version);
 
-// Set child theme constants
-define('TEMPLATENAME', $childeThemeData['Title']);
-define('TEMPLATEAUTHOR', $childeThemeData['Author']);
-define('TEMPLATEURI', $childeThemeData['URI']);
-define('TEMPLATEVERSION', $templateversion);
-
 // Path constants
 define('TEMPLATE_DIR', get_bloginfo('template_directory'));
 define('STYLESHEET_DIR', get_bloginfo('stylesheet_directory'));
 define('STYLEURL', get_bloginfo('stylesheet_url'));
 
-/**
- * Load Options Framework: http://wptheming.com/2010/12/options-framework/
- */
-
-if ( !function_exists( 'optionsframework_init' ) ) {
-
-	/* Set the file path based on whether the Options Framework Theme is a parent theme or child theme */
-	if ( STYLESHEETPATH == TEMPLATEPATH ) { 
-		define('OPTIONS_FRAMEWORK_PATH', STYLESHEETPATH . '/inc/options/');
-		define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('stylesheet_directory') . '/inc/options/');
-	} else {
-		define('OPTIONS_FRAMEWORK_PATH', TEMPLATEPATH . '/inc/options/');
-		define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory') . '/inc/options/');
-	}
-	
-	require_once (OPTIONS_FRAMEWORK_PATH . 'options-framework.php');
-	require_once (OPTIONS_FRAMEWORK_PATH . 'options-functions.php');
-
-}
 
 //	Load AutoFocus WP Filters
 require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
