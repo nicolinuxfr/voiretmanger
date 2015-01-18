@@ -57,58 +57,12 @@ function autofocus_page_menu_args( $args ) {
 add_filter( 'wp_page_menu_args', 'autofocus_page_menu_args' );
 
 /**
- * Sets the post excerpt length to 40 characters.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- */
-function autofocus_excerpt_length( $length ) {
-	return 40;
-}
-add_filter( 'excerpt_length', 'autofocus_excerpt_length' );
-
-/**
  * Returns a "Continue Reading" link for excerpts
  *
  */
 function autofocus_continue_reading_link() {
 	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( '<span class="liresuite">lire la suite</span> <span class="meta-nav">&rarr;</span>', 'autofocus' ) . '</a>';
 }
-
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and autofocus_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- *
- */
-function autofocus_auto_excerpt_more( $more ) {
-	return ' &hellip;' . autofocus_continue_reading_link();
-}
-add_filter( 'excerpt_more', 'autofocus_auto_excerpt_more' );
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
-function autofocus_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= autofocus_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'autofocus_custom_excerpt_more' );
-
-/**
- * Remove inline styles printed when the gallery shortcode is used.
- * Galleries are styled by the theme in AutoFocus’s style.css.
- */
-function autofocus_remove_gallery_css( $css ) {
-	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
-}
-add_filter( 'gallery_style', 'autofocus_remove_gallery_css' );
 
 /**
  * Customise the AutoFocus Two comments fields with HTML5 form elements
