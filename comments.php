@@ -45,12 +45,6 @@
 <?php endif; // end ! comments_open() ?>
 
 
-<?php 
-
-$af_comment_fields =  array(
-	'comment_notes_before' => '<p class="comment-notes">' . __( 'Votre adresse mail ne sera pas publi&eacute;e.' ) . ( $req ? '<br>Les champs obligatoires sont marqu&eacute;s :<span class="required">*</span>' : '' ) . '</p>'
-);
-
-comment_form($af_comment_fields); ?>
+<?php comment_form(); ?>
 
 </div><!-- #comments -->

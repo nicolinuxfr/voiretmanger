@@ -771,7 +771,13 @@ div.canvas{width:100% !important;}
 
 /* Respond */
 #respond {margin-bottom:22px; overflow:hidden; padding:0; position:relative}
-#respond #reply-title {border-bottom: 1px dotted #000000; margin-bottom: 11px}
+#respond #reply-title {
+	border-bottom: 1px dotted #000000; 	margin: 1em auto 0.3em auto;
+	font: 2em/1em "Playfair Display", "Droid Serif", serif;
+	color: #898989;
+	padding: 0;
+	font-style: italic;
+}
 #respond p {padding:0 8px;margin-bottom:22px;}
 #respond .form-label {padding:0 8px;line-height:22px;}
 #comments-list #respond {margin:0 0 22px 0; padding:22px 16px}
