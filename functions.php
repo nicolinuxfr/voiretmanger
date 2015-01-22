@@ -158,6 +158,13 @@ function jetpackme_filter_exclude_category( $filters ) {
 }
 add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
 
+// Bonne taille d'images
+function jetpackchange_image_size ( $thumbnail_size ) {
+    $thumbnail_size['width'] = 1000;
+    $thumbnail_size['height'] = 572;
+    return $thumbnail_size;
+}
+add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size' );
 
 
 // FIN DES AJOUTS PERSOS
