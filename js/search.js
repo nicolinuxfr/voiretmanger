@@ -50,9 +50,7 @@ var Search = {
 			results = results.slice(0, 10); // on garde les 10 premiers resultats
 			jQuery.each(results, function(index, obj) {
 				search_results_box.append( // on ajoute un élément de liste au menu
-					'<li>'+
-					'<a href="'+obj.url+'">'+obj.title+'</a>'+
-					'</li>'
+					'<a href="'+obj.url+'"><li>'+obj.title+'</li></a>'
 				);
 			});
 		});

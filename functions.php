@@ -72,25 +72,114 @@ function a_new_post( $new_status, $old_status, $post )
 			return;
 	}
 	$postsArray = Array(); // un tableau vide
+	// ********** Liste des articles
+		$postsArray = Array(); // un tableau vide
+
+		$args = array('post_type' => 'post','posts_per_page' => -1);
 	
-	$args = array('post_type' => 'post','posts_per_page' => -1, 'category__not_in' => array( 1818 ));
-	
-	$post_query = new WP_Query($args);
-	if($post_query->have_posts()) {
-		while($post_query->have_posts()) {
-			$post_query->the_post();
-			$currentPost = Array(); // un tableau vide pour l'article en cours
-			$currentPost["title"] = get_the_title(); // on ajoute le titre
-			$currentPost["url"] = get_permalink(); // l'url
+		$post_query = new WP_Query($args);
+		if($post_query->have_posts()) {
+			while($post_query->have_posts()) {
+				$post_query->the_post();
+				$currentPost = Array(); // un tableau vide pour l'article en cours
+				$currentPost["title"] = get_the_title(); // on ajoute le titre
+				$currentPost["url"] = get_permalink(); // l'url
 			
-			array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
-		}
-		$json = json_encode($postsArray); // on encode tout ça en JSON
+			
+				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
+			
+			
+			}
+			
+			$json = json_encode($postsArray); // on encode tout ça en JSON
 		
-		if(!file_put_contents(ABSPATH."/search.json", $json)) { // on ecrit tout ca dans un fichier
-		  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+			if(!file_put_contents(ABSPATH."/search.json", $json)) { // on ecrit tout ca dans un fichier
+			  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+			}
+
+
+	// ********** Liste des créateurs
+			$createursArray = Array(); // un tableau vide
+		
+			//list terms in a given taxonomy
+			$taxonomy = 'createur';
+			$args = array(
+			    'orderby'           => 'name', 
+			      'order'             => 'ASC',
+			      'hide_empty'        => true, 
+			);
+	
+			$tax_terms = get_terms($taxonomy, $args );
+	
+			foreach ($tax_terms as $tax_term) {
+				$currentPost = Array(); // un tableau vide pour l'article en cours
+				$currentPost["title"] = $tax_term->name; // on ajoute le titre
+				$currentPost["url"] = get_term_link( $tax_term ); // l'url
+				array_push($createursArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
 		}
+	
+		$json = json_encode($createursArray); // on encode tout ça en JSON
+	
+		if(!file_put_contents(ABSPATH."/createurs.json", $json)) { // on ecrit tout ca dans un fichier
+		  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+		}	
+	
+	// ********** Liste des acteurs
+		$acteursArray = Array(); // un tableau vide
+	
+		//list terms in a given taxonomy
+		$taxonomy = 'acteur';
+		$args = array(
+		    'orderby'           => 'name', 
+		      'order'             => 'ASC',
+		      'hide_empty'        => true, 
+		);
+
+		$tax_terms = get_terms($taxonomy, $args );
+
+		foreach ($tax_terms as $tax_term) {
+			$currentPost = Array(); // un tableau vide pour l'article en cours
+			$currentPost["title"] = $tax_term->name; // on ajoute le titre
+			$currentPost["url"] = get_term_link( $tax_term ); // l'url
+			array_push($acteursArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
 	}
+
+	$json = json_encode($acteursArray); // on encode tout ça en JSON
+
+	if(!file_put_contents(ABSPATH."/acteurs.json", $json)) { // on ecrit tout ca dans un fichier
+	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+	}	
+
+
+	// ********** Liste des annees
+		echo('Annees ');
+		$anneesArray = Array(); // un tableau vide
+	
+		//list terms in a given taxonomy
+		$taxonomy = 'annee';
+		$args = array(
+		    'orderby'           => 'name', 
+		      'order'             => 'ASC',
+		      'hide_empty'        => true, 
+		);
+
+		$tax_terms = get_terms($taxonomy, $args );
+
+		foreach ($tax_terms as $tax_term) {
+			$currentPost = Array(); // un tableau vide pour l'article en cours
+			$currentPost["title"] = $tax_term->name; // on ajoute le titre
+			$currentPost["url"] = get_term_link( $tax_term ); // l'url
+			array_push($anneesArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
+	}
+
+	$json = json_encode($anneesArray); // on encode tout ça en JSON
+
+	if(!file_put_contents(ABSPATH."/annees.json", $json)) { // on ecrit tout ca dans un fichier
+	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+	}	
+	
+	
+		}
 } 
  
 function Unaccent($string)
