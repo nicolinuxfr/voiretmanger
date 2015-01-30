@@ -845,9 +845,9 @@ div.canvas{width:100% !important;}
 #cancel-comment-reply a {}
 #cancel-comment-reply a:before {content:"\00D7\00a0";}
 #respond .required {font-weight:bold}
-#commentform p label {font-size:11px; padding: 0}
+#commentform p label {font-size:1rem; padding: 0}
 #commentform p .required {color: red; padding: 0 4px}
-#commentform p input {display: block; margin: 0 -8px;}
+#commentform p input {display: inline; margin: 0;}
 #commentform input#form {margin:0 0 22px; width:98%}
 #commentform textarea {width:98%;height:128px;margin: 0 -8px; padding: 8px}
 #commentform .form-allowed-tags {display:none;}
