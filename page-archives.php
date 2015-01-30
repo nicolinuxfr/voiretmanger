@@ -73,6 +73,11 @@ get_header(); ?>
 						
 						</ul><!-- #searchArchives -->
 						
+					
+					
+					
+					
+						
 						
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'autofocus' ), 'after' => '</div>' ) ); ?>
 						<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link">', '</span>' ); ?>

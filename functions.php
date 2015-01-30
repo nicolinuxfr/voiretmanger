@@ -152,7 +152,6 @@ function a_new_post( $new_status, $old_status, $post )
 
 
 	// ********** Liste des annees
-		echo('Annees ');
 		$anneesArray = Array(); // un tableau vide
 	
 		//list terms in a given taxonomy
@@ -178,6 +177,31 @@ function a_new_post( $new_status, $old_status, $post )
 	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
 	}	
 	
+	// ********** Liste des pays
+		$paysArray = Array(); // un tableau vide
+	
+		//list terms in a given taxonomy
+		$taxonomy = 'pays';
+		$args = array(
+		    'orderby'           => 'name', 
+		      'order'             => 'ASC',
+		      'hide_empty'        => true, 
+		);
+
+		$tax_terms = get_terms($taxonomy, $args );
+
+		foreach ($tax_terms as $tax_term) {
+			$currentPost = Array(); // un tableau vide pour l'article en cours
+			$currentPost["title"] = $tax_term->name; // on ajoute le titre
+			$currentPost["url"] = get_term_link( $tax_term ); // l'url
+			array_push($paysArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
+	}
+
+	$json = json_encode($paysArray); // on encode tout ça en JSON
+
+	if(!file_put_contents(ABSPATH."/pays.json", $json)) { // on ecrit tout ca dans un fichier
+	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+	}	
 	
 		}
 } 
@@ -249,8 +273,8 @@ add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_cat
 
 // Bonne taille d'images
 function jetpackchange_image_size ( $thumbnail_size ) {
-    $thumbnail_size['width'] = 1000;
-    $thumbnail_size['height'] = 572;
+    $thumbnail_size['width'] = 900;
+    $thumbnail_size['height'] = 515;
     return $thumbnail_size;
 }
 add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size' );
