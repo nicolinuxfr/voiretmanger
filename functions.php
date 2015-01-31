@@ -271,13 +271,16 @@ function jetpackme_filter_exclude_category( $filters ) {
 }
 add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
 
-// Bonne taille d'images
+// Jetpack : Bonne taille d'images
 function jetpackchange_image_size ( $thumbnail_size ) {
     $thumbnail_size['width'] = 900;
     $thumbnail_size['height'] = 515;
     return $thumbnail_size;
 }
 add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size' );
+
+// Retrait CSS taxonomy-images
+add_filter( 'taxonomy-images-disable-public-css', '__return_true' );
 
 
 // FIN DES AJOUTS PERSOS
