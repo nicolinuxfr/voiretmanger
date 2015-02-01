@@ -321,7 +321,7 @@ require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 690;
+	$content_width = 950;
 
 /** Tell WordPress to run autofocus_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'autofocus_setup' );

@@ -1088,6 +1088,13 @@ text-align: center;
   text-decoration: none;
 }
 
+
+
+.tiled-gallery{
+	width:950px;
+	margin:auto !important;
+}
+
 /*	ADAPTATIONS MOBILES  
 -------------------------------------------------------------- */
 
