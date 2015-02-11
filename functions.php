@@ -283,6 +283,16 @@ add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_s
 add_filter( 'taxonomy-images-disable-public-css', '__return_true' );
 
 
+// Arrêt total pingbacks
+add_filter( 'xmlrpc_methods', 'remove_xmlrpc_pingback_ping' );
+function remove_xmlrpc_pingback_ping( $methods ) {
+   unset( $methods['pingback.ping'] );
+   return $methods;
+} ;
+
+
+
+
 // FIN DES AJOUTS PERSOS
 
 /**
