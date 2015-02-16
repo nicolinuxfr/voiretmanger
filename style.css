@@ -298,6 +298,9 @@ header .search_results li:hover{
 	margin: 40px 0px 20px 0px;
 	line-height:1em;
 }
+#content .entry-title em{
+	font-weight:700;
+}
 #content .page-title span {display: block;text-align: center;}
 
 #content header .archive-meta {margin: -44px 0 0; padding: 0 8px 0 16px;width: 367px; border-left: 1px dotted #CCC; }
