@@ -292,7 +292,6 @@ function remove_xmlrpc_pingback_ping( $methods ) {
 
 
 
-
 // FIN DES AJOUTS PERSOS
 
 /**

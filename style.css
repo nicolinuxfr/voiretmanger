@@ -222,7 +222,7 @@ header .search_results li:hover{
 #content textarea{margin:0 0 22px; color:rgba(0, 0, 0, 0.6);}
 #content input.file, 
 #content input.button{margin-right:24px}
-#content hr {border-style: dotted; border-width: 1px 0 0;}
+#content hr {border-style: dotted; border-width: 1px 0 0;max-width:850px;margin-top:2em;}
 #content fieldset {border:1px solid #e7e7e7; margin:0 0 22px; padding:22px}
 #content fieldset legend{background:#fff; color:#000; font-weight:bold; padding:0 24px}
 #content label{font-size:12px}
@@ -267,10 +267,18 @@ header .search_results li:hover{
 	font-style: italic;
 	max-width: 850px;
 }
-#content h4 {margin: 30px 0 5px;
-	font: small-caps 400 25px/20px Georgia, "Droid Serif", serif;
-	color: #898989;
-	padding: 0;}
+#content h4 {
+	margin: 1em auto;
+	font: 1.3em/1em "Playfair Display", "Droid Serif", serif;
+	padding: 0;
+	font-style: italic;
+	text-align: center;
+}
+#content h4:before,
+#content h4:after{
+	content: "\007E";
+	margin:0.3em;
+}
 #content h5,
 #content h6 {font-size:15px;padding:0 8px;margin:22px 0;font-weight:400;line-height: 22px; font-family: Georgia, "Droid Serif", serif;}
 #content table{border:1px solid #e7e7e7; margin:0 -1px 22px 0; text-align:left; width:100%}
