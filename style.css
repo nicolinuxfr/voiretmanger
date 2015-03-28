@@ -809,7 +809,7 @@ div.canvas{width:100% !important;}
 #comments code {font-size:12px; line-height:22px}
 #comments  ol, 
 #comments  ul {list-style:none;margin:0;padding:0;}
-#comments  ol {margin:0 0 22px 0}
+#comments  ol {margin:0 0 22px 0;padding:0 0.3em;}
 #comments  li {background:transparent; border-top:1px dotted #000; position:relative}
 #comments  ul li {border:1px dotted #000;border-width: 1px 0 0;}
 #comments  li .avatar {position:absolute;top:11px; right:16px; width:50px; height:50px}
@@ -1169,8 +1169,8 @@ and (max-width : 640px){
 	
 	.af-layout #content .hentry header {opacity: 1}
 	
-	#site-title{font-size:7em;}
-	#site-description{font-size:3em;}
+	#site-title{font-size:8em;}
+	#site-description{display:none;}
 	
 	
 	.single #content .header .entry-title{
@@ -1180,10 +1180,18 @@ and (max-width : 640px){
 		font-size:2em;
 	}
 	
+	#access{display:none;}
+	
 	.single #content .entry-content, 
-	.page #content .entry-content{
+	.page #content .entry-content,
+	#comments{
 		font-size:1.6em;
 	}
+	
+	#content h3{font-size:1.5em;padding-left:0.3em;}
+	.single #content .amazon{padding:0;}
+	.single #content .amazon ul{padding-left:2em;font-size:0.9em;}
+
 	
 	.single #content .footnotes{
 		margin: 0.5em 1em;
@@ -1216,6 +1224,12 @@ and (max-width : 640px){
 		column-count:1;
 		columns:1;
 	    clear: both;
+	}
+	
+	#comments #comments-title, 
+	#respond #reply-title{
+		font-size:1.3em;
+		padding-left:0.3em;
 	}
 	
 	#comments  ol.children li.depth-2,
