@@ -83,7 +83,7 @@ function a_new_post( $new_status, $old_status, $post )
 				$post_query->the_post();
 				$currentPost = Array(); // un tableau vide pour l'article en cours
 				$currentPost["title"] = get_the_title(); // on ajoute le titre
-				$currentPost["url"] = get_permalink(); // l'url
+				$currentPost["url"] = get_the_ID(); // l'url
 			
 			
 				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global

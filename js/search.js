@@ -50,7 +50,7 @@ var Search = {
 			results = results.slice(0, 10); // on garde les 10 premiers resultats
 			jQuery.each(results, function(index, obj) {
 				search_results_box.append( // on ajoute un élément de liste au menu
-					'<a href="'+obj.url+'"><li>'+obj.title+'</li></a>'
+					'<a href="http://voiretmanger.fr/?p='+obj.url+'"><li>'+obj.title+'</li></a>'
 				);
 			});
 		});
