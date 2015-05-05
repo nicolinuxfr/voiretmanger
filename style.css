@@ -308,6 +308,7 @@ header .search_results li:hover{
 #content .entry-title em{
 	font-weight:700;
 }
+#content .page-title,
 #content .page-title span {display: block;text-align: center;}
 
 #content header .archive-meta {margin: -44px 0 0; padding: 0 8px 0 16px;width: 367px; border-left: 1px dotted #CCC; }
@@ -411,6 +412,7 @@ header .entry-date {font-family: Georgia, "Droid Serif", serif}
 
 /* Réglages du texte des articles 
 */
+article .entry-content,
 .single #content .entry-content,
 .page #content .entry-content {
 	font-size: 2em;
@@ -635,13 +637,13 @@ div.canvas{width:100% !important;}
 /* =404 and No Search Results
 -------------------------------------------------------------- */
 .error404 #content .post,
-.search-no-results #content .post {margin-left:204px;border-left:1px dotted #CCC;padding:22px 0 22px 8px;}
+.search-no-results #content .post {}
 .error404 #content .post .entry-title,
-.search-no-results #content .post .entry-title {font-style:italic;font-size: 48px;line-height: 44px;width:392px;padding: 0 8px; margin: 0 0 11px}
+.search-no-results #content .post .entry-title {}
 .error404 #content .post .entry-content, 
-.search-no-results #content .post .entry-content {width:392px;margin: 0}
+.search-no-results #content .post .entry-content {}
 .error404 #content #searchform, 
-.search-no-results #content #searchform {margin-left:10px;}
+.search-no-results #content #searchform {}
 
 /* =Attachments
 -------------------------------------------------------------- */
