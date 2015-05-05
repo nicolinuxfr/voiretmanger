@@ -88,7 +88,7 @@ function a_new_post( $new_status, $old_status, $post )
 			
 				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
 			
-			
+
 			}
 			
 			$json = json_encode($postsArray); // on encode tout ça en JSON
