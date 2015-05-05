@@ -502,69 +502,6 @@ div.canvas{width:100% !important;}
 
 
 
-
-/* =Page des archives
--------------------------------------------------------------- */
-.archive .hentry{width: 950px;margin:auto;}
-
-.archive .article {display: table; position: relative; margin-bottom: 20px;width: 100%;}
-
-
-.archive .article .gauche {
-	float: left;
-}
-
-.archive .article .gauche img {
-	max-width: 600px;
-	height:auto;
-}
-
-.archive .article .centre {
-    float:left;
-    width: 330px;
-    margin-left:20px;
-
-}
-
-.archive .article .droite {
-    float:left;
-    width: 200px;
-    margin-left:10px;
-
-}
-
-.archive .article .entry-utility {
-	padding: 0 8px 11px 16px;
-	clear: none;
-
-}
-
-.archive .article .entry-content {
-    clear: none;font-size: 18px;
-}
-
-.archive .article .entry-content p {
-    clear: none;font-size: 18px; line-height: 26px; margin-top: 10px;-webkit-hyphens: auto;-moz-hyphens: auto;autohyphens: auto;text-align: justify;
-}
-
-.archive .article .entry-title{font-family: "Helvetica Neue", Helvetica, sans-serif;}
-.archive .article .entry-title a{text-decoration: none;}
-
-.archive .entry-title h2 {padding: 11px 8px;font-size: 30px; line-height: 22px;display: table-cell; vertical-align: middle;border-bottom-style: none;}
-
-.archive h1 {margin-bottom: 40px!important;}
-
-#taxo-img{margin-bottom: 15px;
-	width:100%;
-}
-
-#taxo-img img{
-	width: 100% !important;
-	margin: 0 !important;
-	height:auto;
-}
-
-
 /* =Page d'archive
 -------------------------------------------------------------- */
 #content .searchArchives{
@@ -652,28 +589,32 @@ div.canvas{width:100% !important;}
 
 /* =AutoFocus Staggered/Default Image Display
 -------------------------------------------------------------- */
-/* Default / Staggered Layout */
-.af-layout #container {width:950px; overflow: hidden;}
-.af-layout #content {width:950px;margin:auto;}
-.af-layout #content .hentry {height:350px;margin:0 4px 4px 0; padding:0;}
-.af-layout #content .hentry img {width: 100%;}
-.af-layout #content .hentry.p1 {width:100%;margin: 0 0 4px;height: 450px}
-.af-layout #content .hentry.p2 {width:596px;}
-.af-layout #content .hentry.p3 {width:350px;margin: 0 0 4px;}
-.af-layout #content .hentry.p4 {width:350px;}
-.af-layout #content .hentry.p5 {width:596px;margin: 0 0 4px;}
-.af-layout #content .hentry.p6 {width:314px;}
-.af-layout #content .hentry.p7 {width:314px;}
-.af-layout #content .hentry.p8 {width:314px;margin: 0 0 4px;}
-.af-layout #content .hentry.p9 {width:596px;}
-.af-layout #content .hentry.p10 {width:350px;margin: 0 0 4px;}
-.af-layout #content .hentry.p11 {width:677px;}
-.af-layout #content .hentry.p12 {width:269px;margin: 0 0 4px;}
-.af-layout #content .hentry header {padding: 22px 0 0;}
-.af-layout #content .entry-title{}
+/* Mise en page accueil */
+.home .af-layout #container {width:950px; overflow: hidden;}
+.home .af-layout #content {width:950px;margin:auto;}
+.home .af-layout #content .hentry {height:350px;margin:0 4px 4px 0; padding:0;}
+.home .af-layout #content .hentry img {width: 100%;}
+.home .af-layout #content .hentry.p1 {width:100%;margin: 0 0 4px;height: 450px}
+.home .af-layout #content .hentry.p2 {width:596px;}
+.home .af-layout #content .hentry.p3 {width:350px;margin: 0 0 4px;}
+.home .af-layout #content .hentry.p4 {width:350px;}
+.home .af-layout #content .hentry.p5 {width:596px;margin: 0 0 4px;}
+.home .af-layout #content .hentry.p6 {width:314px;}
+.home .af-layout #content .hentry.p7 {width:314px;}
+.home .af-layout #content .hentry.p8 {width:314px;margin: 0 0 4px;}
+.home .af-layout #content .hentry.p9 {width:596px;}
+.home .af-layout #content .hentry.p10 {width:350px;margin: 0 0 4px;}
+.home .af-layout #content .hentry.p11 {width:677px;}
+.home .af-layout #content .hentry.p12 {width:269px;margin: 0 0 4px;}
+.home .af-layout #content .hentry header {padding: 22px 0 0;}
+
+/* Mise en page accueil */
+.archive .af-layout #container {overflow: hidden;}
+.archive .af-layout #content .hentry {width:33.33%;height:20vw; padding:0;}
+.archive .af-layout #content .hentry img {width: 100%;}
 
 
-/* PAGE D'ACCEUIL */ 
+/* PAGE D'ACCEUIL + ARCHIVES */ 
 .af-layout #content .hentry {
 	display: block;
 	float:left;
@@ -705,6 +646,71 @@ div.canvas{width:100% !important;}
 } 
 .af-layout #content .entry-title a{color: white;} 
 .af-layout #content .entry-title em{font-weight:700;}
+
+
+
+
+/* =Page des archives
+-------------------------------------------------------------- */
+.archive .hentry{width: 950px;margin:auto;}
+
+.archive .article {display: table; position: relative; margin-bottom: 20px;width: 100%;}
+
+
+.archive .article .gauche {
+	float: left;
+}
+
+.archive .article .gauche img {
+	max-width: 600px;
+	height:auto;
+}
+
+.archive .article .centre {
+    float:left;
+    width: 330px;
+    margin-left:20px;
+
+}
+
+.archive .article .droite {
+    float:left;
+    width: 200px;
+    margin-left:10px;
+
+}
+
+.archive .article .entry-utility {
+	padding: 0 8px 11px 16px;
+	clear: none;
+
+}
+
+.archive .article .entry-content {
+    clear: none;font-size: 18px;
+}
+
+.archive .article .entry-content p {
+    clear: none;font-size: 18px; line-height: 26px; margin-top: 10px;-webkit-hyphens: auto;-moz-hyphens: auto;autohyphens: auto;text-align: justify;
+}
+
+.archive .article .entry-title{font-family: "Helvetica Neue", Helvetica, sans-serif;}
+.archive .article .entry-title a{text-decoration: none;}
+
+.archive .entry-title h2 {padding: 11px 8px;font-size: 30px; line-height: 22px;display: table-cell; vertical-align: middle;border-bottom-style: none;}
+
+.archive h1 {margin-bottom: 40px!important;}
+
+#taxo-img{margin-bottom: 15px;
+	width:100%;
+}
+
+#taxo-img img{
+	width: 100% !important;
+	margin: 0 !important;
+	height:auto;
+}
+
 
 
 /* =Shortcodes
@@ -1110,7 +1116,13 @@ text-align: center;
 /*	ADAPTATIONS MOBILES  
 -------------------------------------------------------------- */
 
+@media only screen 
+and (max-width : 1620px){
+/* Page d'accueil spéciale */
 
+.archive .af-layout #content .hentry {width:50%;height:30vw;}
+
+}
 
 @media only screen 
 and (max-width : 950px){
@@ -1130,6 +1142,7 @@ and (max-width : 950px){
 		width: 100%;
 	}
 	
+	
 
 	#content .searchArchives li{
 		width: 50%;
@@ -1140,13 +1153,18 @@ and (max-width : 950px){
 	.af-layout #content .entry-image-small{display:block;}
 	.af-layout #content .entry-image{display:none;}
 	
-	.af-layout #container {width:100%; overflow: hidden;}
-	.af-layout #content {width:100%;margin:0;}
+	.home .af-layout #container,
+	.archive .af-layout #container {width:100%; overflow: hidden;}
+	.home .af-layout #content,
+	.archive .af-layout #content {width:100%;margin:0;}
 	.af-layout #content .hentry {width:100% !important;height:auto!important;margin:0!important; padding:0;}
 	.af-layout #content .hentry img {width: 100%;margin:0!important;}
 	.af-layout #content .hentry header{bottom:0;}
 	
 	.af-layout #content .entry-title{font-size:2em;}
+	
+
+	
 	
 	
 	/* Pour les images en 100% en dessous de 950px */

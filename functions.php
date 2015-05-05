@@ -356,7 +356,7 @@ function autofocus_setup() {
 	add_image_size( 'home-3', 450, 450, true ); // Images du bas thumbnail size
 	add_image_size( 'home-4', 400, 450, true ); // Images du bas thumbnail size
 	set_post_thumbnail_size( 400, 400, true ); // Default thumbnail size
-	add_image_size( 'archive-thumbnail', 900, 500, true ); // Archives thumbnail size
+	add_image_size( 'archive-thumbnail', 1200, 800, true ); // Archives thumbnail size
 	add_image_size( 'bottom-thumbnail', 900, 500, true ); // Images du bas thumbnail size
 	add_image_size( 'full-post-thumbnail', 1600, 9999 ); // Full Single Posts thumbnail size
 
