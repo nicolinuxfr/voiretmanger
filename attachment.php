@@ -28,8 +28,7 @@ get_header(); ?>
 
 							<?php
 								// Pull the attachment image at the Image Display size 
-								$af_img_display = of_get_option($shortname . '_image_display');
-								echo wp_get_attachment_image( $post->ID, $af_img_display ); 
+								echo wp_get_attachment_image( $post->ID, full ); 
 							?>
 	
 							</div><!-- .entry-image -->
@@ -49,9 +48,7 @@ get_header(); ?>
 
 					<div class="entry-content">
 
-					<?php if ( of_get_option($shortname . '_show_exif_data') == TRUE) { ?>
-						<?php af_display_exif_data(); ?>
-					<?php } ?>
+			
 
 <?php the_content( __( 'Lire la suite <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?>
 <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'autofocus' ), 'after' => '</div>' ) ); ?>
