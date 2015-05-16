@@ -367,6 +367,10 @@ function autofocus_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'autofocus' ),
 	) );
+    
+	wp_enqueue_style( 'dashicons' );
+	
+	
 }
 endif;
 
@@ -423,6 +427,7 @@ function af_author_info_avatar() {
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar("$email") );
 	echo $avatar;
 }
+
 
 /**
  *	Previous / Next Excerpts
