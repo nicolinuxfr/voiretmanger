@@ -29,11 +29,13 @@
 							echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
 					?>
 				</header>
-				
-<?php
-	rewind_posts();
-	get_template_part('liste', 'archives');
-?>
+		
+	<div class="liste">	
+		<?php
+			rewind_posts();
+			get_template_part('liste', 'archives');
+		?>
+	</div>	
 			<?php endif; ?>
 
 

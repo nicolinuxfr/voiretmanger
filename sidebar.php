@@ -29,30 +29,27 @@
 		$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - '. $lien ;
 	?>
 	
-<div class="partage">	
-	<div class="titre">Partager</div> 			
-			<ul>
-				<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Mail</li></a>
-				<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Twitter</li></a>
-				<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
-			</ul>				
-</div>
+<section class="partage">	
+	<h4>Partager</h4> 			
+		<ul>
+			<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Mail</li></a>
+			<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Twitter</li></a>
+			<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
+		</ul>				
+</section>
 
-<div class="entry-pers">		
+<section class="post-meta">		
 <!-- Taxonomie perso, articles liés et autres articles dans la catégorie -->
-<div class="liste">
 	<ul>
-			<?php echo get_the_term_list( $post->ID, 'festival', '<li><strong>Festival</strong> : ', ', ','</li>');  ?>	
-		
-			<?php echo get_the_term_list( $post->ID, 'saga', '<li><strong>Saga</strong> : ', ', ','</li>'); ?>
-
-			<?php 
-				if( get_post_meta($post->ID, 'original', true) ) { ?>
+		<?php echo get_the_term_list( $post->ID, 'festival', '<li><strong>Festival</strong> : ', ', ','</li>');  ?>	
+		<?php echo get_the_term_list( $post->ID, 'saga', '<li><strong>Saga</strong> : ', ', ','</li>'); ?>
+		<?php 
+			if( get_post_meta($post->ID, 'original', true) ) { ?>
 			<li><strong>Titre original</strong> : <span style="color:black;display:inline;"><em><?php echo get_post_meta($post->ID, 'original', true); ?></em></span></li> 
-			<?php } ?>	
+		<?php } ?>	
 
-			<?php 
-			 if( in_category('cinema') ) { ?>
+		<?php 
+			if( in_category('cinema') ) { ?>
 				<?php echo get_the_term_list( $post->ID, 'createur', '<li><strong>R&eacute;alisateur</strong> : ', ', ','</li>') ?>
 			<?php } elseif ( in_category('musique') ) { ?>
 				<?php echo get_the_term_list( $post->ID, 'createur', '<li><strong>Artiste</strong> : ', ', ','</li>') ?>
@@ -85,13 +82,8 @@
 				echo get_the_tag_list('<li><strong>Tags</strong> : ',', ','</li>'); 
 			endif; ?>
 		</ul>
-</div>
-</div>
-				
-<!-- Date publication et de dernière modification -->	
-						
-					<div class="date-perso">Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> (derni&egrave;re modification le <?php echo the_modified_date('', '', '', FALSE); ?>)</span> </div>
-
-</div>
-
-<!-- Fin des modifs -->			
+	    <time class="post-date" datetime="<?php echo get_the_date(); ?>">
+			Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> (derni&egrave;re modification le <?php echo the_modified_date('', '', '', FALSE); ?>)</span>
+		</time>
+		
+</section>

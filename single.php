@@ -10,43 +10,27 @@ get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
-					
-					<div class="header">
-					
-					<div class="entry-image">
-					<div><?php echo the_post_thumbnail('full'); ?></div>
-					</div>
+	<article id="post-<?php the_ID(); ?>" class="single">
+			
+		<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>		
+		
+		<header class="post-header" style="background-image: url(<?php echo $featuredImage[0]; ?>); <?php if( get_post_meta($post->ID, 'position', true) ) ?> background-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;">
+		<div class="flou">
+			<h2 class="post-title"><?php the_title(); ?></h2>
+		</div>
+		</header>
 
+		<section class="post-content">
+			<?php the_content(); ?>
+		</section>
+
+			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'autofocus' ), 'after' => '</div>' ) ); ?>
 					
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-					</div>
-
-					<div class="entry-content">
-
-						<?php the_content(); ?>
-						
-
-					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'autofocus' ), 'after' => '</div>' ) ); ?>
-					
-					<footer class="entry-utility">
-						
-						<?php get_sidebar(); ?>
-					</footer><!-- .entry-utility -->
-					
-					</div><!-- .entry-content -->
-
-				</article><!-- #post-## -->
-
-					
-				<?php
-				
-					// Only show the Comments Form if the post has comments open
-					if ( comments_open() || get_comments_number() != '0' ) {
-						comments_template( '', true ); 
-					}
-				?>
+		<footer class="post-footer">
+			<?php get_sidebar(); ?>
+		</footer>
+		
+	</article>
 
 <?php endwhile; // end of the loop. ?>
 

@@ -4,55 +4,30 @@
  */
 ?>
 
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-	<nav id="nav-above" class="navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span>', 'autofocus' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( '<span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
-	</nav><!-- #nav-above -->
-<?php endif; ?>
 
-	<?php 
+<?php // Début de la boucle
 	
-	$i = 1;
-	
-	while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-	
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header>
-				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
-			</header>
-
-			<?php 	
-				$thumbs_perso = array('1' => 'home-1',
-								'2' => 'home-2',
-								'3' => 'home-3',
-								'4' => 'home-3',
-								'5' => 'home-2',
-								'6' => 'home-4',
-								'7' => 'home-4',
-								'8' => 'home-4',
-								'9' => 'home-2',
-								'10' => 'home-3');			
-			?>
-				
-				
-		<div class="entry-image">
-			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbs_perso[$i] );?></a>
-		</div>
+	while ($wp_query->have_posts()) : $wp_query->the_post(); 
 		
-		<div class="entry-image-small">
-			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( $thumbs_perso[1] );?></a>
-		</div>
-			
+		 if( $wp_query->current_post == 0 ) :
+			 $size = "full";
+			 else :
+			 $size = "full-post-thumbnail";
+		 endif;
+		
+		$featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), $size, true);
+		?>
 
+		<article id="post-<?php the_ID(); ?>" class="post">
+		<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+			<div class="image" style="background-image: url(<?php echo $featuredImage[0]; ?>); <?php if( get_post_meta($post->ID, 'position', true) ) ?> background-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;">
+				<header><h2 class="post-title"><?php the_title(); ?></h2></header>
+			</div>
+		</a>
 		</article><!-- #post-## -->
 
-	<?php 
-	$i++;
+<?php endwhile; // Fin de la boucle ?>
 
-	endwhile; // end of the loop. ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>

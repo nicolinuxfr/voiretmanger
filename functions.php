@@ -292,6 +292,8 @@ function remove_xmlrpc_pingback_ping( $methods ) {
    return $methods;
 } ;
 
+add_filter( 'show_admin_bar', '__return_false' );
+
 
 
 // FIN DES AJOUTS PERSOS

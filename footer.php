@@ -6,20 +6,14 @@
  * after.  Calls sidebar-footer.php for bottom widgets.
  */
 ?>
-	</div><!-- #main -->
+</main>
 
-	<footer role="contentinfo">
-
-		<div id="colophon">
-
-			<div id="site-info">Publié depuis 2008. Tous droits réservés.</div>
-			
-		</div><!-- #colophon -->
-	</footer><!-- #footer -->
+<footer class="site-footer">
+	<section class="copyright">Publié depuis 2008. Tous droits réservés.</section>
+</footer><!-- #footer -->
 
 </div><!-- #wrapper -->
 
-	<script type='text/javascript' src='http://voiretmanger.fr/wp-includes/js/jquery/jquery.js'></script>
 	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
 	
 <?php if (is_page( 'archives' ) ) { ?>

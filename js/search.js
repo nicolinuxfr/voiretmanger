@@ -3,7 +3,7 @@ var results = [];
 
 jQuery(document).ready(function($) {
 	Search.getSearchIndex();
-	$('#s').keyup(function() {
+	$('#search').keyup(function() {
 			// get search term
 			var search_term = jQuery(this).val().toLowerCase();
 			// run the search
@@ -12,12 +12,17 @@ jQuery(document).ready(function($) {
 });
 
 
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) $('#op').prop('checked', false);   // esc
+});
+
+
 var Search = {
 	// Load the index file for later use
 	getSearchIndex: function() {
 		jQuery.getJSON("/search.json", function(data) {
 				console.log('[Search index successfully loaded]');
-				jQuery('.search_results').html(''); // on vide la liste, au cas où
+				jQuery('#results').html(''); // on vide la liste, au cas où
 				searchIndex = data;
 		});
 	},
@@ -35,15 +40,15 @@ var Search = {
 			Search.printResults(); // le tableau des resultats est construit, on lance l'affichage
 		}
 		else {
-			$('.search_results').fadeOut(100); // on masque le menu
-			$('.search_results').html(); // on vide le menu
+			$('#results').fadeOut(100); // on masque le menu
+			$('#results').html(); // on vide le menu
 			results = [];
 		}
 	},
 
 	printResults: function() {
 		
-		var search_results_box = jQuery('.search_results'); // on selectionne l'objet HTML qui contiendra les resultats
+		var search_results_box = jQuery('#results'); // on selectionne l'objet HTML qui contiendra les resultats
 		search_results_box.html('');
 
 		search_results_box.html(function() {
@@ -54,7 +59,7 @@ var Search = {
 				);
 			});
 		});
-		$('.search_results').fadeIn(100); // on affiche le menu
+		$('#results').fadeIn(100); // on affiche le menu
 	}
 
 }

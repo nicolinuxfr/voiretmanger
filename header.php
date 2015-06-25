@@ -53,7 +53,11 @@
 <meta property="og:description" content="<?php echo $extrait; ?>" />
 
 <link rel="image_src" href="<?php echo $iMage; ?>" />
-<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
+
+<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic|Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
+
+ 
 <link rel="pingback" href="http://voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="http://voiretmanger.fr/favicon.ico" />
 
@@ -71,6 +75,8 @@
   }
 }
 </script>
+
+<script type='text/javascript' src='http://voiretmanger.fr/wp-includes/js/jquery/jquery.js'></script>
 
 <?php
 
@@ -104,35 +110,50 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 
 
 <div id="wrapper" class="hfeed">
-	<header class="header">
-		<section id="masthead">
-			<div id="branding" role="banner">		
-    <h1 id="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a>  </h1>
-	<h2 id="site-description">Chez Nicoflo</h2>
+	
+<?php
+	if ( ! is_single() ) { ?>
+		<header class="header-site">
+			<h1 class="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a>  </h1>
+			<h2 class="site-description">Chez Nicoflo</h2>
+			
+			
+			<div class="menu" id="menu">
+				<nav id="access" role="navigation">
+			    	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+				</nav>
 			</div>
-</section><!-- #masthead -->
+			
+	<?php } else { ?>
+		<header class="header-post">
+			<a href="http://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><span class="dashicons dashicons-arrow-left-alt"></span></a>
+	<?php } ?>
 
-<div class="menu" id="menu">
+	
+	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
+		<input type="checkbox" id="op"></input>
+	<div class="lower">
+		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
+	</div>
 
-	<nav id="access" role="navigation">
-    	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-	</nav>
-
-<div class="recherche">
-		<form method="get" id="searchform"  action="<?php bloginfo('home'); ?>/"> 
-		<input class="case" type="text" value="Chercher" placeholder="Chercher" id="s" name="s" onblur="if (this.value == '')  {this.value = 'Chercher';}"  onfocus="if (this.value == 'Chercher') {this.value = '';}" /> 
-		  <input type="hidden" id="searchsubmit" /> 
-		</form>
-		<ul id="searchPage" class="search_results">
-  
-		</ul>
+	<div class="overlay overlay-hugeinc">
+		<label for="op"><span class="dashicons dashicons-no-alt"></span></label>
+		
+			<form method="get" id="searchform"  action="<?php bloginfo('home'); ?>/"> 
+				<input class="case" type="text" autofocus value="Chercher" placeholder="Chercher" id="search" name="s" onblur="if (this.value == '')  {this.value = 'Chercher';}"  onfocus="if (this.value == 'Chercher') {this.value = '';}" /> 
+				<input type="hidden" id="searchsubmit" /> 
+			</form>
+				
+			<nav>
+				<ul id="results"></ul>
+			</nav>
 	</div>
 
 
  			</header><!-- #header -->
 
-	<div id="main">
+	<main <?php body_class(); ?>>
