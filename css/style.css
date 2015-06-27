@@ -712,6 +712,11 @@ article .amazon ul{
 }
 
 
+/* Carte */
+div.canvas{width:100% !important;}
+
+
+
 /* ==========================================================================
    MOBILE
    ========================================================================== */
@@ -742,12 +747,14 @@ and (max-width : 790px){
 	}
 	
 	
-	.single .post-header > .flou > h1{
+	.single .post-header > .flou > h2{
 		font-size:3em;
 	}
 	
 	article .post-content p{
 		padding:0 0.5em;
+	    font-size: 0.8em;
+	    line-height: 1.5em;	
 	}
 	
 	.partage h4,
