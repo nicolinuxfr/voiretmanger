@@ -783,7 +783,15 @@ div.canvas{width:100% !important;}
 }
 
 
-
+.post-edit-link{
+	display: block;
+	text-align: center;
+	background-color: gray;
+	font-size: 3em;
+	font-family: "Roboto", sans-serif;
+	color: white;
+	font-weight: 700;
+}
 
 
 /* ==========================================================================
