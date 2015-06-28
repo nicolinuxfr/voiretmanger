@@ -329,16 +329,6 @@ function autofocus_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
 
-	// Add new Full Gallery & Archive Thumb image sizes for Front Page slider and Archives
-	add_image_size( 'home-1', 1200, 600, true ); // Images du bas thumbnail size
-	add_image_size( 'home-2', 750, 450, true ); // Images du bas thumbnail size
-	add_image_size( 'home-3', 450, 450, true ); // Images du bas thumbnail size
-	add_image_size( 'home-4', 400, 450, true ); // Images du bas thumbnail size
-	set_post_thumbnail_size( 400, 400, true ); // Default thumbnail size
-	add_image_size( 'archive-thumbnail', 1200, 800, true ); // Archives thumbnail size
-	add_image_size( 'bottom-thumbnail', 900, 500, true ); // Images du bas thumbnail size
-	add_image_size( 'full-post-thumbnail', 1600, 9999 ); // Full Single Posts thumbnail size
-
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
 
@@ -348,6 +338,19 @@ function autofocus_setup() {
 	) );
     
 	wp_enqueue_style( 'dashicons' );
+	
+	function remove_default_image_sizes( $sizes) {
+	    unset($sizes['detail']);
+	    unset($sizes['medium']);
+	    unset($sizes['large']);
+	    return $sizes;
+	}
+	add_filter('intermediate_image_sizes_advanced','remove_default_image_sizes');
+	
+	if(function_exists('add_image_size')){
+	    add_image_size('thumbnail',1600,9999); // Crop mode
+	}
+		
 }
 endif;
 
