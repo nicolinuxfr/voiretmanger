@@ -9,7 +9,7 @@
 </main>
 
 <footer class="site-footer">
-	<section class="copyright">Publié depuis 2008. Tous droits réservés.</section>
+	<section class="copyright">Publié depuis 2008. <a href="http://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
 </footer><!-- #footer -->
 
 </div><!-- #wrapper -->
