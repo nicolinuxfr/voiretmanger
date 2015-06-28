@@ -90,7 +90,7 @@
 
 	if (is_single()) { ?>
 	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
-	<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/bigfoot-default.css" />
+	<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
 	
 		<script type="text/javascript">
 		$ = jQuery.noConflict();
