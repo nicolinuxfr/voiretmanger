@@ -30,6 +30,8 @@ get_header(); ?>
 			<?php get_sidebar(); ?>
 		</footer>
 		
+		<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link">', '</span>' ); ?>
+		
 	</article>
 
 <?php endwhile; // end of the loop. ?>
