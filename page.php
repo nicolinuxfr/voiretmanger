@@ -2,32 +2,23 @@
 
 get_header(); ?>
 
-		<div id="container">
-			<div id="content" role="main">
+	<div id="container">
+		<div id="content" role="main">
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
-					<div class="header">
-					
-					<div class="entry-image">
-					<?php echo the_post_thumbnail('full'); ?>
-					</div>
+				<article id="post-<?php the_ID(); ?>" class="single">
+					<header class="post-header page">
+						<h2 class="post-title"><?php the_title(); ?></h2>
+					</header>
 
-					
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-					</div>
-
-					<div class="entry-content">
-
+					<section class="post-content">
 						<?php the_content(); ?>
-						
-						
-						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'autofocus' ), 'after' => '</div>' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link">', '</span>' ); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-## -->
+					</section>
+					
+					<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link">', '</span>' ); ?>
+					
+				</article>
 
 
 <?php endwhile; ?>
