@@ -623,9 +623,8 @@ article .amazon ul{
 .partage{
 	color:white;
 	font-family: "Roboto",serif;
-	height: 35px;
-	width: auto;
 	font-size:2em;
+	margin:4em 0;
 }
 
 
@@ -643,7 +642,6 @@ article .amazon ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	margin-top: 0;
 	max-width: 100%;
 }
 
@@ -678,11 +676,12 @@ article .amazon ul{
 .post-meta{
 	clear:both;
 	font-family: "Roboto",sans-serif;
-	font-size:1.5em;
+	font-size:1.8em;
 	line-height:1.2em;
 	width:100%;
-	margin: 1em auto;
+	margin: 0 auto;
 	font-weight:300;
+	padding:1.5em 0;
 }
 
 
@@ -694,10 +693,10 @@ article .amazon ul{
 	-o-column-count:2;
 	column-count:2;
 	columns:2;
-	margin: 1em auto;
+	margin: 0 auto;
 	list-style-type:none;
 	padding:0;
-	max-width:900px;
+	max-width:1000px;
 }
 	
 
