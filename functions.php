@@ -15,33 +15,8 @@ function create_my_taxonomies() {
 	register_taxonomy( 'chef', 'post', array( 'hierarchical' => false, 'label' => 'Chefs d\'orchestre', 'query_var' => 'chef',  'rewrite' => array( 'slug' => 'chef' )) );
 	register_taxonomy( 'saga', 'post', array( 'hierarchical' => false, 'label' => 'Saga', 'query_var' => 'saga',  'rewrite' => array( 'slug' => 'saga' )) );
 	register_taxonomy( 'festival', 'post', array( 'hierarchical' => false, 'label' => 'Festival', 'query_var' => 'festival',  'rewrite' => array( 'slug' => 'festival' )) );
-	register_taxonomy( 'original', 'post', array( 'hierarchical' => false, 'label' => 'Original', 'query_var' => 'original',  'rewrite' => array( 'slug' => 'original' )) );
-
 
 }
-
- 
- 
- // RECHERCHE -- Source : http://www.geekpress.fr/wordpress/astuce/modifier-url-page-resultats-recherche-wordpress-560/
-// add_action('template_redirect', 'gkp_search_url_rewrite_rule');
-/*
-function gkp_search_url_rewrite_rule() {
- 
-    global $wp_rewrite;
-	
-    if ( is_search() && isset( $_GET['s'] ) ) {
-	$s = str_replace( array( ' ', '%20' ), '+', get_query_var( 's' ) );
-	wp_redirect( home_url( $wp_rewrite->search_base . '/' . remove_accents ( $s ) ) );
-	exit();
-    }
-}
- 
-//add_action('init','gkp_change_search_permalinks');
-function gkp_change_search_permalinks( ) {
-    global $wp_rewrite;
-    $wp_rewrite->search_base = 'recherche';
-}
-*/
 
 // TRI PAR TAXONOMIES
 //allows queries to be sorted by taxonomy term name (http://www.jrnielsen.com/wp-query-orderby-taxonomy-term-name/)
@@ -328,7 +303,7 @@ define('STYLEURL', get_bloginfo('stylesheet_url'));
 
 
 //	Load AutoFocus WP Filters
-require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
+// require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
 
 /**
  * Set the content width based on the theme's design and stylesheet.
