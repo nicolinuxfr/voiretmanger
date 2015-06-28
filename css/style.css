@@ -448,7 +448,7 @@ footer {clear:both;}
 
 
 /* ==========================================================================
-   ARTICLES
+   ARTICLES et PAGES
    ========================================================================== */
 
 /* Header
@@ -502,6 +502,9 @@ footer {clear:both;}
     overflow: hidden;
 }
 
+/* Pour les pages, on annule la hauteur pleine page */
+.single .page{height:auto;}
+
 
 .single .post-header > .flou{
  position: absolute;
@@ -544,8 +547,7 @@ content: "";
 
 }
 
-
-.single .post-header > .flou > h2{
+.single .post-header h2{
 	color:white;
 	text-align:center;
 	letter-spacing: -1px; 
@@ -558,6 +560,10 @@ content: "";
 	position:relative;
 	margin-top: 0;
 	margin-bottom :0
+}
+
+.single .page h2{
+	color:inherit;
 }
 
 
@@ -607,7 +613,10 @@ article .amazon ul{
 	padding: 0 2em;
 }
 
-
+/* Pour les pages avec un index, on aère */
+.azindex h2{
+	margin-top:1.5em !important;
+}
 
 
 /* Partage
@@ -714,6 +723,66 @@ article .amazon ul{
 
 /* Carte */
 div.canvas{width:100% !important;}
+
+
+
+
+/* Page d'archive
+-------------------------------------------------------------- */
+#content .searchArchives{
+	max-width:100% !important;
+}
+
+#content .searchArchives h3{
+	text-align:center;
+	margin:0.3em auto;
+}
+
+#content .searchArchives .recherche{
+	display: inline;
+}
+
+#content .searchArchives .recherche input{
+	width: 100%;
+	font-family: "Playfair Display", serif;
+	font-size: 1em;
+	outline: 0;
+	margin: 0;
+	padding: 5px 0px;
+	background-color: rgba(231,231,231,0.95);
+	text-align:center;
+}
+
+#content .searchArchives li{
+	display: inline;
+	float: left;
+	width: 25%;
+}
+
+#content .searchArchives .resultats{margin:0;}
+
+#content .searchArchives .resultats ul{
+	list-style-type: none;
+	margin:0;	
+}
+
+
+#content .searchArchives .resultats a li{
+	padding: 0.3em 0.1em 0.3em 0.1em;
+	line-height: 1.4em;
+	text-decoration:none;
+	width:100%;
+	background-color: rgba(231,231,231,0.95);
+	font-family: "Playfair Display", serif;
+}
+
+
+#content .searchArchives .resultats a li:hover{
+	color: white;
+	background-color: rgba(183,183,183,0.85);
+}
+
+
 
 
 
