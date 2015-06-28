@@ -89,15 +89,27 @@
 		wp_enqueue_script( 'comment-reply' );
 
 	if (is_single()) { ?>
-	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
-	<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
+		<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
+		<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
 	
 		<script type="text/javascript">
 		$ = jQuery.noConflict();
 		$.bigfoot({actionOriginalFN: "ignore"});
 		</script>
+		
+		<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?> 
+			<style>
+				.header-post #rechercher, 
+				.header-post a{
+					color: rgba(35, 35, 35, 0.7);
+				}
+				.header-post a:hover,
+				.header-post #rechercher:hover{
+					color:black;
+				}
+			</style>
 	
-<?php } 
+	<?php } } 
 
 
 	/* Always have wp_head() just before the closing </head>
