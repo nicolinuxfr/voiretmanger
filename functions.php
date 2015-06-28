@@ -373,8 +373,6 @@ function autofocus_setup() {
 	) );
     
 	wp_enqueue_style( 'dashicons' );
-	
-	
 }
 endif;
 
