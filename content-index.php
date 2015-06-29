@@ -12,7 +12,7 @@
 		 if( $wp_query->current_post == 0 ) :
 			 $size = "full";
 			 else :
-			 $size = "full-post-thumbnail";
+			 $size = "large";
 		 endif;
 		
 		$featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), $size, true);

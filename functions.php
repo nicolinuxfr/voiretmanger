@@ -339,18 +339,6 @@ function autofocus_setup() {
     
 	wp_enqueue_style( 'dashicons' );
 	
-	function remove_default_image_sizes( $sizes) {
-	    unset($sizes['detail']);
-	    unset($sizes['medium']);
-	    unset($sizes['large']);
-	    return $sizes;
-	}
-	add_filter('intermediate_image_sizes_advanced','remove_default_image_sizes');
-	
-	if(function_exists('add_image_size')){
-	    add_image_size('thumbnail',1600,9999); // Crop mode
-	}
-		
 }
 endif;
 

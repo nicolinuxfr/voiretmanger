@@ -19,7 +19,7 @@
 	
 	while ( have_posts() ) : the_post(); ?>
 		
-		<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "archive-thumbnail", true); ?>
+		<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "large", true); ?>
 
 		<article id="post-<?php the_ID(); ?>" class="post">
 		<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
