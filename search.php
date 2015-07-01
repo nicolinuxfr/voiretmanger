@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: SearchWP Custom Search */
+/* Modèle pour les résultats de recherche */
 
 global $post;
 
@@ -18,10 +18,13 @@ get_header(); ?>
           <h1 class="page-title">Résultats pour : <span><?php echo $query; ?></span></h1>
         </header>
  
+	   <div class="liste">
 		<?php
 			rewind_posts();
 			get_template_part('liste', 'archives');
 		?>
+
+ 	   </div>
 
  	<?php endif; ?>
       

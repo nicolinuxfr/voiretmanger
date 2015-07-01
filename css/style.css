@@ -345,7 +345,8 @@ footer {clear:both;}
 .liste{overflow:hidden;}
 
 .archive,
-.home {
+.home,
+.search {
 	display: block;
 	float:left;
 	clear:none;
@@ -353,7 +354,8 @@ footer {clear:both;}
 	width: 100%;
 } 
 
-.archive header .page-title{
+.archive header .page-title,
+.search header .page-title{
 	font-family: "Playfair Display", serif;
 	font-size: 10em;
 	line-height:1em;
@@ -363,7 +365,8 @@ footer {clear:both;}
 }
 
 .archive article,
-.home article{
+.home article,
+.search article{
 	display: block;
 	width:50%;
 	height:35vw;
@@ -373,7 +376,8 @@ footer {clear:both;}
 }
 
 .archive .image,
-.home .image{
+.home .image,
+.search .image{
 	display: block; 
 	width: 100%;
 	height:100%;
@@ -416,7 +420,8 @@ footer {clear:both;}
 }
 
 .home article header,
-.archive article header {
+.archive article header,
+.search article header {
 	position: absolute;
 	z-index: 3;
 	bottom: 0;
@@ -426,10 +431,12 @@ footer {clear:both;}
 } 
 
 .home article:hover header,
-.archive article:hover header{opacity: 1;transition: all 0.5s ease;} 
+.archive article:hover header,
+.search article:hover header{opacity: 1;transition: all 0.5s ease;} 
 
 .home article header .post-title,
-.archive article header .post-title {
+.archive article header .post-title,
+.search article header .post-title {
 	font-size:2.8em;
 	color: white;
 	line-height: 1em;
@@ -441,7 +448,8 @@ footer {clear:both;}
 } 
 
 .archive article header .post-title em,
-.home article header .post-title em{
+.home article header .post-title em, 
+.search article header .post-title em{
 	font-weight:700;
 }
 
