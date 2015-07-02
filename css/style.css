@@ -640,8 +640,7 @@ article .amazon ul{
 	margin:0;
 	padding:0.5em 0;
 	background-color:#5e5e5e;
-	width: 25%;
-    width: calc(100% / 4);
+	width: calc(100% * 1/3);
 	float: left;
 	text-align:center;
 }
@@ -655,15 +654,15 @@ article .amazon ul{
 
 .partage ul li{
 	padding:0.5em 0;
-	width: 25%;
-	width: calc(100% / 4);
+	width: calc(100% * 1/3 * 2/3);
 	display: inline-block;
 	text-align: center;
 	background-color:#5e5e5e;
 	float:left;
 }
 
-.partage ul li:hover{
+.partage ul li:hover,
+.partage h4:hover{
 	background-color: white;
 	color:#5e5e5e;
 }
@@ -802,6 +801,40 @@ div.canvas{width:100% !important;}
    MOBILE
    ========================================================================== */
 
+/* Largeur moyenne, tous les écrans
+-------------------------------------------------------------- */
+@media only screen 
+and (max-width : 900px){
+	
+	.home article:nth-of-type(n+0),
+	.archive article{
+		width:100%;
+		height:60vw;
+	}
+	
+	.home article header,
+	.archive article header{
+		opacity:1;
+	}
+	
+	
+	.partage h4,
+	.partage ul li{
+		width:100%;
+	}
+	
+	
+	.post-meta ul{
+		padding:0 0.5em;
+		-webkit-column-count:1;   
+		-moz-column-count:1;
+		column-count:1;
+		columns:1;
+	}
+	
+	
+}
+
 
 /* Petite largeur, tous les écrans
 -------------------------------------------------------------- */
@@ -817,17 +850,6 @@ and (max-width : 790px){
 		font-size:2.4em;
 	}
 	
-	.home article:nth-of-type(n+0){
-		width:100%;
-		height:60vw;
-	}
-	
-	.home article header,
-	.archive article header{
-		opacity:1;
-	}
-	
-	
 	.single .post-header > .flou > h2{
 		font-size:3em;
 	}
@@ -838,20 +860,7 @@ and (max-width : 790px){
 	    line-height: 1.5em;	
 	}
 	
-	.partage h4,
-	.partage ul li{
-		width:100%;
-	}
-	
-	.post-meta ul{
-		padding:0 0.5em;
-		-webkit-column-count:1;   
-		-moz-column-count:1;
-		-ms-column-count:1;
-		-o-column-count:1;
-		column-count:1;
-		columns:1;
-	}
+
 	
 }
 
