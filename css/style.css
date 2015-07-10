@@ -201,8 +201,8 @@ header #results a{
 }
 
 #recherche {
-	top: 1em;
-	right: 4em;
+    top: 0.5em;
+    right: 3em;
 }
 
 .lower:hover{
@@ -243,8 +243,7 @@ label .dashicons.dashicons-no-alt{
 	position: relative;
 }
 
-
-.overlay ul li a {
+.overlay ul a {
 	font-weight: 300;
 	display: block;
 	color: white;
@@ -253,9 +252,9 @@ label .dashicons.dashicons-no-alt{
 	transition: color 0.2s;
 }
 
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-	color: #e6e6e6;
+.overlay ul a:hover,
+.overlay ul a:focus {
+	color: rgba(132, 132, 132, 1);
 }
 
 .lower~.overlay-hugeinc{
@@ -301,6 +300,19 @@ footer {clear:both;}
 }
 
 
+
+#nav-below{
+	font-family: "Roboto", serif;
+	font-size: 3em;
+}
+
+#nav-previous{
+	float:right;
+}
+
+#nav-next{
+	float:left;
+}
 
 /* ==========================================================================
    PAGE D'ACCUEIL
@@ -842,7 +854,26 @@ and (max-width : 900px){
 and (max-width : 790px){
 	
 	.site-title{
-		font-size:10em;
+		font-size:30vw;
+		margin-top: 3rem;
+	}
+	
+	
+	.menu{
+		display:none;
+	}
+	
+	header .recherche .case {
+		font-size: 3em;
+		margin: 0.6em auto 0.3em auto;
+	}
+	
+	header #results a {
+	    font-size: 1.3em;
+	}
+	
+	label .dashicons.dashicons-no-alt{
+		font-size: 3em;
 	}
 	
 	.home article header .post-title,
