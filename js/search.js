@@ -1,6 +1,8 @@
 var searchIndex = null;
 var results = [];
 
+$ = jQuery.noConflict();
+
 jQuery(document).ready(function($) {
 	Search.getSearchIndex();
 	$('#search').keyup(function() {
@@ -12,7 +14,7 @@ jQuery(document).ready(function($) {
 });
 
 
-$(document).keyup(function(e) {
+jQuery(document).keyup(function(e) {
   if (e.keyCode == 27) $('#op').prop('checked', false);   // esc
 });
 
@@ -34,7 +36,7 @@ var Search = {
 				var titleLowerCase = article.title.toLowerCase().replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/â/g, "a").replace(/à/g, "a").replace(/ä/g, "a").replace(/ü/g, "u").replace(/û/g, "u").replace(/ù/g, "u").replace(/î/g, "i").replace(/ï/g, "i").replace(/ô/g, "o").replace(/ö/g, "o").replace(/ç/g, "c"); // on convertit tout en bas-de-casse et on supprime les accents et caractères spéciaux
 				var term = search_term.replace(/é/g, "e").replace(/è/g, "e").replace(/ê/g, "e").replace(/â/g, "a").replace(/à/g, "a").replace(/ä/g, "a").replace(/ü/g, "u").replace(/û/g, "u").replace(/ù/g, "u").replace(/î/g, "i").replace(/ï/g, "i").replace(/ô/g, "o").replace(/ö/g, "o").replace(/ç/g, "c");;
 				if (titleLowerCase.indexOf(term) !== -1) {
-					results.push(article); // si la recherche est contenue dans le titre de l'article en cours, on l'ajoute aux resultats
+					results.push(article); // si la recherche est contenue dans le titre de l'article en cours, on l'ajoute aux resultats					
 				};
 			});
 			Search.printResults(); // le tableau des resultats est construit, on lance l'affichage
