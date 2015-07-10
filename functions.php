@@ -316,9 +316,7 @@ function autofocus_setup() {
 		'primary' => __( 'Primary Navigation', 'autofocus' ),
 	) );
     
-	wp_enqueue_style( 'dashicons' );
-	wp_deregister_script('jquery');
-	
+	wp_enqueue_style( 'dashicons' );	
 }
 endif;
 
