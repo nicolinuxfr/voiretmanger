@@ -76,8 +76,6 @@
 }
 </script>
 
-<script type='text/javascript' src='http://voiretmanger.fr/wp-includes/js/jquery/jquery.js'></script>
-
 <?php
 
 	wp_head();
