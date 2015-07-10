@@ -220,15 +220,6 @@ function patch_jetpack_29( $rules )
 }
 
 
-function no_photon_by_page() {
-  if ( ! is_singular() ) {
-	 add_filter( 'jetpack_photon_skip_image', '__return_true');
-  }
-}
- 
-add_action('wp', 'no_photon_by_page');
-
-
 
 
 // Retirer les balises p autour des images (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
@@ -247,14 +238,6 @@ function jetpackme_filter_exclude_category( $filters ) {
     return $filters;
 }
 add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
-
-// Jetpack : Bonne taille d'images
-function jetpackchange_image_size ( $thumbnail_size ) {
-    $thumbnail_size['width'] = 900;
-    $thumbnail_size['height'] = 515;
-    return $thumbnail_size;
-}
-add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jetpackchange_image_size' );
 
 // Retrait CSS taxonomy-images
 add_filter( 'taxonomy-images-disable-public-css', '__return_true' );
@@ -301,10 +284,6 @@ define('TEMPLATE_DIR', get_bloginfo('template_directory'));
 define('STYLESHEET_DIR', get_bloginfo('stylesheet_directory'));
 define('STYLEURL', get_bloginfo('stylesheet_url'));
 
-
-//	Load AutoFocus WP Filters
-// require_once(TEMPLATEPATH . '/inc/autofocus-filters.php');
-
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -338,6 +317,7 @@ function autofocus_setup() {
 	) );
     
 	wp_enqueue_style( 'dashicons' );
+	wp_deregister_script('jquery');
 	
 }
 endif;
@@ -406,22 +386,12 @@ function af_author_info_avatar() {
  *	AutoFocus Navigation Above
  */
 function autofocus_nav_above() {
-	global $post, $excluded_categories, $in_same_cat, $shortname;
-
-	// Grab The Blog Category
-	$af_blog_catid = of_get_option($shortname . '_blog_cat');
-
-	if ( in_category($af_blog_catid)) : ?>
-				<nav id="nav-above" class="navigation">
-					<div class="nav-previous"><?php previous_post_link('%link', __('<span class="meta-nav">&larr;</span>', 'autofocus'), TRUE) ?></div>
-					<div class="nav-next"><?php next_post_link('%link', __('<span class="meta-nav">&rarr;</span>', 'autofocus'), TRUE) ?></div>
-				</nav><!-- #nav-above -->
-	<?php else : ?>
+	global $post, $excluded_categories, $in_same_cat, $shortname;?>
 				<nav id="nav-above" class="navigation">
 					<div class="nav-previous"><?php previous_post_link('%link', __('<span class="meta-nav">&larr;</span>', 'autofocus'), 0, $af_blog_catid) ?></div>
 					<div class="nav-next"><?php next_post_link('%link', __('<span class="meta-nav">&rarr;</span>', 'autofocus'), 0, $af_blog_catid) ?></div>
 				</nav><!-- #nav-above -->
-	<?php endif; 
+	<?php  
 }
 
 /**
@@ -430,9 +400,6 @@ function autofocus_nav_above() {
 function autofocus_nav_below() {
 	global $post, $excluded_categories, $in_same_cat, $shortname;
 	
-	// Grab The Blog Category
-	$af_blog_catid = of_get_option($shortname . '_blog_cat');
-
 	if ( in_category($af_blog_catid) ) : ?>
 			<nav id="nav-below" class="navigation">
 				<h3><?php _e('Naviguer', 'autofocus') ?></h3>
