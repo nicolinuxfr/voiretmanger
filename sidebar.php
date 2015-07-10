@@ -26,8 +26,8 @@
 		$titre = strip_tags(get_the_title());
 		$facebook_link  = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' . $lien ;
 		$twitter_link  = 'http://twitter.com/share?url=' . $lien . '&text=' . $titre ;
-		$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - '. $lien ;
-		$contact = 'mailto:nicolinux@gmail.com?subject=Au%20sujet%20de%20' . $titre . ' - '. $lien ;
+		$mail_link = 'mailto:?subject=' . $titre . '&amp;body=' . $titre . ' - ' . $lien ;
+		$contact = 'mailto:nicolinux@gmail.com?subject=Au%20sujet%20de%20' . $titre . ' - ' . $lien ;
 	?>
 	
 <section class="partage">	
