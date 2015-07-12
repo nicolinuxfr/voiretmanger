@@ -33,9 +33,9 @@
 <section class="partage">	
 	<a title="Me contacter" href="<?php echo $contact; ?>" ><h4>Une erreur, une remarque&nbsp;?</h4></a>
 		<ul>
-			<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Mail</li></a>
-			<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Twitter</li></a>
-			<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Facebook</li></a>
+			<a title="Envoyer cet article par mail" href="<?php echo $mail_link; ?>"><li>Envoyer par Mail</li></a>
+			<a title="Partager cet article sur Twitter" href="<?php echo $twitter_link; ?>"><li>Partager sur Twitter</li></a>
+			<a title="Partager cet article sur Facebook" href="<?php echo $facebook_link; ?>"><li>Partager sur Facebook</li></a>
 		</ul>				
 </section>
 
