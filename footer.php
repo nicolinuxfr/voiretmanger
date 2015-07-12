@@ -12,8 +12,6 @@
 	<section class="copyright">Publié depuis 2008. <a href="http://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
 </footer><!-- #footer -->
 
-</div><!-- #wrapper -->
-
 	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
 	
 <?php if (is_page( 'archives' ) ) { ?>

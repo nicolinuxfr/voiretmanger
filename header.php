@@ -115,30 +115,21 @@
 </head>
 
 <body>
-
-
-<div id="wrapper" class="hfeed">
 	
+		
 <?php
 	if ( ! is_single() ) { ?>
 		<header class="header-site">
-			<h1 class="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a>  </h1>
-			<h2 class="site-description">Chez Nicoflo</h2>
-			
-			
-			<div class="menu" id="menu">
-				<nav id="access" role="navigation">
-			    	<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-				</nav>
-			</div>
+			<h1 class="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
 			
 	<?php } else { ?>
 		<header class="header-post">
 			<a href="http://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><span class="dashicons dashicons-arrow-left-alt"></span></a>
 	<?php } ?>
-
 	
-	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
+	
+	
+	<div class="recherche" id="recherche">
 		<input type="checkbox" id="op"></input>
 	<div class="lower">
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
@@ -155,8 +146,22 @@
 			<nav>
 				<ul id="results"></ul>
 			</nav>
+			
+			<hr />
+			<div class="menu">
+				<span class="dashicons dashicons-editor-justify"></span>
+				<ul class="navigation">
+				    <li class="nav-item"><a href="http://voiretmanger.fr/">Accueil</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/archives/">Archives</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/a-voir/">À voir</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/a-manger/">À manger</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/a-lire/">À lire</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/a-ecouter/">À écouter</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/a-propos/">À propos</a></li>
+				</ul>
+			</div>
+			
 	</div>
-
 
  			</header><!-- #header -->
 

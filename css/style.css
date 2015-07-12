@@ -98,6 +98,7 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	font-family:'NotoSerif', serif;
+	   overflow-x: hidden;
 }
 
 
@@ -115,42 +116,10 @@ a {text-decoration:none;color: rgba(0, 0, 0, 0.5);}
 a:hover{color: rgba(0, 0, 0, 0.9);}
 
 
-/* =Menu
+
+/* Recherche et menus
 -------------------------------------------------------------- */
-#access {padding:0; margin:0; clear:right; display:inline; overflow:visible;float:left;margin-bottom: 1em;}
-#access .menu-header ul, 
-div.menu ul{list-style:none; margin:0}
-#access .menu-header li, 
-div.menu li{float:left; position:relative}
 
-.menu {
-	font-family: "Roboto", sans-serif;
-	display: inline;
-}
-.menu ul {margin:0; padding:0;}
-.menu li {display:inline; float:left;}
-.menu li a {
-	padding: 0.2em 1vw;
-	margin:0; 
-	display:block; 
-	font-size:1.4em;
-}
-.menu li ul li a {padding:0.4em;font-size: 1.4em;}
-.menu li ul li a:before {content:"\2014\00a0";}
-
-#access ul ul{display:none; position:absolute; top:22px; left:3px; float:left; width:172px; z-index:99999}
-#access ul ul li{min-width:300px}
-#access ul ul ul{left:100%; top:0}
-#access ul ul a {background:#333; line-height:1em; height:auto;background-color: white;}
-#access .sub-menu, 
-#access .children {border-style: dotted;border-width: 0 0 0 1px}
-#access li:hover >a, 
-#access ul ul:hover >a{ }
-#access ul li:hover >ul{display:block}
-
-
-/* Recherche
--------------------------------------------------------------- */
 header .recherche{
 	font-family: "Roboto", sans-serif;
 	right: 0;
@@ -170,9 +139,8 @@ header .recherche{
 header .recherche .case{
 	display: block;
 	font-size:5em;
-	margin: 1em auto;
+	margin: 1em auto 0.5em auto;
 	border: none;
-	border-bottom: 1px solid white;
 	color: white;
 	background: none;
 	outline:0;
@@ -286,6 +254,49 @@ label .dashicons.dashicons-no-alt{
 	transform: translateY(25%) rotateX(-35deg);
 }
 
+
+.overlay hr{
+	width:50%;
+	margin-top: 8em;
+}
+
+.menu{
+	font-size:3em;
+	margin: 1em auto;
+	float:left;
+	width:100%;
+}
+
+
+.navigation {
+	display: inline;
+	list-style: none; 
+	margin: 0;
+	position: relative;
+	clear: left;
+	float: left;
+	left: 50%;
+}
+
+.navigation li{
+	display: block;
+	float: left;
+	right: 50%;
+	position: relative;
+	text-align: center;
+}
+
+
+.navigation > li:after {
+  content: ' | ';
+}
+
+
+.navigation li a {
+	padding: 0.2em 1vw;
+	margin:0; 
+	display:block; 
+}
 
 
 
@@ -829,6 +840,26 @@ and (max-width : 900px){
 		opacity:1;
 	}
 	
+	.menu{
+		margin:0;
+	}
+	
+	.navigation li{
+		width:100%;
+	}
+	
+	
+	.navigation{
+		left:0;
+	}
+	
+	.navigation li{
+		right:0;
+	}
+	
+	.navigation > li:after{
+		content:"";
+	}
 	
 	.partage h4,
 	.partage ul li{
@@ -859,10 +890,6 @@ and (max-width : 790px){
 	}
 	
 	
-	.menu{
-		display:none;
-	}
-	
 	header .recherche .case {
 		font-size: 3em;
 		margin: 0.6em auto 0.3em auto;
@@ -874,6 +901,10 @@ and (max-width : 790px){
 	
 	label .dashicons.dashicons-no-alt{
 		font-size: 3em;
+	}
+	
+	.overlay hr{
+		width: 90%;
 	}
 	
 	.home article header .post-title,
