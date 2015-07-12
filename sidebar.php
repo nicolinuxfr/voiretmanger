@@ -46,7 +46,7 @@
 		<?php echo get_the_term_list( $post->ID, 'saga', '<li><strong>Saga</strong> : ', ', ','</li>'); ?>
 		<?php 
 			if( get_post_meta($post->ID, 'original', true) ) { ?>
-			<li><strong>Titre original</strong> : <span style="color:black;display:inline;"><em><?php echo get_post_meta($post->ID, 'original', true); ?></em></span></li> 
+			<li><strong>Titre original</strong> : <span><em><?php echo get_post_meta($post->ID, 'original', true); ?></em></span></li> 
 		<?php } ?>	
 
 		<?php 
