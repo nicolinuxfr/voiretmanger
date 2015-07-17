@@ -232,7 +232,14 @@ label .dashicons.dashicons-no-alt{
 	transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
+body.noscroll{
+	overflow: hidden;
+	width: 100%;
+}
 
+body.scroll{
+	overflow: initial;
+}
 
 #op:checked~.overlay-hugeinc{
 	opacity: 1;
@@ -751,20 +758,21 @@ div.canvas{width:100% !important;}
 
 /* Page d'archive
 -------------------------------------------------------------- */
-#content .searchArchives{
-	max-width:100% !important;
+.searchArchives{
+	padding:0;
+	margin:0;
 }
 
-#content .searchArchives h3{
+.searchArchives h3{
 	text-align:center;
 	margin:0.3em auto;
 }
 
-#content .searchArchives .recherche{
+.searchArchives .recherche{
 	display: inline;
 }
 
-#content .searchArchives .recherche input{
+.searchArchives .recherche input{
 	width: 100%;
 	font-family: "Playfair Display", serif;
 	font-size: 1em;
@@ -775,21 +783,21 @@ div.canvas{width:100% !important;}
 	text-align:center;
 }
 
-#content .searchArchives li{
+.searchArchives li{
 	display: inline;
 	float: left;
 	width: 25%;
 }
 
-#content .searchArchives .resultats{margin:0;}
+.searchArchives .resultats{margin:0;}
 
-#content .searchArchives .resultats ul{
+.searchArchives .resultats ul{
 	list-style-type: none;
 	margin:0;	
 }
 
 
-#content .searchArchives .resultats a li{
+.searchArchives .resultats a li{
 	padding: 0.3em 0.1em 0.3em 0.1em;
 	line-height: 1.4em;
 	text-decoration:none;
@@ -799,13 +807,14 @@ div.canvas{width:100% !important;}
 }
 
 
-#content .searchArchives .resultats a li:hover{
+.searchArchives .resultats a li:hover{
 	color: white;
 	background-color: rgba(183,183,183,0.85);
 }
 
 
 .post-edit-link{
+	clear:both;
 	display: block;
 	text-align: center;
 	background-color: gray;
