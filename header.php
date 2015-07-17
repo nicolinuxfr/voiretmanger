@@ -22,8 +22,9 @@
 	$iMage = $thumb[0];
 
 	if ( is_single() ){
-		$extrait = strip_tags(htmlentities(get_the_excerpt(), ENT_QUOTES, 'UTF-8'));
-		$extrait = substr($extrait, 0, strrpos($extrait, '&lt;a'));
+		$post_object = get_post( $post->ID );
+		$content = $post_object->post_content;
+		$extrait = wp_trim_words( $content, $num_words = 55, $more = null );
 	}
 
 	}
@@ -129,14 +130,14 @@
 	
 	
 	
-	<div class="recherche" id="recherche">
+	<div class="recherche" id="recherche" onclick="document.getElementsByTagName('body')[0].className='scroll';">
 		<input type="checkbox" id="op"></input>
 	<div class="lower">
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
 	</div>
 
 	<div class="overlay overlay-hugeinc">
-		<label for="op"><span class="dashicons dashicons-no-alt"></span></label>
+		<label for="op" onclick="$('body').removeClass('noscroll');"><span class="dashicons dashicons-no-alt"</span></label>
 		
 			<form method="get" id="searchform"  action="<?php bloginfo('home'); ?>/"> 
 				<input class="case" type="text" autofocus value="Chercher" placeholder="Chercher" id="search" name="s" onblur="if (this.value == '')  {this.value = 'Chercher';}"  onfocus="if (this.value == 'Chercher') {this.value = '';}" /> 
