@@ -39,9 +39,9 @@ get_header(); ?>
 <?php elseif ( is_year() ) : ?>
 				<?php printf( __( 'Tous les articles de l\'ann&eacute;e : <span>%s</span>', 'autofocus' ), get_the_date('Y') ); ?>
 <?php elseif ( is_category() ) : ?>
-				<?php printf( __( 'Tous les articles dans la cat&eacute;gorie : %s', 'autofocus' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
+				<?php printf( __( '%s', 'autofocus' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
 <?php elseif ( is_tag() ) : ?>
-				<?php printf( __( 'Tous les articles avec le mot-cl&eacute; : %s', 'autofocus' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
+				<?php printf( __( '%s', 'autofocus' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?>
 <?php else : ?>
 				<?php _e( 'Archives', 'autofocus' ); ?>
 <?php endif; ?>
