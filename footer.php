@@ -18,6 +18,9 @@
 	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search-archives.js'></script>
 <?php } ?>
 
+	<script src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/instantclick.min.js' data-no-instant></script>
+	<script data-no-instant>InstantClick.init();</script>
+
 
 <?php if (is_single()) { ?>
 	
