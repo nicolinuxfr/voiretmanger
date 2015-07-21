@@ -153,7 +153,7 @@
 				<span class="dashicons dashicons-editor-justify"></span>
 				<ul class="navigation">
 				    <li class="nav-item"><a href="http://voiretmanger.fr/">Accueil</a></li>
-				    <li class="nav-item"><a href="http://voiretmanger.fr/archives/">Archives</a></li>
+				    <li class="nav-item"><a href="http://voiretmanger.fr/archives/" data-no-instant>Archives</a></li>
 				    <li class="nav-item"><a href="http://voiretmanger.fr/a-voir/">À voir</a></li>
 				    <li class="nav-item"><a href="http://voiretmanger.fr/a-manger/">À manger</a></li>
 				    <li class="nav-item"><a href="http://voiretmanger.fr/a-lire/">À lire</a></li>

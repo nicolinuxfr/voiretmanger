@@ -16,7 +16,7 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</section>
 					
-					<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link" data-no-instant>', '</span>' ); ?>
 					
 				</article>
 

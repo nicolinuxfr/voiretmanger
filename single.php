@@ -30,7 +30,7 @@ get_header(); ?>
 			<?php get_sidebar(); ?>
 		</footer>
 		
-		<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link" data-no-instant>', '</span>' ); ?>
 		
 	</article>
 
