@@ -55,7 +55,7 @@
 
 <link rel="image_src" href="<?php echo $iMage; ?>" />
 
-<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/style.css" />
+<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic|Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
 
  
