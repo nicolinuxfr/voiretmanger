@@ -77,18 +77,9 @@
 }
 </script>
 
-<?php
-
-	wp_head();
-
-	if (is_single()) { ?>
-		<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
-		<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
+<?php wp_head(); ?>
 	
-		<script type="text/javascript">
-		$ = jQuery.noConflict();
-		$.bigfoot({actionOriginalFN: "ignore"});
-		</script>
+		
 		
 		<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?> 
 			<style>
@@ -102,7 +93,7 @@
 				}
 			</style>
 	
-	<?php } } 
+	<?php } 
 
 
 	/* Always have wp_head() just before the closing </head>

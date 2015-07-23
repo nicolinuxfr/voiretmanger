@@ -18,8 +18,18 @@
 	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search-archives.js'></script>
 <?php } ?>
 
+	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js' data-no-instant></script>
+		<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
 	<script src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/instantclick.min.js' data-no-instant></script>
-	<script data-no-instant>InstantClick.init();</script>
+	<script type="text/javascript" data-no-instant>
+		function bigfoot() {
+			$ = jQuery.noConflict();
+			$.bigfoot({actionOriginalFN: "ignore"})
+		}
+	
+		InstantClick.on('change', bigfoot);
+		InstantClick.init();
+	</script>
 
 
 <?php if (is_single()) { ?>
