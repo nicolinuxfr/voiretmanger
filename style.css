@@ -132,7 +132,7 @@ a:hover{color: rgba(0, 0, 0, 0.9);}
 -------------------------------------------------------------- */
 
 header .recherche{
-	font-family: "Roboto", sans-serif;
+	font-family: -apple-system, "Roboto", sans-serif;
 	right: 0;
 	position: absolute;
 }
@@ -159,7 +159,7 @@ header .recherche .case{
 
 
 header #results{
-	font-family: "Roboto", sans-serif;
+	font-family: -apple-system, "Roboto", sans-serif;
 	font-size:1.5em;
 	list-style: none;
 	margin: 0;
@@ -322,7 +322,7 @@ body.scroll{
 -------------------------------------------------------------- */
 footer {clear:both;}
 .copyright{
-	font-family: "Roboto", sans-serif;
+	font-family: -apple-system, "Roboto", sans-serif;
 	font-size:1em;
 	text-align: center; 
 	padding: 1em;
@@ -331,7 +331,7 @@ footer {clear:both;}
 
 
 #nav-below{
-	font-family: "Roboto", serif;
+	font-family: -apple-system, "Roboto", serif;
 	font-size: 3em;
 }
 
@@ -395,14 +395,14 @@ footer {clear:both;}
 	width: 100%;
 } 
 
-.archive header .page-title,
-.search header .page-title{
+
+.page-title{
 	font-family: "Playfair Display", serif;
 	font-size: 10em;
-	line-height:1em;
 	margin: 0.5em auto;
 	font-weight: 400;
 	text-align: center;
+	overflow: hidden;
 }
 
 .archive article,
@@ -671,7 +671,7 @@ article .amazon ul{
 -------------------------------------------------------------- */
 .partage{
 	color:white;
-	font-family: "Roboto",serif;
+	font-family: -apple-system, "Roboto",serif;
 	font-size:2em;
 	margin:4em 0;
 }
@@ -723,7 +723,7 @@ article .amazon ul{
 -------------------------------------------------------------- */
 .post-meta{
 	clear:both;
-	font-family: "Roboto",sans-serif;
+	font-family: -apple-system, "Roboto",sans-serif;
 	font-size:1.8em;
 	line-height:1.2em;
 	width:100%;
@@ -830,7 +830,7 @@ div.canvas{width:100% !important;}
 	text-align: center;
 	background-color: gray;
 	font-size: 3em;
-	font-family: "Roboto", sans-serif;
+	font-family: -apple-system, "Roboto", sans-serif;
 	color: white;
 	font-weight: 700;
 }
@@ -894,6 +894,11 @@ and (max-width : 900px){
 		columns:1;
 	}
 	
+		
+	.page-title{
+		font-size: 6em;
+	}
+	
 	
 }
 
@@ -940,7 +945,7 @@ and (max-width : 790px){
 	    font-size: 0.8em;
 	    line-height: 1.5em;	
 	}
-	
+
 
 	
 }
@@ -949,7 +954,7 @@ and (max-width : 790px){
 /* Appareils iOS
 -------------------------------------------------------------- */
 @media only screen  
-and (max-device-width : 736px) {
+and (max-device-width : 1024px) {
 	.single .post-header{
 		background-attachment: scroll;
 	}
