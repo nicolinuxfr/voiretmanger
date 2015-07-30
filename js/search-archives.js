@@ -187,7 +187,7 @@ var SearchPays = {
 	// Load the index file for later use
 
 	getPaysIndex: function() {
-		jQuery.getJSON("/pays.json", function(data) {
+		jQuery.getJSON("/nations.json", function(data) {
 				console.log('[Search index successfully loaded - pays]');
 				jQuery('.pays_results').html(''); // on vide la liste, au cas où
 				paysIndex = data;

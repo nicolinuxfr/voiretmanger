@@ -6,15 +6,18 @@ add_filter( 'searchwp_debug', '__return_true' );
 add_action( 'init', 'create_my_taxonomies', 0 );
 
 function create_my_taxonomies() {
-	register_taxonomy( 'pays', 'post', array( 'hierarchical' => false, 'label' => 'Pays', 'query_var' => true, 'rewrite' => true ) );
 	register_taxonomy( 'annee', 'post', array( 'hierarchical' => false, 'label' => 'Ann&eacute;es', 'query_var' => 'annee', 'rewrite' => array( 'slug' => 'annee' )) );
-	register_taxonomy( 'createur', 'post', array( 'hierarchical' => false, 'label' => 'Cr&eacute;ateurs', 'query_var' => true, 'rewrite' => true ) );
+	register_taxonomy( 'pays', 'post', array( 'hierarchical' => false, 'label' => 'Pays', 'query_var' => 'pays', 'rewrite'  => array( 'slug' => 'pays' ) ));
+	register_taxonomy( 'createur', 'post', array( 'hierarchical' => false, 'label' => 'Cr&eacute;ateurs', 'query_var' => true, 'rewrite' => array( 'slug' => 'createur' )) );
 	register_taxonomy( 'acteur', 'post', array( 'hierarchical' => false, 'label' => 'Acteurs', 'query_var' => 'acteur',  'rewrite' => array( 'slug' => 'acteur' )) );
 	register_taxonomy( 'metteurenscene', 'post', array( 'hierarchical' => false, 'label' => 'Metteurs en sc&egrave;ne', 'query_var' => 'metteurenscene',  'rewrite' => array( 'slug' => 'metteurenscene' )) );
 	register_taxonomy( 'lieu', 'post', array( 'hierarchical' => false, 'label' => 'Lieux', 'query_var' => 'lieu',  'rewrite' => array( 'slug' => 'lieu' )) );
 	register_taxonomy( 'chef', 'post', array( 'hierarchical' => false, 'label' => 'Chefs d\'orchestre', 'query_var' => 'chef',  'rewrite' => array( 'slug' => 'chef' )) );
 	register_taxonomy( 'saga', 'post', array( 'hierarchical' => false, 'label' => 'Saga', 'query_var' => 'saga',  'rewrite' => array( 'slug' => 'saga' )) );
 	register_taxonomy( 'festival', 'post', array( 'hierarchical' => false, 'label' => 'Festival', 'query_var' => 'festival',  'rewrite' => array( 'slug' => 'festival' )) );
+	register_taxonomy( 'original', 'post', array( 'hierarchical' => false, 'label' => 'Original', 'query_var' => 'original',  'rewrite' => array( 'slug' => 'original' ), 'show_in_nav_menus' => false, 'rewrite' => false, 'public' => false ) );
+
+	flush_rewrite_rules();
 
 }
 
@@ -71,7 +74,7 @@ function a_new_post( $new_status, $old_status, $post )
 			$json = json_encode($postsArray); // on encode tout ça en JSON
 		
 			if(!file_put_contents(ABSPATH."/search.json", $json)) { // on ecrit tout ca dans un fichier
-			  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+				throw new Exception("Problème lors de l'écriture du fichier");
 			}
 
 
@@ -98,7 +101,7 @@ function a_new_post( $new_status, $old_status, $post )
 		$json = json_encode($createursArray); // on encode tout ça en JSON
 	
 		if(!file_put_contents(ABSPATH."/createurs.json", $json)) { // on ecrit tout ca dans un fichier
-		  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+			throw new Exception("Problème lors de l'écriture du fichier");
 		}	
 	
 	// ********** Liste des acteurs
@@ -124,7 +127,7 @@ function a_new_post( $new_status, $old_status, $post )
 	$json = json_encode($acteursArray); // on encode tout ça en JSON
 
 	if(!file_put_contents(ABSPATH."/acteurs.json", $json)) { // on ecrit tout ca dans un fichier
-	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+	  throw new Exception("Problème lors de l'écriture du fichier");
 	}	
 
 
@@ -151,7 +154,7 @@ function a_new_post( $new_status, $old_status, $post )
 	$json = json_encode($anneesArray); // on encode tout ça en JSON
 
 	if(!file_put_contents(ABSPATH."/annees.json", $json)) { // on ecrit tout ca dans un fichier
-	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+	  throw new Exception("Problème lors de l'écriture du fichier");
 	}	
 	
 	// ********** Liste des pays
@@ -176,8 +179,8 @@ function a_new_post( $new_status, $old_status, $post )
 
 	$json = json_encode($paysArray); // on encode tout ça en JSON
 
-	if(!file_put_contents(ABSPATH."/pays.json", $json)) { // on ecrit tout ca dans un fichier
-	  throw new Exception("Probleme lors de l'ecrtiture du fichier");
+	if(!file_put_contents(ABSPATH."/nations.json", $json)) { // on ecrit tout ca dans un fichier
+	  throw new Exception("Problème lors de l'écriture du fichier");
 	}	
 	
 		}
