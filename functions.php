@@ -210,21 +210,6 @@ add_filter('the_excerpt_rss', 'rss_post_thumbnail');
 add_filter('the_content_feed', 'rss_post_thumbnail');
 
 
-// Articles liés
-function jetpackme_move_related_posts_to_top( $options ) {
-    $options['enabled'] = true;
-    return $options;
-}
-add_filter( 'jetpack_relatedposts_filter_options', 'jetpackme_move_related_posts_to_top' );
-add_filter( 'rocket_htaccess_mod_rewrite', 'patch_jetpack_29' );
-function patch_jetpack_29( $rules )
-{
-	return str_replace( '!.*=.*', '=""', $rules );
-}
-
-
-
-
 // Retirer les balises p autour des images (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -232,15 +217,6 @@ function filter_ptags_on_images($content){
 
 add_filter('the_content', 'filter_ptags_on_images');
 
-
-// Retrait catégorie archive du blog aux articles liés
-function jetpackme_filter_exclude_category( $filters ) {
-    $filters[] = array( 'not' =>
-      array( 'term' => array( 'category.slug' => 'archives-du-blog' ) )
-    );
-    return $filters;
-}
-add_filter( 'jetpack_relatedposts_filter_filters', 'jetpackme_filter_exclude_category' );
 
 // Retrait CSS taxonomy-images
 add_filter( 'taxonomy-images-disable-public-css', '__return_true' );
@@ -253,7 +229,12 @@ function remove_xmlrpc_pingback_ping( $methods ) {
    return $methods;
 } ;
 
-add_filter( 'show_admin_bar', '__return_false' );
+
+// RICG compression accentuée des images
+function custom_theme_setup() {
+    add_theme_support( 'advanced-image-compression' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 
 
