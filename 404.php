@@ -6,19 +6,31 @@
 
 get_header(); ?>
 
-	<div id="container" class="normal-layout">
+
+
+	<div id="container">
 		<div id="content" role="main">
 
-			<article id="post-0" class="post single error404 not-found">
-				<h1 class="page-title">Oups, cette page n'existe pas</h1>
-				<div class="entry-content">
-					<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant !</p>
+				<article id="post-0" class="single error404">
+					<header class="post-header page">
+						<h2 class="post-title">Cette page n'existe pas</h2>
+					</header>
 
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
+					<section class="post-content">
+						<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant !</p>
+						
+						<div class="recherche" id="recherche">
+							<?php get_search_form( "true" ); ?>
+							<nav>
+				<ul id="results"></ul>
+			</nav>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+						</div>
+					</section>
+					
+					
+				</article>
+
 
 	<script type="text/javascript">
 		// focus on search field after it has loaded
