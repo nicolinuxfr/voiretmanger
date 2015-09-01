@@ -20,11 +20,7 @@ get_header(); ?>
 						<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant !</p>
 						
 						<div class="recherche" id="recherche">
-							<?php get_search_form( "true" ); ?>
-							<nav>
-				<ul id="results"></ul>
-			</nav>
-
+							<?php get_search_form( "true" ); ?>							
 						</div>
 					</section>
 					
