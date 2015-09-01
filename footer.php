@@ -24,7 +24,7 @@
 	<script type="text/javascript" data-no-instant>
 		function bigfoot() {
 			$ = jQuery.noConflict();
-			$.bigfoot({actionOriginalFN: "ignore"})
+			$.bigfoot({actionOriginalFN: "ignore"});
 		}
 	
 		InstantClick.on('change', bigfoot);

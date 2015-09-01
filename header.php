@@ -32,16 +32,16 @@
 
 </head>
 
-<body>
+<body data-no-instant>
 	
 		
 <?php
 	if ( ! is_single() ) { ?>
-		<header class="header-site">
+		<header class="header-site" data-instant>
 			<h1 class="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
 			
 	<?php } else { ?>
-		<header class="header-post">
+		<header class="header-post" data-instant>
 			<a href="http://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><span class="dashicons dashicons-arrow-left-alt"></span></a>
 	<?php } ?>
 	
@@ -59,7 +59,7 @@
 			<?php get_search_form( "true" ); ?>
 							
 			<hr />
-			<div class="menu">
+			<div class="menu" data-instant>
 				<span class="dashicons dashicons-editor-justify"></span>
 				<ul class="navigation">
 				    <li class="nav-item"><a href="http://voiretmanger.fr/">Accueil</a></li>
@@ -76,4 +76,4 @@
 
  			</header><!-- #header -->
 
-	<main <?php body_class(); ?>>
+	<main <?php body_class(); ?> data-instant>
