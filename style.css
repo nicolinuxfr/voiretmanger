@@ -106,7 +106,7 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	font-family:'NotoSerif', serif;
-	   overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 
@@ -633,7 +633,8 @@ article .post-content p{
 	padding:0;
 }
 
-article .post-content p a{
+article .post-content a
+{
 	text-decoration: underline;
 }
 
@@ -661,11 +662,19 @@ article .amazon ul{
 	padding: 0 2em;
 }
 
+article .amazon a{
+	text-decoration: none;	
+}
+
 /* Pour les pages avec un index, on aère */
 .azindex h2{
 	margin-top:1.5em !important;
 }
 
+.azindex a,
+.azlinks a{
+	text-decoration: none !important;
+}
 
 /* Partage
 -------------------------------------------------------------- */
