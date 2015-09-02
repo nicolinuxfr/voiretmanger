@@ -4,7 +4,7 @@
  */
 ?>
 
-
+<div data-no-instant>
 <?php 
 	if(function_exists('pronamic_google_maps')) {
     pronamic_google_maps(array(
@@ -18,6 +18,7 @@
             ), 
     ));
 } ?>
+</div>
 
 
 <!-- Fonctions de partage -->	
