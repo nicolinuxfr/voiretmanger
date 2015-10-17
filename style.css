@@ -762,6 +762,16 @@ article .amazon a{
 }
 
 
+.post-meta .resto{
+	font-size: 1.5em;
+	text-align: center;
+	margin: 0.5em auto;
+	width: 100%;
+	font-weight: 700;
+	float: left;
+}
+
+
 
 .post-meta ul{
 	-webkit-column-count:2;   

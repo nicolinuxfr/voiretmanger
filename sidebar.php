@@ -7,6 +7,13 @@
 <div data-no-instant>
 <?php 
 	if(function_exists('pronamic_google_maps')) {
+		?> 
+		
+   <section class="post-meta">		
+   		<span class="resto"><a href="http://voiretmanger.fr/a-manger/">Toutes les critiques de restaurant</a></span>
+   </section>
+   
+   <?php
     pronamic_google_maps(array(
         'width' => 900 ,
         'height' => 400 ,
@@ -19,6 +26,8 @@
     ));
 } ?>
 </div>
+
+
 
 
 <!-- Fonctions de partage -->	
