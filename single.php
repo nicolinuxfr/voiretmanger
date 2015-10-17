@@ -29,9 +29,7 @@ get_header(); ?>
 		<footer class="post-footer">
 			<?php get_sidebar(); ?>
 		</footer>
-		
-		<?php edit_post_link( __( 'Edit', 'autofocus' ), '<span class="edit-link" data-no-instant>', '</span>' ); ?>
-		
+			
 	</article>
 
 <?php endwhile; // end of the loop. ?>
