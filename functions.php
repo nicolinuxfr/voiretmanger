@@ -52,9 +52,25 @@ function a_new_post( $new_status, $old_status, $post )
 			return;
 	}
 	$postsArray = Array(); // un tableau vide
+	
+	// Liste des sagas
+			$taxonomy = 'saga';
+			$args = array(
+			    'orderby'           => 'name', 
+			      'order'             => 'ASC',
+			      'hide_empty'        => true, 
+			);
+	
+			$tax_terms = get_terms($taxonomy, $args );
+	
+			foreach ($tax_terms as $tax_term) {
+				$currentPost = Array(); // un tableau vide pour l'article en cours
+				$currentPost["title"] = $tax_term->name; // on ajoute le titre
+				$currentPost["url"] = get_term_link( $tax_term ); // l'url
+				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
+		}
+	
 	// ********** Liste des articles
-		$postsArray = Array(); // un tableau vide
-
 		$args = array('post_type' => 'post','posts_per_page' => -1);
 	
 		$post_query = new WP_Query($args);
@@ -63,8 +79,7 @@ function a_new_post( $new_status, $old_status, $post )
 				$post_query->the_post();
 				$currentPost = Array(); // un tableau vide pour l'article en cours
 				$currentPost["title"] = get_the_title(); // on ajoute le titre
-				$currentPost["url"] = get_the_ID(); // l'url
-			
+				$currentPost["url"] = get_permalink(); // l'url
 			
 				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
 			
