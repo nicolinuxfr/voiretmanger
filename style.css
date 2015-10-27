@@ -775,7 +775,6 @@ article .amazon a{
 
 .post-meta ul{
 	-webkit-column-count:2;   
-	-moz-columns:2;
 	column-count:2;
 	columns:2;
 	margin: 0 auto;
