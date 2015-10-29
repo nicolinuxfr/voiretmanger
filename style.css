@@ -99,16 +99,16 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Polices
 -------------------------------------------------------------- */
+
 body{
 	font-size:12px;
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.7);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-	font-family:serif;
+	font-family: "Latin Modern", serif;
 	overflow-x: hidden;
 }
-
 
 h2,
 h3{
@@ -123,7 +123,7 @@ h4{
 
 img {width: 100%;height:auto;}
 
-a {text-decoration:none;color: rgba(0, 0, 0, 0.5);}
+a {text-decoration:none;color: rgba(0, 0, 0, 0.7);}
 a:hover{color: rgba(0, 0, 0, 0.9);}
 
 

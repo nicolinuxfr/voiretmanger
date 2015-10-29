@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>	
+<link href='http://voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
 
 <link rel="pingback" href="http://voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="http://voiretmanger.fr/favicon.ico" />
