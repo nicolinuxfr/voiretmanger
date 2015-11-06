@@ -634,15 +634,18 @@ article .post-content p{
 	padding:0;
 }
 
-article .post-content a
-{
+article .post-content a{
 	text-decoration: underline;
 	color: rgba(0, 0, 0, 0.7);
 }
 
-article .post-content a:hover
-{
+article .post-content a:hover{
 	color: rgba(0, 0, 0, 0.9);
+}
+
+article .post-content strong,
+article .post-content b{
+	letter-spacing: -0.01em;
 }
 
 article h3{
