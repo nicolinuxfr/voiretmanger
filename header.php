@@ -48,19 +48,16 @@
 	
 	
 	
-	<div class="recherche" id="recherche" onclick="document.getElementsByTagName('body')[0].className='scroll';">
+	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
 		<input type="checkbox" id="op"></input>
 	<div class="lower">
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
 	</div>
 
 	<div class="overlay overlay-hugeinc">
-		<label for="op" onclick="$('body').removeClass('noscroll');"><span class="dashicons dashicons-no-alt"</span></label>
+		<label for="op"><span class="dashicons dashicons-no-alt"</span></label>
 		
-			<?php get_search_form( "true" ); ?>
-							
-			<hr />
-			<div class="menu" data-instant>
+					<div class="menu" data-instant>
 				<span class="dashicons dashicons-editor-justify"></span>
 				<ul class="navigation">
 				    <li class="nav-item"><a href="http://voiretmanger.fr/">Accueil</a></li>
@@ -72,7 +69,10 @@
 				    <li class="nav-item"><a href="http://voiretmanger.fr/a-propos/">À propos</a></li>
 				</ul>
 			</div>
+		
+		<hr />
 			
+			<?php get_search_form( "true" ); ?>	
 	</div>
 
  			</header><!-- #header -->

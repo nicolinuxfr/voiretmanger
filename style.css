@@ -207,7 +207,7 @@ input[type="checkbox"] {
 
 .overlay label{
 	position: absolute;
-	top: 1em;
+	top: 3em;
 	right: 3em;
   	cursor:pointer;
 	color:white;
@@ -275,12 +275,11 @@ body.scroll{
 
 .overlay hr{
 	width:50%;
-	margin-top: 8em;
 }
 
 .menu{
 	font-size:3em;
-	margin: 1em auto;
+	margin: 2em auto 0.5em auto;
 	float:left;
 	width:100%;
 }
@@ -902,7 +901,8 @@ and (max-width : 1100px){
 	}
 	
 	.navigation li{
-		width:100%;
+		margin-right: 2em;
+		font-size: 0.7em;
 	}
 	
 	
