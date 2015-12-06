@@ -18,21 +18,18 @@
 	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search-archives.js'></script>
 <?php } ?>
 
-	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js' data-no-instant></script>
-		<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
-	<script src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/instantclick.min.js' data-no-instant></script>
-	<script type="text/javascript" data-no-instant>
-		function bigfoot() {
-			$ = jQuery.noConflict();
-			$.bigfoot({actionOriginalFN: "ignore"});
-		}
-	
-		InstantClick.on('change', bigfoot);
-		InstantClick.init();
-	</script>
 
 
 <?php if (is_single()) { ?>
+
+
+	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js' data-no-instant></script>
+		<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
+	<script type="text/javascript">
+		$ = jQuery.noConflict();
+		$.bigfoot({actionOriginalFN: "ignore"});
+	</script>
+
 	
 	<script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11lwu9']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
 
