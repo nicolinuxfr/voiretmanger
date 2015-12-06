@@ -56,7 +56,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 				<nav id="nav-below" class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Plus anciens', 'autofocus' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Plus récents <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Avant', 'autofocus' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Après <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
 				</nav><!-- #nav-below -->
 <?php endif; ?>

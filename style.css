@@ -289,10 +289,19 @@ body.scroll{
 	display: inline;
 	list-style: none; 
 	margin: 0;
-	position: relative;
 	clear: left;
 	float: left;
-	left: 50%;
+	height: 1.5em;
+}
+
+.nav-previous{
+	position: absolute;
+	left: 0;
+}
+
+.nav-next{
+	position: absolute;
+	right: 0;
 }
 
 .navigation li{
@@ -917,6 +926,10 @@ and (max-width : 1100px){
 	.navigation > li:after{
 		content:"";
 	}
+	
+	.post-meta ul{
+		padding: 0 1em;
+	}
 }
 
 /* Largeur moyenne, tous les écrans
@@ -937,7 +950,6 @@ and (max-width : 900px){
 	
 	
 	.post-meta ul{
-		padding:0 0.5em;
 		-webkit-column-count:1;   
 		-moz-column-count:1;
 		column-count:1;
