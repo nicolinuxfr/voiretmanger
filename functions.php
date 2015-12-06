@@ -253,6 +253,34 @@ add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 
 
+// Tri dans la colonne des news par dernière modif (source : https://wordpress.org/plugins/sort-by-modified/)
+
+// Register Modified Date Column for both posts & pages
+function modified_column_register( $columns ) {
+	$columns['date modif'] = __( 'Modification', 'date modified' );
+ 
+	return $columns;
+}
+add_filter( 'manage_posts_columns', 'modified_column_register' );
+add_filter( 'manage_pages_columns', 'modified_column_register' );
+
+// Display the modified date of each post
+function modified_column_display( $column_name, $post_id ) {
+	global $post; 
+	$modified = the_modified_date();
+	echo $modified;
+}
+add_action( 'manage_posts_custom_column', 'modified_column_display', 10, 2 );
+add_action( 'manage_pages_custom_column', 'modified_column_display', 10, 2 );
+
+// Register the column as sortable
+function modified_column_register_sortable( $columns ) {
+	$columns['date modif'] = 'modified';
+	return $columns;
+}
+add_filter( 'manage_edit-post_sortable_columns', 'modified_column_register_sortable' );
+add_filter( 'manage_edit-page_sortable_columns', 'modified_column_register_sortable' );
+
 // FIN DES AJOUTS PERSOS
 
 /**
