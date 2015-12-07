@@ -6,12 +6,30 @@
 
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
-	<article id="post-0" class="post single error404 not-found">
-		<h1 class="page-title">Oups, cette page n'existe pas</h1>
-		<div class="entry-content">
-			<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant !</p>
-		</div><!-- .entry-content -->
-	</article><!-- #post-0 -->
+	<div id="container">
+		<div id="content" role="main">
+
+				<article id="post-0" class="single error404">
+						<h1>Aucun résultat</h1>
+
+					<section class="post-content">
+						<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant !</p>
+						
+						<div class="recherche" id="recherche">
+							<?php get_search_form( "true" ); ?>							
+						</div>
+					</section>
+					
+					
+				</article>
+
+
+	<script type="text/javascript">
+		// focus on search field after it has loaded
+		document.getElementById('s') && document.getElementById('s').focus();
+	</script>
+	
+	
 <?php endif; ?>
 
 
