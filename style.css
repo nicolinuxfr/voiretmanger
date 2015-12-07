@@ -291,17 +291,11 @@ body.scroll{
 	margin: 0;
 	clear: left;
 	float: left;
-	height: 1.5em;
 }
 
-.nav-previous{
-	position: absolute;
-	left: 0;
-}
-
-.nav-next{
-	position: absolute;
-	right: 0;
+.menu .navigation{
+	position: relative;
+	left: 50%;	
 }
 
 .navigation li{
@@ -341,15 +335,20 @@ footer {clear:both;}
 #nav-below{
 	font-family: -apple-system, "Roboto", serif;
 	font-size: 3em;
+	height: 1.5em;
 }
 
-#nav-previous{
-	float:right;
+
+.nav-previous{
+	position: absolute;
+	left: 0;
 }
 
-#nav-next{
-	float:left;
+.nav-next{
+	position: absolute;
+	right: 0;
 }
+
 
 /* ==========================================================================
    PAGE D'ACCUEIL
@@ -915,7 +914,7 @@ and (max-width : 1100px){
 	}
 	
 	
-	.navigation{
+	.menu .navigation{
 		left:0;
 	}
 	
