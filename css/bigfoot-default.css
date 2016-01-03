@@ -242,7 +242,7 @@
   z-index: 8;
   display: inline-block;
   max-height: 15em;
-  padding: 1.1em 1.3em 1.2em;
+  padding: 1.1em;
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
@@ -251,7 +251,8 @@
   background: #fafafa;
   border-radius: 0.5em;
   font-smoothing: subpixel-antialiased;
-  line-height: normal;
+  line-height: 1.2em;
+  font-size: 0.8em;
 }
 
 .bigfoot-footnote__content img {
