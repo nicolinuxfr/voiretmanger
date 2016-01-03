@@ -7,15 +7,15 @@
 <meta name="apple-mobile-web-app-title" content="Voir et manger" />
 <meta name="viewport" content="initial-scale=1">
 
-<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" media="all" href="//voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
+<link href='//fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
 
 <?php if (is_single()) { ?>	
-<link href='http://voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
+<link href='//voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
 <?php } ?>
 
-<link rel="pingback" href="http://voiretmanger.fr/xmlrpc.php" />
-<link rel="shortcut icon" href="http://voiretmanger.fr/favicon.ico" />
+<link rel="pingback" href="//voiretmanger.fr/xmlrpc.php" />
+<link rel="shortcut icon" href="//voiretmanger.fr/favicon.ico" />
 
 <?php wp_head(); ?>	
 		
@@ -42,7 +42,7 @@
 <?php
 	if ( ! is_single() ) { ?>
 		<header class="header-site" data-instant>
-			<h1 class="site-title"><a href="http://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
+			<h1 class="site-title"><a href="//voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
 			
 	<?php } else { ?>
 		<header class="header-post" data-instant>
