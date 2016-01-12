@@ -417,7 +417,7 @@ footer {clear:both;}
 .search article{
 	display: block;
 	width:50%;
-	height:35vw;
+	height:45vh;
 	float:left;
 	position: relative;
 	overflow: hidden;
@@ -558,7 +558,7 @@ footer {clear:both;}
 }
 
 /* Pour les pages, on annule la hauteur pleine page */
-.single .page{height:auto;}
+.single .post-header .page{height:auto;}
 
 
 .single .post-header > .flou{
@@ -676,8 +676,28 @@ article h3{
 }
 
 
-article img {width: 100%;height:auto;}
+article img {
+	width: 100%;
+	height:auto;
+}
 
+
+article blockquote {
+	margin: 0 1.5em 0 1.5em;
+	font-style: italic;
+	font-size: 1.2em;
+	line-height: 1.1em;
+}
+
+article blockquote cite {
+	font-family: -apple-system, "Roboto", serif;
+	font-style: normal;
+	font-size: 0.6em;
+	line-height: 1em;
+	text-align: right;
+	display: block;
+	padding: 0.5em;
+}
 
 article .footnotes{
 	font-size: 0.8em;
@@ -977,6 +997,29 @@ and (max-width : 900px){
 		font-size: 6em;
 	}
 	
+	article .post-content p{
+		padding:0 0.8em;
+	    font-size: 0.9em;
+	}
+	
+	article blockquote{
+		font-size: 1em;
+	}
+	
+	article h2,
+	article h3{
+		font-size: 1.5em;	
+	}
+	
+	article .amazon{
+		font-size: 0.9em;
+	}
+
+
+	.searchArchives li{
+		width: 50%;
+	}
+	
 	
 }
 
@@ -1018,21 +1061,10 @@ and (max-width : 790px){
 		font-size:3em;
 	}
 	
-	article .post-content p{
-		padding:0 0.5em;
-	    font-size: 0.8em;
-	    line-height: 1.5em;	
+	.searchArchives li{
+		width: 100%;
 	}
 	
-	article h2,
-	article h3{
-		font-size: 1.5em;	
-	}
-	
-	article .amazon{
-		font-size: 0.9em;
-	}
-
 
 	
 }
