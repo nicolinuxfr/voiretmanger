@@ -17,6 +17,13 @@
 <link rel="pingback" href="//voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="//voiretmanger.fr/favicon.ico" />
 
+<?php if (current_user_can( 'manage_options' )) { ?>
+	<style>
+		.single .post-header{height: calc(100vh - 1em);}
+		.single .post-header .page{height:auto;}
+	</style>
+<?php } ?>
+
 <?php wp_head(); ?>	
 		
 		<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?> 
