@@ -20,7 +20,7 @@
 <?php if (current_user_can( 'manage_options' )) { ?>
 	<style>
 		.single .post-header{height: calc(100vh - 1em);}
-		.single .post-header .page{height:auto;}
+		.page .single .post-header{height:auto;}	
 	</style>
 <?php } ?>
 
