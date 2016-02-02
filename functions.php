@@ -1,7 +1,5 @@
 <?php
 
-add_filter( 'searchwp_debug', '__return_true' );
-
 // AJOUTS PERSOS
 add_action( 'init', 'create_my_taxonomies', 0 );
 
@@ -251,6 +249,7 @@ function custom_theme_setup() {
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
 
+// Retrait de tous les émojis
 function disable_wp_emojicons() {
 
   // all actions related to emojis
