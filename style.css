@@ -1036,6 +1036,13 @@ and (max-width : 900px){
 @media only screen 
 and (max-width : 790px){
 	
+	.home article:nth-of-type(n+0),
+	.archive article,
+	.search article{
+		width:100%;
+		height:80vw;
+	}
+	
 	.site-title{
 		font-size:30vw;
 		margin-top: 3rem;
@@ -1075,6 +1082,20 @@ and (max-width : 790px){
 
 	
 }
+
+
+/* Petits iPhone
+-------------------------------------------------------------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	.home article header .post-title,
+	.archive article header .post-title{
+		font-size:2em;
+	}	
+	
+}
+
 
 
 /* Appareils iOS
