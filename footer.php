@@ -9,13 +9,13 @@
 </main>
 
 <footer class="site-footer">
-	<section class="copyright">Publié depuis 2008. <a href="http://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
+	<section class="copyright">Publié depuis 2008. <a href="https://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
 </footer><!-- #footer -->
 
-	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
+	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
 	
 <?php if (is_page( 'archives' ) ) { ?>
-	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/search-archives.js'></script>
+	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/search-archives.js'></script>
 <?php } ?>
 
 
@@ -23,8 +23,8 @@
 <?php if (is_single()) { ?>
 
 
-	<script type='text/javascript' src='http://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
-		<link rel="stylesheet" media="all" href="http://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
+	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
+		<link rel="stylesheet" media="all" href="//voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
 	<script type="text/javascript">
 		$ = jQuery.noConflict();
 		$.bigfoot({actionOriginalFN: "ignore"});
