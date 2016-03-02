@@ -11,7 +11,7 @@
 <link rel="stylesheet" media="all" href="//voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
 <link href='//fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
 
-<?php if (is_single()) { ?>	
+<?php if (is_singular()) { ?>	
 <link href='//voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
 <?php } ?>
 
