@@ -8,7 +8,7 @@ get_header(); ?>
 
 
 
-	<div id="container">
+	<div id="container" class="page">
 		<div id="content" role="main">
 
 				<article id="post-0" class="single error404">
