@@ -18,6 +18,11 @@
 <link rel="pingback" href="//voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="//voiretmanger.fr/favicon.ico" />
 
+<?php if (is_single() ) { ?>
+	<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>
+	<link rel="preload" href="<?php echo $featuredImage[0]; ?>" as="image">
+<?php } ?>
+
 <?php if (current_user_can( 'manage_options' )) { ?>
 	<style>
 		.single .post-header{height: calc(100vh - 1em);}
@@ -25,7 +30,7 @@
 	</style>
 <?php } ?>
 
-<?php wp_head(); ?>
+
 
 		<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?>
 			<style>
@@ -41,7 +46,7 @@
 
 	<?php } ?>
 
-
+<?php wp_head(); ?>
 </head>
 
 <body>
