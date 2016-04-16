@@ -573,8 +573,9 @@ footer {clear:both;}
 }
 
 
-.single .post-header .post-title em{font-size: 1.5em;font-weight:700;}
-
+.single .post-header .post-title em,
+.single .post-header .post-title i{
+	font-size: 1.5em;font-weight:700;
 }
 
 .single .post-header > .flou::before {
@@ -586,8 +587,6 @@ content: "";
   height: 200%;
   background: inherit;
   background-attachment: fixed;
-  -webkit-filter: blur(20px);
-  filter: blur(4px);
 
 }
 
