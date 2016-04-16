@@ -7,16 +7,17 @@
 <link rel="alternate" hreflang="fr" href="https://voiretmanger.fr" />
 <meta name="apple-mobile-web-app-title" content="Voir et manger" />
 <meta name="viewport" content="initial-scale=1">
+<meta property="fb:pages" content="384298108368" />
 
-<link rel="stylesheet" media="all" href="//voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
-<link href='//fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
 
 <?php if (is_singular()) { ?>
-<link href='//voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
+<link href='https://voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
 <?php } ?>
 
-<link rel="pingback" href="//voiretmanger.fr/xmlrpc.php" />
-<link rel="shortcut icon" href="//voiretmanger.fr/favicon.ico" />
+<link rel="pingback" href="https://voiretmanger.fr/xmlrpc.php" />
+<link rel="shortcut icon" href="https://voiretmanger.fr/favicon.ico" />
 
 <?php if (is_single() ) { ?>
 	<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>
