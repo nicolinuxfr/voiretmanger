@@ -1,10 +1,10 @@
-/* 
+/*
 Theme Name: À voir et à manger
 
 	==========================================================================
 		Thème du blog : À voir et à manger
-	========================================================================== 
-	
+	==========================================================================
+
 */
 
 
@@ -132,7 +132,7 @@ a:hover{color: rgba(0, 0, 0, 0.9);}
 -------------------------------------------------------------- */
 
 header .recherche{
-	font-family: -apple-system, "Roboto", sans-serif;
+	font-family: -apple-system, sans-serif;
 	right: 0;
 	position: absolute;
 }
@@ -159,7 +159,7 @@ header .recherche .case{
 
 
 header #results{
-	font-family: -apple-system, "Roboto", sans-serif;
+	font-family: -apple-system, sans-serif;
 	font-size:1.5em;
 	list-style: none;
 	margin: 0;
@@ -287,7 +287,7 @@ body.scroll{
 
 .navigation {
 	display: inline;
-	list-style: none; 
+	list-style: none;
 	margin: 0;
 	clear: left;
 	float: left;
@@ -295,7 +295,7 @@ body.scroll{
 
 .menu .navigation{
 	position: relative;
-	left: 50%;	
+	left: 50%;
 }
 
 .navigation li{
@@ -314,8 +314,8 @@ body.scroll{
 
 .navigation li a {
 	padding: 0.2em 1vw;
-	margin:0; 
-	display:block; 
+	margin:0;
+	display:block;
 }
 
 
@@ -324,16 +324,16 @@ body.scroll{
 -------------------------------------------------------------- */
 footer {clear:both;}
 .copyright{
-	font-family: -apple-system, "Roboto", sans-serif;
+	font-family: -apple-system, sans-serif;
 	font-size:1em;
-	text-align: center; 
+	text-align: center;
 	padding: 1em;
 }
 
 
 
 #nav-below{
-	font-family: -apple-system, "Roboto", serif;
+	font-family: -apple-system, sans-serif;
 	font-size: 3em;
 	height: 1.5em;
 }
@@ -368,9 +368,9 @@ footer {clear:both;}
 
 
 .site-title {
-	padding:0.1em; 
+	padding:0.1em;
 	font-size:20em;
-	line-height:1em; 
+	line-height:1em;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 400;
@@ -382,7 +382,7 @@ footer {clear:both;}
 	padding:0 8px;
 	margin:0;
 	font-size:4em;
-	line-height:1em;	
+	line-height:1em;
 	font-family: 'Dorsa', sans-serif;
 }
 
@@ -400,7 +400,7 @@ footer {clear:both;}
 	clear:none;
 	position:relative;
 	width: 100%;
-} 
+}
 
 
 .page-title{
@@ -426,7 +426,7 @@ footer {clear:both;}
 .archive .image,
 .home .image,
 .search .image{
-	display: block; 
+	display: block;
 	width: 100%;
 	height:100%;
 	background-position: center;
@@ -476,11 +476,11 @@ footer {clear:both;}
 	width: 100%;
 	opacity: 0;
 	background-color: rgba(0, 0, 0, 0.6);
-} 
+}
 
 .home article:hover header,
 .archive article:hover header,
-.search article:hover header{opacity: 1;transition: all 0.5s ease;} 
+.search article:hover header{opacity: 1;transition: all 0.5s ease;}
 
 .home article header .post-title,
 .archive article header .post-title,
@@ -493,10 +493,10 @@ footer {clear:both;}
 	padding: 0.4em;
 	text-align:left;
 	margin:0;
-} 
+}
 
 .archive article header .post-title em,
-.home article header .post-title em, 
+.home article header .post-title em,
 .search article header .post-title em{
 	font-weight:700;
 }
@@ -530,7 +530,7 @@ footer {clear:both;}
 
 .header-post .dashicons-arrow-left-alt{
 	font-size:4em;
-	
+
 }
 
 .header-post #rechercher{
@@ -604,8 +604,8 @@ content: "";
 .single .post-header h2{
 	color:white;
 	text-align:center;
-	letter-spacing: -1px; 
-	margin:0.4em auto; 
+	letter-spacing: -1px;
+	margin:0.4em auto;
 	padding: 0px 0.3em;
 	border: 0;
 	font: normal 5em "Playfair Display", serif;
@@ -656,7 +656,7 @@ article .post-content b{
 
 article h2{
 	font-size: 2em;
-	text-align: center;	
+	text-align: center;
 	line-height: 1em;
 }
 
@@ -684,7 +684,7 @@ article figcaption{
 	text-align: center;
 	font-style: italic;
 	font-size: 0.7em;
-	margin-top:-0.5em;	
+	margin-top:-0.5em;
 }
 
 article blockquote {
@@ -695,7 +695,7 @@ article blockquote {
 }
 
 article blockquote cite {
-	font-family: -apple-system, "Roboto", serif;
+	font-family: -apple-system, sans-serif;
 	font-style: normal;
 	font-size: 0.6em;
 	line-height: 1em;
@@ -716,13 +716,13 @@ article hr{
 	margin-bottom: 1em;
 }
 
- 
+
 article .amazon ul{
 	padding: 0 2em;
 }
 
 article .amazon a{
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 /* Pour les pages avec un index, on aère */
@@ -737,11 +737,11 @@ article .amazon a{
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; 
-    height: 0; 
+    padding-bottom: 56.25%;
+    height: 0;
     overflow: hidden;
 }
- 
+
 
 .video-container iframe,
 .video-container object,
@@ -759,7 +759,7 @@ article .amazon a{
 -------------------------------------------------------------- */
 .partage{
 	color:white;
-	font-family: -apple-system, "Roboto",serif;
+	font-family: -apple-system, sans-serif;
 	font-size:2em;
 	margin:4em 0;
 }
@@ -811,7 +811,7 @@ article .amazon a{
 -------------------------------------------------------------- */
 .post-meta{
 	clear:both;
-	font-family: -apple-system, "Roboto",sans-serif;
+	font-family: -apple-system, sans-serif;
 	font-size:1.8em;
 	line-height:1.2em;
 	width:100%;
@@ -833,7 +833,7 @@ article .amazon a{
 
 
 .post-meta ul{
-	-webkit-column-count:2;   
+	-webkit-column-count:2;
 	column-count:2;
 	columns:2;
 	margin: 0 auto;
@@ -841,7 +841,7 @@ article .amazon a{
 	padding:0;
 	max-width:1000px;
 }
-	
+
 
 .post-meta ul > li {
 	display:inline-block;
@@ -901,7 +901,7 @@ div.canvas{width:100% !important;}
 
 .searchArchives .resultats ul{
 	list-style-type: none;
-	margin:0;	
+	margin:0;
 }
 
 
@@ -927,7 +927,7 @@ div.canvas{width:100% !important;}
 	text-align: center;
 	background-color: gray;
 	font-size: 3em;
-	font-family: -apple-system, "Roboto", sans-serif;
+	font-family: -apple-system, sans-serif;
 	color: white;
 	font-weight: 700;
 }
@@ -937,35 +937,35 @@ div.canvas{width:100% !important;}
    MOBILE
    ========================================================================== */
 
-@media only screen 
+@media only screen
 and (max-width : 1100px){
 	.partage h4,
 	.partage ul li{
 		width:100%;
 	}
-	
+
 	.menu{
 		margin:0;
 	}
-	
+
 	.navigation li{
 		margin-right: 2em;
 		font-size: 0.7em;
 	}
-	
-	
+
+
 	.menu .navigation{
 		left:0;
 	}
-	
+
 	.navigation li{
 		right:0;
 	}
-	
+
 	.navigation > li:after{
 		content:"";
 	}
-	
+
 	.post-meta ul{
 		padding: 0 1em;
 	}
@@ -973,50 +973,50 @@ and (max-width : 1100px){
 
 /* Largeur moyenne, tous les écrans
 -------------------------------------------------------------- */
-@media only screen 
+@media only screen
 and (max-width : 900px){
-	
+
 	.home article:nth-of-type(n+0),
 	.archive article,
 	.search article{
 		width:100%;
 		height:60vw;
 	}
-	
+
 	.home article header,
 	.archive article header,
 	.search article header{
 		opacity:1;
 	}
-	
-	
+
+
 	.post-meta ul{
-		-webkit-column-count:1;   
+		-webkit-column-count:1;
 		-moz-column-count:1;
 		column-count:1;
 		columns:1;
 	}
-	
-		
+
+
 	.page-title{
 		font-size: 6em;
 	}
-	
+
 	article .post-content p{
 		padding:0 0.7em;
 	    font-size: 0.8em;
 	    line-height: 1.4em;
 	}
-	
+
 	article blockquote{
 		font-size: 1em;
 	}
-	
+
 	article h2,
 	article h3{
-		font-size: 1.5em;	
+		font-size: 1.5em;
 	}
-	
+
 	article .amazon{
 		font-size: 0.9em;
 	}
@@ -1025,86 +1025,86 @@ and (max-width : 900px){
 	.searchArchives li{
 		width: 50%;
 	}
-	
-	
+
+
 }
 
 
 /* Petite largeur, tous les écrans
 -------------------------------------------------------------- */
-@media only screen 
+@media only screen
 and (max-width : 790px){
-	
+
 	.home article:nth-of-type(n+0),
 	.archive article,
 	.search article{
 		width:100%;
 		height:80vw;
 	}
-	
+
 	.site-title{
 		font-size:30vw;
 		margin-top: 3rem;
 	}
-	
-	
+
+
 	header .recherche .case {
 		font-size: 3em;
 		margin: 0.6em auto 0.3em auto;
 	}
-	
+
 	header #results a {
 	    font-size: 1.3em;
 	}
-	
+
 	label .dashicons.dashicons-no-alt{
 		font-size: 3em;
 	}
-	
+
 	.overlay hr{
 		width: 90%;
 	}
-	
+
 	.home article header .post-title,
 	.archive article header .post-title{
 		font-size:2.4em;
 	}
-	
+
 	.single .post-header > .flou > h2{
 		font-size:3em;
 	}
-	
+
 	.searchArchives li{
 		width: 100%;
 	}
-	
 
-	
+
+
 }
 
 
 /* Petits iPhone
 -------------------------------------------------------------- */
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 568px) {
 	.home article header .post-title,
 	.archive article header .post-title{
 		font-size:2em;
-	}	
-	
+	}
+
 }
 
 
 
 /* Appareils iOS
 -------------------------------------------------------------- */
-@media only screen  
+@media only screen
 and (max-device-width : 1024px) {
 	.single .post-header{
 		background-attachment: scroll;
 	}
-	
+
 	.single .post-header > .flou{
 		background: none;
 		padding: 1em 0;

@@ -9,12 +9,8 @@
 <meta name="viewport" content="initial-scale=1">
 <meta property="fb:pages" content="384298108368" />
 
-<link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700italic|Roboto:300,300italic,700|Dorsa' rel='stylesheet' type='text/css'>
-
-<?php if (is_singular()) { ?>
 <link href='https://voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
-<?php } ?>
+<link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
 
 <link rel="pingback" href="https://voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="https://voiretmanger.fr/favicon.ico" />
