@@ -665,7 +665,7 @@ article h2 em{
 }
 
 article h3{
-	margin: 1em auto 0.3em auto;
+	margin: 1em auto 0.3em 0.5em;
 	font-size: 2em;
 	padding: 0;
 	font-style: italic;
@@ -1014,7 +1014,7 @@ and (max-width : 900px){
 
 	article h2,
 	article h3{
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 
 	article .amazon{
