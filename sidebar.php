@@ -91,7 +91,7 @@
 			
 			<?php echo get_the_term_list( $post->ID, 'chef', '<li><strong>Chef d\'orchestre</strong> : ', ', ','</li>') ?>
 			
-			<?php if (! in_category('À manger') ) :
+			<?php if (! in_category( array('961', '3977'))) :
 				echo get_the_tag_list('<li><strong>Tags</strong> : ',', ','</li>'); 
 			endif; ?>
 		</ul>
