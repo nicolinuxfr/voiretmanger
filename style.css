@@ -435,7 +435,7 @@ footer {clear:both;}
 
 .home article:nth-of-type(1){
 	width:100%;
-	height:45vw;
+	height: calc(100vh - 288px);
 }
 
 .home article:nth-of-type(2),
@@ -502,6 +502,14 @@ footer {clear:both;}
 }
 
 
+.home article:first-child header{
+    opacity: 1;
+}
+
+.home article:first-child header .post-title{
+	font-size:5em;
+	text-align:center;
+}
 
 /* ==========================================================================
    ARTICLES et PAGES
@@ -976,7 +984,7 @@ and (max-width : 1100px){
 @media only screen
 and (max-width : 900px){
 
-	.home article:nth-of-type(n+0),
+	.home article:nth-of-type(n+2),
 	.archive article,
 	.search article{
 		width:100%;
@@ -988,6 +996,11 @@ and (max-width : 900px){
 	.search article header{
 		opacity:1;
 	}
+	
+	.home article:first-child header .post-title{
+		font-size: 2.8em;
+	}
+
 
 
 	.post-meta ul{
@@ -1035,13 +1048,6 @@ and (max-width : 900px){
 @media only screen
 and (max-width : 790px){
 
-	.home article:nth-of-type(n+0),
-	.archive article,
-	.search article{
-		width:100%;
-		height:80vw;
-	}
-
 	.site-title{
 		font-size:30vw;
 		margin-top: 3rem;
@@ -1064,11 +1070,18 @@ and (max-width : 790px){
 	.overlay hr{
 		width: 90%;
 	}
+	
+	.home article:first-child{
+		height:60vw;
+	}
+
 
 	.home article header .post-title,
+	.home article:first-child header .post-title,
 	.archive article header .post-title{
 		font-size:2.4em;
 	}
+	
 
 	.single .post-header > .flou > h2{
 		font-size:3em;
@@ -1089,6 +1102,7 @@ and (max-width : 790px){
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
 	.home article header .post-title,
+	.home article:first-child header .post-title,
 	.archive article header .post-title{
 		font-size:2em;
 	}
