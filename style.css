@@ -1017,22 +1017,8 @@ and (max-width : 900px){
 
 	article .post-content p{
 		padding:0 0.7em;
-	    font-size: 0.8em;
-	    line-height: 1.4em;
 	}
 
-	article blockquote{
-		font-size: 1em;
-	}
-
-	article h2,
-	article h3{
-		font-size: 1.3em;
-	}
-
-	article .amazon{
-		font-size: 0.9em;
-	}
 
 
 	.searchArchives li{
@@ -1086,12 +1072,36 @@ and (max-width : 790px){
 	.single .post-header > .flou > h2{
 		font-size:3em;
 	}
-
+	
 	.searchArchives li{
 		width: 100%;
 	}
 
 
+
+}
+
+
+@media only screen
+and (max-width : 600px){
+	
+	article .post-content p{
+	    font-size: 0.8em;
+	    line-height: 1.4em;
+	}
+
+	article blockquote{
+		font-size: 1em;
+	}
+
+	article h2,
+	article h3{
+		font-size: 1.3em;
+	}
+
+	article .amazon{
+		font-size: 0.9em;
+	}
 
 }
 
