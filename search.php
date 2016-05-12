@@ -10,9 +10,6 @@ $page = isset( $_GET['swppage'] ) ? absint( $_GET['swppage'] ) : 1;
 the_post();
 get_header(); ?>
 
-	<div id="container" class="af-layout">
-    <div id="content" class="site-content" role="main">
-
       <?php if( !empty( $query ) ) : ?>
         <header class="page-header">
           <h1 class="page-title">Résultats pour : <span><?php echo $query; ?></span></h1>
@@ -28,10 +25,6 @@ get_header(); ?>
 
  	<?php endif; ?>
       
-     
-    </div><!-- #content -->
-  </div><!-- #primary -->
-
 <?php
 
   wp_reset_postdata();
