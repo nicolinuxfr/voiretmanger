@@ -19,6 +19,48 @@ function create_my_taxonomies() {
 
 }
 
+remove_action( 'add_meta_boxes', array( 'Instant_Articles_Meta_Box', 'register_meta_box' ) );
+remove_action( 'wp_ajax_instant_articles_meta_box', array( 'Instant_Articles_Meta_Box', 'render_meta_box' ) );
+
+add_action( 'pre_amp_render_post', 'xyz_amp_add_custom_actions' );
+function xyz_amp_add_custom_actions() {
+    add_filter( 'the_content', 'xyz_amp_add_featured_image' );
+}
+
+function xyz_amp_add_featured_image( $content ) {
+    if ( has_post_thumbnail() ) {
+        // Just add the raw <img /> tag; our sanitizer will take care of it later.
+        $image = sprintf( '<p class="xyz-featured-image">%s</p>', get_the_post_thumbnail() );
+        $content = $image . $content;
+    }
+    return $content;
+}
+
+add_filter( 'amp_post_template_meta_parts', 'xyz_amp_remove_author_meta' );
+
+function xyz_amp_remove_author_meta( $meta_parts ) {
+    foreach ( array_keys( $meta_parts, 'meta-author', true ) as $key ) {
+        unset( $meta_parts[ $key ] );
+    }
+    return $meta_parts;
+}
+
+
+function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
+    $post_id = get_the_ID();
+
+    $tonesque = get_post_meta( $post_id, '_post_colors', true );
+    extract( $tonesque );
+
+    $colors_css = ".post a {
+        color: #{$color};
+    }";
+
+    return $colors_css;
+}
+add_filter( 'colorposts_css_output', 'jeherve_use_custom_colors', 10, 3 );
+
+
 // TRI PAR TAXONOMIES
 //allows queries to be sorted by taxonomy term name (http://www.jrnielsen.com/wp-query-orderby-taxonomy-term-name/)
 add_filter('posts_clauses', 'posts_clauses_with_tax', 10, 2);
@@ -362,6 +404,7 @@ function autofocus_setup() {
 		'primary' => __( 'Primary Navigation', 'autofocus' ),
 	) );
     
-	wp_enqueue_style( 'dashicons' );	
+	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_script( 'jquery' );	
 }
 endif;
