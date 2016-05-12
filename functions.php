@@ -111,7 +111,13 @@ function a_new_post( $new_status, $old_status, $post )
 		}
 	
 	// ********** Liste des articles
-		$args = array('post_type' => 'post','posts_per_page' => -1);
+		$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => -1, 
+			'no_found_rows' => true, 
+			'update_post_meta_cache' => false, 
+			'update_post_term_cache' => false, 
+			'fields' => 'ids');
 	
 		$post_query = new WP_Query($args);
 		if($post_query->have_posts()) {
@@ -123,7 +129,6 @@ function a_new_post( $new_status, $old_status, $post )
 			
 				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
 			
-
 			}
 			
 			$json = json_encode($postsArray); // on encode tout ça en JSON
@@ -345,14 +350,7 @@ add_filter( 'manage_edit-page_sortable_columns', 'modified_column_register_sorta
 // FIN DES AJOUTS PERSOS
 
 /**
- * AutoFocus functions and definitions
- *
- * Sets up the theme and provides some helper functions. Some helper functions
- * are used in the theme as custom template tags. Others are attached to action and
- * filter hooks in WordPress to change core functionality.
- *
- * The first function, autofocus_setup(), sets up the theme by registering support
- * for various features in WordPress, such as post thumbnails, navigation menus, and the like.
+ * Fonctions de base du blog
  *
  */
 
@@ -379,16 +377,16 @@ if ( ! isset( $content_width ) )
 	$content_width = 950;
 
 /** Tell WordPress to run autofocus_setup() when the 'after_setup_theme' hook is run. */
-add_action( 'after_setup_theme', 'autofocus_setup' );
+add_action( 'after_setup_theme', 'voiretmanger_setup' );
 
-if ( ! function_exists( 'autofocus_setup' ) ):
+if ( ! function_exists( 'voiretmanger_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * To override autofocus_setup() in a child theme, add your own autofocus_setup to your child theme's
  * functions.php file.
  */
-function autofocus_setup() {
+function voiretmanger_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
@@ -398,11 +396,6 @@ function autofocus_setup() {
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Navigation', 'autofocus' ),
-	) );
     
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_script( 'jquery' );	
