@@ -762,6 +762,14 @@ article .amazon a{
 }
 
 
+.tiled-gallery-caption{	
+	font-size: 18px !important;
+	padding: 10px !important;
+	text-indent: 0px !important;
+	white-space: normal !important;
+}
+
+
 
 /* Partage
 -------------------------------------------------------------- */
@@ -1075,6 +1083,12 @@ and (max-width : 790px){
 	
 	.searchArchives li{
 		width: 100%;
+	}
+	
+	.tiled-gallery-caption{	
+		font-size: 13px !important;
+		padding: 10px !important;
+		line-height: 20px !important;
 	}
 
 
