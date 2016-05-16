@@ -1,6 +1,6 @@
 <?php
 /**
- * The loop that displays images in the AutoFocus format.
+ * Index du blog
  */
 ?>
 
@@ -28,11 +28,13 @@
 
 <?php endwhile; // Fin de la boucle ?>
 
-
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-				<nav id="nav-below" class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Avant', 'autofocus' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Après <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
-				</nav><!-- #nav-below -->
-<?php endif; ?>
+<nav id="nav-below" class="navigation">
+	<?php if ( !is_paged() ) { ?>
+		<div class="nav-home"><a href="https://voiretmanger.fr/page/2/">Les articles suivants</a></div>
+	<?php }
+	
+	else { ?>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Avant', 'autofocus' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Après <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
+	<?php } ?>
+</nav><!-- #nav-below -->
