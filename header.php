@@ -26,22 +26,18 @@
 		.page .single .post-header{height:auto;}
 	</style>
 <?php } ?>
-
-
-
-		<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?>
-			<style>
-				.header-post #rechercher,
-				.header-post a{
-					color: rgba(35, 35, 35, 0.7);
-				}
-				.header-post a:hover,
-				.header-post #rechercher:hover{
-					color:black;
-				}
-			</style>
-
-	<?php } ?>
+<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?>
+	<style>
+		.header-post #rechercher,
+		.header-post a{
+			color: rgba(35, 35, 35, 0.7);
+		}
+		.header-post a:hover,
+		.header-post #rechercher:hover{
+			color:black;
+		}
+	</style>
+<?php } ?>
 
 <?php wp_head(); ?>
 </head>
