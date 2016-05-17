@@ -452,13 +452,13 @@ footer {clear:both;}
 }
 
 .home:not(.paged) article:nth-of-type(1){
-	width:100%;
+	width: 100%;
 	height: calc(100vh - 288px);
 }
 
 .home:not(.paged) article:nth-of-type(2),
 .home:not(.paged) article:nth-of-type(3){
-	width:50%;
+    /* width: 50%; */
 }
 
 .home:not(.paged) article:nth-of-type(4){
@@ -1010,8 +1010,8 @@ and (max-width : 1100px){
 @media only screen
 and (max-width : 900px){
 
-	.home article:nth-of-type(n+2),
-	.archive article,
+	.home:not(.paged) article:nth-of-type(n), 
+	.archive article, 
 	.search article{
 		width:100%;
 		height:60vw;
@@ -1023,8 +1023,9 @@ and (max-width : 900px){
 		opacity:1;
 	}
 	
-	.home article:first-child header .post-title{
+	.home:not(.paged) article:nth-of-type(n) header .post-title{
 		font-size: 2.8em;
+		text-align: left
 	}
 
 
@@ -1088,8 +1089,8 @@ and (max-width : 790px){
 	}
 
 
-	.home article header .post-title,
-	.home article:first-child header .post-title,
+	.home article:nth-of-child(n) header .post-title,
+	.home:not(.paged) article:nth-of-child(n) header .post-title,
 	.archive article header .post-title{
 		font-size:2.4em;
 	}
