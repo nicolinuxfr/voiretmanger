@@ -1010,6 +1010,7 @@ and (max-width : 1100px){
 @media only screen
 and (max-width : 900px){
 
+	.home article:nth-of-type(n), 
 	.home:not(.paged) article:nth-of-type(n), 
 	.archive article, 
 	.search article{
@@ -1082,10 +1083,6 @@ and (max-width : 790px){
 
 	.overlay hr{
 		width: 90%;
-	}
-	
-	.home article:first-child{
-		height:60vw;
 	}
 
 
