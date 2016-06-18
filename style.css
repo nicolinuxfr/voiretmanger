@@ -651,9 +651,6 @@ content: "";
 -------------------------------------------------------------- */
 article .post-content{
 	clear:both;
-	margin:auto;
-	position:relative;
-	max-width: 850px;
 	font-size: 2.2em;
 	line-height: 1.4em;
 	background-color:white;
@@ -661,9 +658,19 @@ article .post-content{
 	color: rgba(0, 0, 0, 0.7);
 }
 
-article .post-content p{
-	margin:0.5em 0;
-	padding:0;
+article .post-content p,
+article .post-content h3,
+article blockquote,
+article img,
+article .amazon{
+	max-width: 850px;
+	margin:auto;
+}
+
+article .post-content p,
+article .amazon{
+	padding: 0;
+	margin: 1em auto;
 }
 
 article .post-content a{
@@ -680,18 +687,20 @@ article .post-content b{
 	letter-spacing: -0.01em;
 }
 
-article h2{
+article .post-content h2{
+	margin:1em auto;
+	max-width:950px;
 	font-size: 2em;
 	text-align: center;
 	line-height: 1em;
 }
 
-article h2 em{
+article .post-content h2 em{
 	font-weight: 700;
 }
 
-article h3{
-	margin: 1em auto 0.3em 0.5em;
+article .post-content h3{
+	margin: 1em auto;
 	font-size: 2em;
 	padding: 0;
 	font-style: italic;
@@ -701,9 +710,16 @@ article h3{
 }
 
 
-article img {
-	width: 100%;
-	height:auto;
+article .post-content img {
+	text-align:center;
+	width:100%;
+	display:block;
+	margin:auto;
+}
+
+
+article .post-content img.big {
+	max-width: 1300px;
 }
 
 article figcaption{
@@ -738,8 +754,8 @@ article .footnotes{
 }
 
 article hr{
-	margin-top: 3em;
-	margin-bottom: 1em;
+	margin: 3em auto 2em auto;
+	max-width: 950px;
 }
 
 
@@ -779,6 +795,10 @@ article .amazon a{
     height: 100%;
 }
 
+.tiled-gallery{
+	width: 850px;
+	margin:auto !important;
+}
 
 .tiled-gallery-caption{	
 	font-size: 18px !important;
