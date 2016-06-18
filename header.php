@@ -48,11 +48,11 @@
 <?php
 	if ( ! is_single() ) { ?>
 		<header class="header-site">
-			<h1 class="site-title"><a href="//voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
+			<h1 class="site-title"><a href="https://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
 
 	<?php } else { ?>
 		<header class="header-post">
-			<a href="http://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><span class="dashicons dashicons-arrow-left-alt"></span></a>
+			<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><span class="dashicons dashicons-arrow-left-alt"></span></a>
 	<?php } ?>
 
 
