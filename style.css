@@ -669,7 +669,6 @@ article .amazon{
 
 article .post-content p,
 article .amazon{
-	padding: 0;
 	margin: 1em auto;
 }
 
@@ -729,11 +728,11 @@ article figcaption{
 	margin-top:-0.5em;
 }
 
-article blockquote {
-	margin: 0 1.5em 0 1.5em;
+article blockquote p {
 	font-style: italic;
 	font-size: 1.2em;
 	line-height: 1.1em;
+	padding: 0 1.5em;
 }
 
 article blockquote cite {
