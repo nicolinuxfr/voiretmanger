@@ -319,6 +319,13 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
+// Retrait de scripts inutiles
+function my_deregister_scripts(){
+  wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
+
 // Tri dans la colonne des news par dernière modif (source : https://wordpress.org/plugins/sort-by-modified/)
 
 // Register Modified Date Column for both posts & pages
