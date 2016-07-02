@@ -453,7 +453,7 @@ footer {clear:both;}
 
 .home:not(.paged) article:nth-of-type(1){
 	width: 100%;
-	height: calc(100vh - 288px);
+	height: calc(100vh);
 }
 
 .home:not(.paged) article:nth-of-type(2),
@@ -634,7 +634,7 @@ content: "";
 	margin:0.4em auto;
 	padding: 0px 0.3em;
 	border: 0;
-	font: normal 5em "Playfair Display", serif;
+	font: normal 5vw "Playfair Display", serif;
 	font-weight: 400;
 	z-index: 1;
 	position:relative;
@@ -1022,6 +1022,12 @@ and (max-width : 1100px){
 	.post-meta ul{
 		padding: 0 1em;
 	}
+	
+	.home:not(.paged) article:first-child header .post-title{
+		font-size:3.5em;
+	}
+
+	
 }
 
 /* Largeur moyenne, tous les écrans
@@ -1082,7 +1088,7 @@ and (max-width : 900px){
 and (max-width : 790px){
 
 	.site-title{
-		font-size:30vw;
+		font-size:28vw;
 		margin-top: 3rem;
 	}
 
