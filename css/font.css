@@ -1,24 +1,17 @@
 @font-face {
-    font-family: 'Latin Modern';
-    src: url('lmroman10-regular-webfont.eot');
-    src: url('lmroman10-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('lmroman10-regular-webfont.woff2') format('woff2'),
-         url('lmroman10-regular-webfont.woff') format('woff'),
-         url('lmroman10-regular-webfont.ttf') format('truetype'),
-         url('lmroman10-regular-webfont.svg#latin_modern_roman10_regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'Latin Modern';
+  src: url('lmroman10-regular-webfont.woff2') format('woff2'),
+       url('lmroman10-regular-webfont.woff') format('woff'),
+       url('lmroman10-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
     font-family: 'Latin Modern';
-    src: url('lmroman10-italic-webfont.eot');
-    src: url('lmroman10-italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('lmroman10-italic-webfont.woff2') format('woff2'),
          url('lmroman10-italic-webfont.woff') format('woff'),
          url('lmroman10-italic-webfont.ttf') format('truetype'),
-         url('lmroman10-italic-webfont.svg#latin_modern_roman10_italic') format('svg');
     font-weight: normal;
     font-style: italic;
 
@@ -26,12 +19,9 @@
 
 @font-face {
     font-family: 'Latin Modern';
-    src: url('lmroman10-bold-webfont.eot');
-    src: url('lmroman10-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('lmroman10-bold-webfont.woff2') format('woff2'),
          url('lmroman10-bold-webfont.woff') format('woff'),
          url('lmroman10-bold-webfont.ttf') format('truetype'),
-         url('lmroman10-bold-webfont.svg#latin_modern_roman10_bold') format('svg');
     font-weight: bold;
     font-style: normal;
 
@@ -39,12 +29,9 @@
 
 @font-face {
     font-family: 'Latin Modern';
-    src: url('lmroman10-bolditalic-webfont.eot');
-    src: url('lmroman10-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('lmroman10-bolditalic-webfont.woff2') format('woff2'),
          url('lmroman10-bolditalic-webfont.woff') format('woff'),
          url('lmroman10-bolditalic-webfont.ttf') format('truetype'),
-         url('lmroman10-bolditalic-webfont.svg#latin_modern_roman10BdIt') format('svg');
     font-weight: bold;
     font-style: italic;
 
@@ -54,25 +41,18 @@
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
-  src: url('playfair-display-v10-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Playfair Display'), local('PlayfairDisplay-Regular'),
-       url('playfair-display-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('playfair-display-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('playfair-display-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('playfair-display-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('playfair-display-v10-latin-regular.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
 }
+
 /* playfair-display-700italic - latin */
 @font-face {
   font-family: 'Playfair Display';
   font-style: italic;
-  src: url('playfair-display-v10-latin-700italic.eot'); /* IE9 Compat Modes */
-  src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'),
-       url('playfair-display-v10-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('playfair-display-v10-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
        url('playfair-display-v10-latin-700italic.woff') format('woff'), /* Modern Browsers */
        url('playfair-display-v10-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('playfair-display-v10-latin-700italic.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
 }
 
 /* dorsa-regular - latin */
@@ -80,11 +60,7 @@
   font-family: 'Dorsa';
   font-style: normal;
   font-weight: 400;
-  src: url('dorsa-v7-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Dorsa'), local('Dorsa-Regular'),
-       url('dorsa-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('dorsa-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('dorsa-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
        url('dorsa-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('dorsa-v7-latin-regular.svg#Dorsa') format('svg'); /* Legacy iOS */
 }
