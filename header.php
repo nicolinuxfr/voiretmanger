@@ -18,6 +18,8 @@
 <?php if (is_single() ) { ?>
 	<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>
 	<link rel="preload" href="<?php echo $featuredImage[0]; ?>" as="image">
+	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/playfair-display-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/playfair-display-v10-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
 <?php } ?>
 
 <?php if (current_user_can( 'manage_options' )) { ?>
