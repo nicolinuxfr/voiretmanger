@@ -23,6 +23,7 @@ remove_action( 'add_meta_boxes', array( 'Instant_Articles_Meta_Box', 'register_m
 remove_action( 'wp_ajax_instant_articles_meta_box', array( 'Instant_Articles_Meta_Box', 'render_meta_box' ) );
 
 
+// Prise en charge des sticky posts et pagination corrigée (source http://wordpress.stackexchange.com/questions/180005/include-sticky-post-in-page-posts-count/180021#180021)
 add_action( 'pre_get_posts', function ( $q ) 
 {
 
