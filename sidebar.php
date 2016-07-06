@@ -74,7 +74,7 @@
 			
 			<?php echo get_the_term_list( $post->ID, 'annee', '<li><strong>Ann&eacute;e</strong> : ', ', ','</li>'); ?>
 			<?php echo get_the_term_list( $post->ID, 'pays', '<li><strong>Nationalit&eacute;</strong> : ', ', ','</li>');  ?>
-			<?php echo get_the_term_list( $post->ID, 'acteur', '<li><strong>Acteurs</strong> : ', ', ','</li>');  ?>
+			<?php echo get_the_term_list( $post->ID, 'acteur', '<li class="acteurs"><strong>Acteurs</strong> : ', ', ','</li>');  ?>
 
 		<?php
 			 if( has_tag('theatre') ) { ?>
