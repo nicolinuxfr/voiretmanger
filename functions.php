@@ -22,6 +22,43 @@ function create_my_taxonomies() {
 remove_action( 'add_meta_boxes', array( 'Instant_Articles_Meta_Box', 'register_meta_box' ) );
 remove_action( 'wp_ajax_instant_articles_meta_box', array( 'Instant_Articles_Meta_Box', 'render_meta_box' ) );
 
+
+add_action( 'pre_get_posts', function ( $q ) 
+{
+
+    if ( $q->is_home() ) {
+
+        $count_stickies = count( get_option( 'sticky_posts' ) );
+        $ppp = get_option( 'posts_per_page' );
+        $offset = ( $count_stickies <= $ppp ) ? ( $ppp - ( $ppp - $count_stickies ) ) : $ppp;
+
+        if (!$q->is_paged()) {
+          $q->set('posts_per_page', ( $ppp - $offset ));
+        } else {
+          $offset = ( ($q->query_vars['paged']-1) * $ppp ) - $offset;
+          $q->set('posts_per_page',$ppp);
+          $q->set('offset',$offset);
+        }
+
+    }
+
+});    
+
+add_filter( 'found_posts', function ( $found_posts, $q ) 
+{
+
+    if( $q->is_home() ) {
+
+        $count_stickies = count( get_option( 'sticky_posts' ) );
+        $ppp = get_option( 'posts_per_page' );
+        $offset = ( $count_stickies <= $ppp ) ? ( $ppp - ( $ppp - $count_stickies ) ) : $ppp;        
+
+        $found_posts = $found_posts + $offset;
+    }
+    return $found_posts;
+
+}, 10, 2 );   
+
 add_action( 'pre_amp_render_post', 'xyz_amp_add_custom_actions' );
 function xyz_amp_add_custom_actions() {
     add_filter( 'the_content', 'xyz_amp_add_featured_image' );
