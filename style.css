@@ -659,6 +659,7 @@ article .post-content{
 }
 
 article .post-content p,
+article .post-content ul,
 article .post-content h3,
 article blockquote,
 article img,
@@ -759,7 +760,7 @@ article hr{
 
 
 article .amazon ul{
-	padding: 0 2em;
+	padding-left: 2em;
 }
 
 article .amazon a{
@@ -1071,6 +1072,12 @@ and (max-width : 900px){
 	article .post-content p{
 		padding:0 0.7em;
 	}
+	
+	article .post-content h3{
+		margin: 1em auto 0.5em auto;
+		font-size: 1.8em;
+		padding-left: 0.5em;
+	}
 
 
 
@@ -1155,7 +1162,8 @@ and (max-width : 600px){
 	}
 
 	article .amazon{
-		font-size: 0.9em;
+		font-size: 0.8em;
+		line-height: 1.3em;
 	}
 
 }
