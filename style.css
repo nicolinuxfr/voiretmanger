@@ -132,7 +132,7 @@ a:hover{color: rgba(0, 0, 0, 0.9);}
 -------------------------------------------------------------- */
 
 header .recherche{
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	right: 0;
 	position: absolute;
 }
@@ -159,7 +159,7 @@ header .recherche .case{
 
 
 header #results{
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size:1.5em;
 	list-style: none;
 	margin: 0;
@@ -324,7 +324,7 @@ body.scroll{
 -------------------------------------------------------------- */
 footer {clear:both;}
 .copyright{
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size:1em;
 	text-align: center;
 	padding: 1em;
@@ -333,7 +333,7 @@ footer {clear:both;}
 
 
 #nav-below{
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 3em;
 	height: 1.5em;
 	width: 100%;
@@ -737,7 +737,7 @@ article blockquote p {
 }
 
 article blockquote cite {
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
 	font-size: 0.6em;
 	line-height: 1em;
@@ -813,7 +813,7 @@ article .amazon a{
 -------------------------------------------------------------- */
 .partage{
 	color:white;
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size:2em;
 	margin:4em 0;
 }
@@ -865,7 +865,7 @@ article .amazon a{
 -------------------------------------------------------------- */
 .post-meta{
 	clear:both;
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size:1.8em;
 	line-height:1.2em;
 	width:100%;
@@ -981,7 +981,7 @@ div.canvas{width:100% !important;}
 	text-align: center;
 	background-color: gray;
 	font-size: 3em;
-	font-family: -apple-system, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	color: white;
 	font-weight: 700;
 }
