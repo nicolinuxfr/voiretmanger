@@ -355,6 +355,7 @@ footer {clear:both;}
 }
 
 .nav-home{
+	position:relative;
 	text-align: center;
 	margin: 1em 0;
 	font-size: 1.4em;
@@ -1118,6 +1119,11 @@ and (max-width : 790px){
 	}
 
 
+	.home:not(.paged) article:nth-of-type(n) header .post-title{
+		font-size: 2.2em;
+		text-align: left
+	}
+
 	.home article:nth-of-child(n) header .post-title,
 	.home:not(.paged) article:nth-of-child(n) header .post-title,
 	.archive article header .post-title{
@@ -1146,6 +1152,14 @@ and (max-width : 790px){
 
 @media only screen
 and (max-width : 600px){
+	
+	.nav-home{
+		font-size: 0.8em;
+	}
+	
+	.home:not(.paged) #nav-below{
+	    height: 3em;
+	}
 	
 	article .post-content p{
 	    font-size: 0.8em;
