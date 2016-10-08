@@ -19,10 +19,6 @@ function create_my_taxonomies() {
 
 }
 
-remove_action( 'add_meta_boxes', array( 'Instant_Articles_Meta_Box', 'register_meta_box' ) );
-remove_action( 'wp_ajax_instant_articles_meta_box', array( 'Instant_Articles_Meta_Box', 'render_meta_box' ) );
-
-
 // Prise en charge des sticky posts et pagination corrigée (source http://wordpress.stackexchange.com/questions/180005/include-sticky-post-in-page-posts-count/180021#180021)
 add_action( 'pre_get_posts', function ( $q ) 
 {
@@ -59,29 +55,6 @@ add_filter( 'found_posts', function ( $found_posts, $q )
     return $found_posts;
 
 }, 10, 2 );   
-
-add_action( 'pre_amp_render_post', 'xyz_amp_add_custom_actions' );
-function xyz_amp_add_custom_actions() {
-    add_filter( 'the_content', 'xyz_amp_add_featured_image' );
-}
-
-function xyz_amp_add_featured_image( $content ) {
-    if ( has_post_thumbnail() ) {
-        // Just add the raw <img /> tag; our sanitizer will take care of it later.
-        $image = sprintf( '<p class="xyz-featured-image">%s</p>', get_the_post_thumbnail() );
-        $content = $image . $content;
-    }
-    return $content;
-}
-
-add_filter( 'amp_post_template_meta_parts', 'xyz_amp_remove_author_meta' );
-
-function xyz_amp_remove_author_meta( $meta_parts ) {
-    foreach ( array_keys( $meta_parts, 'meta-author', true ) as $key ) {
-        unset( $meta_parts[ $key ] );
-    }
-    return $meta_parts;
-}
 
 
 function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
@@ -405,10 +378,10 @@ add_filter( 'manage_edit-page_sortable_columns', 'modified_column_register_sorta
 
 
 // Set theme constants
-define('THEMENAME', $themeData['Title']);
-define('THEMEAUTHOR', $themeData['Author']);
-define('THEMEURI', $themeData['URI']);
-define('VERSION', $version);
+//define('THEMENAME', $themeData['Title']);
+//define('THEMEAUTHOR', $themeData['Author']);
+//define('THEMEURI', $themeData['URI']);
+//define('VERSION', $version);
 
 // Path constants
 define('TEMPLATE_DIR', get_bloginfo('template_directory'));
