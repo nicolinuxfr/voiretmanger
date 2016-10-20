@@ -27,7 +27,7 @@
 					?>
 				</header>
 		
-	<div class="liste">	
+	<div class="fukol">	
 		<?php
 			rewind_posts();
 			get_template_part('liste', 'archives');

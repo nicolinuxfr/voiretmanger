@@ -5,6 +5,13 @@
 ?>
 
 
+<?php
+if ( !is_paged() ) { ?> {
+	<div class="post-container">
+ <?php } else { ?>
+	<div class="fukol-grid">
+ <?php } ?>
+
 <?php // Début de la boucle
 	
 	while ($wp_query->have_posts()) : $wp_query->the_post(); 
@@ -27,10 +34,11 @@
 		</article><!-- #post-## -->
 
 <?php endwhile; // Fin de la boucle ?>
+</div>
 
-<nav id="nav-below" class="navigation">
+<nav id="nav-below" class="navigation bas">
 	<?php if ( !is_paged() ) { ?>
-		<div class="nav-home"><a href="https://voiretmanger.fr/page/2/">Les articles suivants</a></div>
+		<div class="nav-home nav-next"><a href="https://voiretmanger.fr/page/2/">Les articles suivants</a></div>
 	<?php }
 	
 	else { ?>
@@ -38,3 +46,15 @@
 		<div class="nav-next"><?php previous_posts_link( __( 'Après <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
 	<?php } ?>
 </nav><!-- #nav-below -->
+
+<div style="display:none;">
+
+<?php
+	  //You will probably want to wrap this in a div and hide it from your users. 
+		the_posts_pagination( array(
+			'mid_size' => 2,
+			'prev_text' => __( '<i class="fa fa-angle-double-left"></i>', 'textdomain' ),
+			'next_text' => __( '<i class="fa fa-angle-double-right"></i>', 'textdomain' ),
+		));
+?>
+</div>

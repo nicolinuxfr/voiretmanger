@@ -43,9 +43,12 @@ get_header(); ?>
 			</h1>
 		</header>
 
-<?php
-	rewind_posts();
-	get_template_part('liste', 'archives');
-?>
+
+<div class="fukol">
+	<?php
+		rewind_posts();
+		get_template_part('liste', 'archives');
+	?>
+</div>
 
 <?php get_footer(); ?>

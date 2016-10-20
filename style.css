@@ -987,6 +987,17 @@ div.canvas{width:100% !important;}
 	font-weight: 700;
 }
 
+.fukol-grid {
+  display: flex; /* 1 */
+  flex-wrap: wrap; /* 2 */
+  margin: -0em; /* 5 (edit me!) */
+}
+
+.fukol-grid > * {
+  flex: 1 0 45em; /* 3 (edit me!) */
+  margin: 0em; /* 4 (edit me!) */
+}
+
 
 /* ==========================================================================
    MOBILE

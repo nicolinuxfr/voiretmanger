@@ -28,6 +28,7 @@
 
 <?php /* Start the Loop. */ ?>
 
+<div class="fukol-grid">
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -52,11 +53,24 @@
 	</article><!-- #post-## -->
 
 <?php endwhile; // End the loop. Whew. ?>
+</div>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-				<nav id="nav-below" class="navigation">
+				<nav id="nav-below" class="navigation bas">
 					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Avant', 'autofocus' ) ); ?></div>
 					<div class="nav-next"><?php previous_posts_link( __( 'Après <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
 				</nav><!-- #nav-below -->
 <?php endif; ?>
+
+<div style="display:none;">
+
+<?php
+	  //You will probably want to wrap this in a div and hide it from your users. 
+		the_posts_pagination( array(
+			'mid_size' => 2,
+			'prev_text' => __( '<i class="fa fa-angle-double-left"></i>', 'textdomain' ),
+			'next_text' => __( '<i class="fa fa-angle-double-right"></i>', 'textdomain' ),
+		));
+?>
+</div>
