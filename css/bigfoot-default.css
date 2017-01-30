@@ -109,6 +109,7 @@
   -webkit-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   transform-origin: 50% 0;
+  text-align:left;
 }
 
 .bigfoot-footnote.is-positioned-top {
