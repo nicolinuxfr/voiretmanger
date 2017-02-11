@@ -1047,33 +1047,10 @@ and (max-width : 1100px){
 -------------------------------------------------------------- */
 @media only screen
 and (max-width : 900px){
-
-	.home article:nth-of-type(n), 
-	.home:not(.paged) article:nth-of-type(n), 
-	.archive article, 
-	.search article{
-		width:100%;
-		height:60vw;
-	}
-
-	.home article header,
-	.archive article header,
-	.search article header{
-		opacity:1;
-	}
-	
+		
 	.home:not(.paged) article:nth-of-type(n) header .post-title{
 		font-size: 2.8em;
 		text-align: left
-	}
-
-
-
-	.post-meta ul{
-		-webkit-column-count:1;
-		-moz-column-count:1;
-		column-count:1;
-		columns:1;
 	}
 
 
@@ -1090,8 +1067,6 @@ and (max-width : 900px){
 		font-size: 1.8em;
 		padding-left: 0.5em;
 	}
-
-
 
 	.searchArchives li{
 		width: 50%;
@@ -1110,7 +1085,6 @@ and (max-width : 790px){
 		font-size:28vw;
 		margin-top: 3rem;
 	}
-
 
 	header .recherche .case {
 		font-size: 3em;
@@ -1141,6 +1115,13 @@ and (max-width : 790px){
 		font-size:2.4em;
 	}
 	
+	.post-meta ul{
+		-webkit-column-count:1;
+		-moz-column-count:1;
+		column-count:1;
+		columns:1;
+	}
+	
 
 	.single .post-header > .flou > h2{
 		font-size:3em;
@@ -1163,6 +1144,26 @@ and (max-width : 790px){
 
 @media only screen
 and (max-width : 600px){
+	
+	.home article:nth-of-type(n), 
+	.home:not(.paged) article:nth-of-type(n), 
+	.archive article, 
+	.search article{
+		width:100%;
+		height:60vw;
+	}
+	
+	
+	.home:not(.paged) article:nth-of-type(n) header .post-title{
+		font-size: 2em;
+		text-align: left
+	}
+
+	.home article header,
+	.archive article header,
+	.search article header{
+		opacity:1;
+	}
 	
 	.nav-home{
 		font-size: 0.8em;
