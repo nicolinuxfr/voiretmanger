@@ -13,7 +13,7 @@
 <link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/style.css" />
 
 <link rel="pingback" href="https://voiretmanger.fr/xmlrpc.php" />
-<link rel="shortcut icon" href="https://voiretmanger.fr/favicon.ico" />
+<link rel="shortcut icon" href="https://voiretmanger.fr/wp-content/favicon.ico" />
 
 <?php if (is_single() ) { ?>
 	<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>
