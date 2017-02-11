@@ -22,7 +22,7 @@ jQuery(document).keyup(function(e) {
 var Search = {
 	// Load the index file for later use
 	getSearchIndex: function() {
-		jQuery.getJSON("/search.json", function(data) {
+		jQuery.getJSON("/wp-content/search.json", function(data) {
 				console.log('[Search index successfully loaded]');
 				jQuery('#results').html(''); // on vide la liste, au cas où
 				searchIndex = data;
