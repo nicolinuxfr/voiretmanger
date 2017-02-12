@@ -63,12 +63,18 @@ function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
     $tonesque = get_post_meta( $post_id, '_post_colors', true );
     extract( $tonesque );
 
-    $colors_css = "article .post-content a:hover {color: #{$color};}
+    $colors_css = "article .post-content a:hover, .post-meta ul a:hover, .post-meta ul strong {color: #{$color};}
         .partage ul li, .partage h4 {background-color: #{$color};}";
 
     return $colors_css;
 }
 add_filter( 'colorposts_css_output', 'jeherve_use_custom_colors', 10, 3 );
+
+function jeherve_custom_colors_default_img( $the_image ) {
+    $the_image = 'https://voiretmanger.fr/wp-content/2017/02/10-cloverfield-lane-mary-elizabeth-winstead.jpg'; 
+    return esc_url( $the_image );
+}
+add_filter( 'jetpack_open_graph_image_default', 'jeherve_custom_colors_default_img' );
 
 
 // TRI PAR TAXONOMIES
