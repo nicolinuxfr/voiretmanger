@@ -95,8 +95,15 @@
 				echo get_the_tag_list('<li><strong>Tags</strong> : ',', ','</li>');
 			endif; ?>
 		</ul>
-	    <time class="post-date" datetime="<?php echo get_the_date(); ?>">
-			Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> (derni&egrave;re modification le <?php echo the_modified_date('', '', '', FALSE); ?>)</span>
-		</time>
+		
+		
+		<time class="post-date" datetime="<?php echo get_the_date(); ?>">
+		<?php
+			$u_time = get_the_time('U');
+			$u_modified_time = get_the_modified_time('U');
+		?>	
+		
+		Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> <?php 	if ($u_modified_time >= $u_time + 86400) { echo "(derni&egrave;re modification le " .  the_modified_date('', '', '', FALSE) . ")"; } ?></span>
+	</time>
 		
 </section>
