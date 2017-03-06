@@ -57,6 +57,18 @@ add_filter( 'found_posts', function ( $found_posts, $q )
 }, 10, 2 );   
 
 
+function my_searchwp_common_words( $terms ) {
+  
+  // we DO NOT want to ignore 'first' so remove it from the list of common words
+  $words_to_keep = array( 'your', 'name', 'everyone' );
+  
+  $terms = array_diff( $terms, $words_to_keep );
+  
+  return $terms;
+}
+add_filter( 'searchwp_common_words', 'my_searchwp_common_words' );
+
+
 function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
     $post_id = get_the_ID();
 
