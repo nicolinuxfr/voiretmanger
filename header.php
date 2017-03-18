@@ -22,12 +22,6 @@
 	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/playfair-display-v10-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
 <?php } ?>
 
-<?php if (current_user_can( 'manage_options' )) { ?>
-	<style>
-		.single .post-header{height: calc(100vh - 1em);}
-		.page .single .post-header{height:auto;}
-	</style>
-<?php } ?>
 <?php if( get_post_meta($post->ID, 'contraste', true) ) { ?>
 	<style>
 		.header-post #rechercher,
