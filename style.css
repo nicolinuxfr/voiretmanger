@@ -942,6 +942,33 @@ div.canvas{width:100% !important;}
 }
 
 
+/* Page archives */
+
+
+.post-content.archives{
+	margin-bottom:1rem;
+}
+
+.post-content.archives a{
+	text-decoration:none;
+}
+
+.post-content.archives h3{
+	text-align:center;
+}
+
+.post-content.archives ul{
+    display: flex;
+    flex-direction: column-reverse;
+	padding: 0;
+}
+
+
+.post-content.archives li{
+	list-style-type: none;
+	text-align: center;
+}
+
 /* ==========================================================================
    MOBILE
    ========================================================================== */
