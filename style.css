@@ -628,7 +628,7 @@ content: "";
 
 }
 
-.single .post-header h2{
+.single .post-title{
 	color:white;
 	text-align:center;
 	letter-spacing: -1px;
@@ -1075,7 +1075,7 @@ and (max-width : 790px){
 	}
 	
     .page-title{
-		font-size: 6vh;
+		font-size: 8vw;
 	}
 
 	.home article:nth-of-child(n) header .post-title,

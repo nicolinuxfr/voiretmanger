@@ -26,7 +26,7 @@ get_header(); ?>
 	   							) );
     
 	        ?>
-			<h1 class="page-title">
+			<h2 class="page-title">
 <?php if ( is_day() ) : ?>
 				<?php printf( __( 'Tous les articles du jour : <span>%s</span>', 'autofocus' ), get_the_date() ); ?>
 <?php elseif ( is_month() ) : ?>
@@ -40,7 +40,7 @@ get_header(); ?>
 <?php else : ?>
 				<?php _e( 'Archives', 'autofocus' ); ?>
 <?php endif; ?>
-			</h1>
+			</h2>
 		</header>
 
 
