@@ -13,15 +13,8 @@
 </footer><!-- #footer -->
 
 	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
-	
-<?php if (is_page( 'archives' ) ) { ?>
-	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/search-archives.js'></script>
-<?php } ?>
-
-
 
 <?php if (is_single()) { ?>
-
 
 	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
 		<link rel="stylesheet" media="all" href="//voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
