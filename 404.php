@@ -17,9 +17,9 @@ get_header(); ?>
 					</header>
 
 					<section class="post-content">
-						<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant !</p>
+						<p>Désolé, mais vous pouvez effectuer une nouvelle recherche dès maintenant&nbsp;!</p>
 						
-						<div class="recherche" id="recherche">
+						<div class="recherche-404">
 							<?php get_search_form( "true" ); ?>							
 						</div>
 					</section>
