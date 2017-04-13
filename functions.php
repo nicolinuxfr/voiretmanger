@@ -75,7 +75,7 @@ function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
     $tonesque = get_post_meta( $post_id, '_post_colors', true );
     extract( $tonesque );
 
-    $colors_css = "article .post-content a:hover, .post-meta ul a:hover, .post-meta ul strong {color: #{$color};}
+    $colors_css = "article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: #{$color};}
         .partage ul li, .partage h4 {background-color: #{$color};}";
 
     return $colors_css;
