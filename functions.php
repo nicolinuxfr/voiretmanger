@@ -20,7 +20,7 @@ function create_my_taxonomies() {
 }
 
 // Prise en charge des sticky posts et pagination corrigée (source http://wordpress.stackexchange.com/questions/180005/include-sticky-post-in-page-posts-count/180021#180021)
-add_action( 'pre_get_posts', function ( $q ) 
+add_action( 'pre_get_posts', function ( $q )
 {
 
     if ( $q->is_home() ) {
@@ -39,16 +39,16 @@ add_action( 'pre_get_posts', function ( $q )
 
     }
 
-});    
+});
 
-add_filter( 'found_posts', function ( $found_posts, $q ) 
+add_filter( 'found_posts', function ( $found_posts, $q )
 {
 
     if( $q->is_home() ) {
 
         $count_stickies = count( get_option( 'sticky_posts' ) );
         $ppp = get_option( 'posts_per_page' );
-        $offset = ( $count_stickies <= $ppp ) ? ( $ppp - ( $ppp - $count_stickies ) ) : $ppp;        
+        $offset = ( $count_stickies <= $ppp ) ? ( $ppp - ( $ppp - $count_stickies ) ) : $ppp;
 
         $found_posts = $found_posts + $offset;
     }
@@ -56,17 +56,29 @@ add_filter( 'found_posts', function ( $found_posts, $q )
 
 }, 10, 2 );   
 
+// Algolia : pas d’indexation des pages
+function exclude_post_types( $should_index, WP_Post $post )
+{
+    // Add all post types you don't want to make searchable.
+    $excluded_post_types = array( 'page' );
+    if ( false === $should_index ) {
+        return false;
+    }
 
-function my_searchwp_common_words( $terms ) {
-  
-  // we DO NOT want to ignore 'first' so remove it from the list of common words
-  $words_to_keep = array( 'your', 'name', 'everyone' );
-  
-  $terms = array_diff( $terms, $words_to_keep );
-  
-  return $terms;
+    return ! in_array( $post->post_type, $excluded_post_types, true );
 }
-add_filter( 'searchwp_common_words', 'my_searchwp_common_words' );
+add_filter( 'algolia_should_index_searchable_post', 'exclude_post_types', 10, 2 );
+
+// Algolia : ajout du titre original
+function my_post_attributes( array $attributes, WP_Post $post ) {
+	if( get_post_meta($post->ID, 'original', true) ){
+		$attributes['original'] = get_post_meta( $post->ID, 'original', true );
+	}
+	return $attributes;
+}
+
+add_filter( 'algolia_post_shared_attributes', 'my_post_attributes', 10, 2 );
+add_filter( 'algolia_searchable_post_shared_attributes', 'my_post_attributes', 10, 2 );
 
 
 function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
@@ -83,7 +95,7 @@ function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
 add_filter( 'colorposts_css_output', 'jeherve_use_custom_colors', 10, 3 );
 
 function jeherve_custom_colors_default_img( $the_image ) {
-    $the_image = 'https://voiretmanger.fr/wp-content/2017/02/10-cloverfield-lane-mary-elizabeth-winstead.jpg'; 
+    $the_image = 'https://voiretmanger.fr/wp-content/2017/02/10-cloverfield-lane-mary-elizabeth-winstead.jpg';
     return esc_url( $the_image );
 }
 add_filter( 'jetpack_open_graph_image_default', 'jeherve_custom_colors_default_img' );
@@ -112,7 +124,7 @@ function posts_clauses_with_tax( $clauses, $wp_query ) {
 
 // RECHERCHE INSTANTANÉE
 add_action( 'transition_post_status', 'a_new_post', 10, 3 );
- 
+
 function a_new_post( $new_status, $old_status, $post )
 {
 	if ( 'publish' !== $new_status or 'publish' === $old_status )
@@ -120,33 +132,33 @@ function a_new_post( $new_status, $old_status, $post )
 			return;
 	}
 	$postsArray = Array(); // un tableau vide
-	
+
 	// Liste des sagas
 			$taxonomy = 'saga';
 			$args = array(
-			    'orderby'           => 'name', 
+			    'orderby'           => 'name',
 			      'order'             => 'ASC',
-			      'hide_empty'        => true, 
+			      'hide_empty'        => true,
 			);
-	
+
 			$tax_terms = get_terms($taxonomy, $args );
-	
+
 			foreach ($tax_terms as $tax_term) {
 				$currentPost = Array(); // un tableau vide pour l'article en cours
 				$currentPost["title"] = $tax_term->name; // on ajoute le titre
 				$currentPost["url"] = get_term_link( $tax_term ); // l'url
 				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
 		}
-	
+
 	// ********** Liste des articles
 		$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => -1, 
-			'no_found_rows' => true, 
-			'update_post_meta_cache' => false, 
-			'update_post_term_cache' => false, 
+			'posts_per_page' => -1,
+			'no_found_rows' => true,
+			'update_post_meta_cache' => false,
+			'update_post_term_cache' => false,
 			'fields' => 'ids');
-	
+
 		$post_query = new WP_Query($args);
 		if($post_query->have_posts()) {
 			while($post_query->have_posts()) {
@@ -154,19 +166,19 @@ function a_new_post( $new_status, $old_status, $post )
 				$currentPost = Array(); // un tableau vide pour l'article en cours
 				$currentPost["title"] = get_the_title(); // on ajoute le titre
 				$currentPost["url"] = get_permalink(); // l'url
-			
+
 				array_push($postsArray, $currentPost); // et on ajoute le tableau de l'article au tableau global
-			
+
 			}
-			
+
 			$json = json_encode($postsArray); // on encode tout ça en JSON
-		
+
 			if(!file_put_contents(ABSPATH."/wp-content/search.json", $json)) { // on ecrit tout ca dans un fichier
 				throw new Exception("Problème lors de l'écriture du fichier");
 			}
-		} 
+		}
 	}
- 
+
 function Unaccent($string)
 {
     return preg_replace('~&([a-z]{1,2})(acute|cedil|circ|grave|lig|orn|ring|slash|th|tilde|uml);~i', '$1', htmlentities($string, ENT_QUOTES, 'UTF-8'));
@@ -180,7 +192,7 @@ function rss_post_thumbnail($content) {
 	if(has_post_thumbnail($post->ID)) {
 		$content = '<p>' . get_the_post_thumbnail($post->ID, 'full') .
 		'</p>' . get_the_content();
-}	
+}
 
 return $content;
 
@@ -252,7 +264,7 @@ add_action( 'wp_footer', 'my_deregister_scripts' );
 // Register Modified Date Column for both posts & pages
 function modified_column_register( $columns ) {
 	$columns['date modif'] = __( 'Modification', 'date modified' );
- 
+
 	return $columns;
 }
 add_filter( 'manage_posts_columns', 'modified_column_register' );
@@ -260,7 +272,7 @@ add_filter( 'manage_pages_columns', 'modified_column_register' );
 
 // Display the modified date of each post
 function modified_column_display( $column_name, $post_id ) {
-	global $post; 
+	global $post;
 	$modified = the_modified_date();
 	echo $modified;
 }
@@ -324,8 +336,8 @@ function voiretmanger_setup() {
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
-    
+
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_script( 'jquery' );	
+	wp_enqueue_script( 'jquery' );
 }
 endif;
