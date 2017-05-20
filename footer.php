@@ -8,6 +8,13 @@
 ?>
 </main>
 
+<?php if (is_search()) { ?>
+
+<div class="algolia"><img src="https://voiretmanger.fr/wp-content/files/search-by-algolia.png" alt="" width="260" height="36" /></div>
+
+<?php } ?>
+
+
 <footer class="site-footer">
 	<section class="copyright">Publié depuis 2008. <a href="https://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
 </footer><!-- #footer -->

@@ -80,6 +80,17 @@ function my_post_attributes( array $attributes, WP_Post $post ) {
 add_filter( 'algolia_post_shared_attributes', 'my_post_attributes', 10, 2 );
 add_filter( 'algolia_searchable_post_shared_attributes', 'my_post_attributes', 10, 2 );
 
+// Algolia : retrait du nom de l’auteur, puisque je suis le seul auteur.
+function my_post_shared_attributes( array $shared_attributes, WP_Post $post) {
+  
+  if ( isset( $shared_attributes['post_author'] ) ) {
+    unset( $shared_attributes['post_author'] );
+  }
+
+  return $shared_attributes;
+}
+add_filter( 'algolia_post_shared_attributes', 'my_post_shared_attributes', 10, 2 );
+
 
 function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
     $post_id = get_the_ID();
