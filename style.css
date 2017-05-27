@@ -1195,10 +1195,6 @@ div.canvas {
 		columns: 1;
 	}
 
-	.single .post-header > .flou > h2 {
-		font-size: 3em;
-	}
-
 	.searchArchives li {
 		width: 100%;
 	}
@@ -1234,10 +1230,6 @@ and (max-width : 600px) {
 
 	.home:not(.paged) #nav-below {
 		height: 3em;
-	}
-	
-	.single .post-header > .flou > h2 {
-		font-size: 4vh;
 	}
 
 	article .post-content p {
