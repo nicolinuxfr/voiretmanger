@@ -73,8 +73,36 @@
 			
 			<?php echo get_the_term_list( $post->ID, 'annee', '<li><strong>Ann&eacute;e</strong> : ', ', ','</li>'); ?>
 			<?php echo get_the_term_list( $post->ID, 'pays', '<li><strong>Nationalit&eacute;</strong> : ', ', ','</li>');  ?>
-			<?php echo get_the_term_list( $post->ID, 'acteur', '<li class="acteurs"><strong>Acteurs</strong> : ', ', ','</li>');  ?>
-
+			
+			<?php // Acteurs : s'il y en a plus de huit, on trie par popularité
+			
+			$terms = get_the_terms( $post->ID, 'acteur' );
+                         
+			if ( $terms && ! is_wp_error( $terms ) ) {
+				if (count($terms) < 9){
+					echo get_the_term_list( $post->ID, 'acteur', '<li class="acteurs"><strong>Acteurs</strong> : ', ', ','</li>'); 
+				}
+				else {
+					// On trie par ordre de popularité
+					$popular_terms = wp_get_object_terms( $post->ID, 'acteur', array( 
+						'orderby' => 'count',
+						'order'   => 'DESC',
+						'fields'  => 'all'
+					) );
+						
+					if ( ! empty( $popular_terms ) ) {
+						if ( ! is_wp_error( $popular_terms ) ) {
+							echo '<li class="acteurs"><strong>Acteurs</strong> : ';
+							foreach( $popular_terms as $term ) {
+								$resultstr[] = '<a href="' . esc_url( get_term_link( $term->slug, 'acteur' ) ) . '">' . esc_html( $term->name ) . '</a>'; 
+							}
+							echo implode(', ', $resultstr);
+							echo '</li>';
+						}
+					}
+				}	
+			} 
+			?>
 		<?php
 			 if( has_tag('theatre') ) { ?>
 				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Th&eacute;&acirc;tre</strong> : ') ?></li>
