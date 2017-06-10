@@ -533,7 +533,7 @@ footer {
 
 .page-title {
 	font-family: "Playfair Display", serif;
-	font-size: 10em;
+	font-size: 8vw;
 	margin: 0.5em auto;
 	font-weight: 400;
 	text-align: center;
@@ -1119,10 +1119,6 @@ div.canvas {
 		font-size: 2.8em;
 	}
 
-	.page-title {
-		font-size: 6em;
-	}
-
 	article .post-content p {
 		padding: 0 0.7em;
 	}
@@ -1164,10 +1160,6 @@ div.canvas {
 
 	.overlay hr {
 		width: 90%;
-	}
-
-	.page-title {
-		font-size: 8vw;
 	}
 
 	.home article:nth-of-child(n) header .post-title, .home:not(.paged) article:nth-of-child(n) header .post-title {
