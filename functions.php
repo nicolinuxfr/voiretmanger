@@ -240,11 +240,6 @@ function custom_theme_setup() {
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
 
-function jeherve_custom_photon( $args ) {
-    $args['quality'] = 80;
-    return $args;
-}
-add_filter( 'jetpack_photon_pre_args', 'jeherve_custom_photon' );
 
 // Retrait de tous les émojis
 function disable_wp_emojicons() {
