@@ -234,6 +234,16 @@ function remove_xmlrpc_pingback_ping( $methods ) {
 } ;
 
 
+// Code YouTube responsive
+
+// Référence : <div class="video-container"><iframe class="aligncenter" src="URL" frameborder="0" allowfullscreen></iframe></div>
+	
+add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
+
+function wrap_embed_with_div($html, $url, $attr) {
+	return "<div class=\"video-container\">".$html."</div>";
+}
+
 // RICG compression accentuée des images
 function custom_theme_setup() {
     add_theme_support( 'advanced-image-compression' );
