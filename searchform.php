@@ -1,5 +1,5 @@
 <form method="get" id="searchform"  action="<?php bloginfo('home'); ?>/"> 
-	<input class="case" type="text" autofocus value="Chercher" placeholder="Chercher" id="search" name="s" onblur="if (this.value == '')  {this.value = 'Chercher';}"  onfocus="if (this.value == 'Chercher') {this.value = '';}" /> 
+	<input class="case" type="text" autofocus id="search" name="s" value="" placeholder="" /> 
 	<input type="hidden" id="searchsubmit" /> 
 </form>
 

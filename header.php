@@ -20,20 +20,18 @@
 	<link rel="preload" href="<?php echo $featuredImage[0]; ?>" as="image">
 	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/playfair-display-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/playfair-display-v10-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<?php } else { ?>
+	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/portico_layer-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/portico_vintage-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
 <?php } ?>
 
-<?php if( get_post_meta($post->ID, 'contraste', true) ) { ?>
-	<style>
-		.header-post #rechercher,
-		.header-post a{
-			color: rgba(35, 35, 35, 0.7);
-		}
-		.header-post a:hover,
-		.header-post #rechercher:hover{
-			color:black;
-		}
-	</style>
+<?php if (current_user_can( 'manage_options' )) { ?>
+	<style>header .overlay .logo{margin-top: 3em;}</style>
 <?php } ?>
+
 
 <?php wp_head(); ?>
 </head>
@@ -41,17 +39,21 @@
 <body>
 
 
+
 <?php
 	if ( ! is_single() ) { ?>
 		<header class="header-site">
-			<h1 class="site-title"><a href="https://voiretmanger.fr/" title="À voir et à manger" rel="home">À voir et à manger</a></h1>
+			<div class="logo">
+				<a href="https://voiretmanger.fr/" title="À voir et à manger" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
+			<h1 class="site-title"><a href="https://voiretmanger.fr/a-voir/" title="Index des films">VOIR</a><br /><a href="https://voiretmanger.fr/a-manger/" title="Index des restaurants" >MANGER</a>
+			<div class="site-menu"><a href="https://voiretmanger.fr/a-lire/" title="Index des livres">LIRE</a>  <a href="https://voiretmanger.fr/a-ecouter/" title="Index de la musique" >ÉCOUTER</a></div>
+			</h1>
 
 	<?php } else { ?>
 		<header class="header-post">
-			<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><span class="dashicons dashicons-arrow-left-alt"></span></a>
+			<div class="logo">
+				<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
 	<?php } ?>
-
-
 
 	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
 		<input type="checkbox" id="op"></input>
@@ -60,23 +62,9 @@
 	</div>
 
 	<div class="overlay overlay-hugeinc">
-		<label for="op"><span class="dashicons dashicons-no-alt"</span></label>
-
-					<div class="menu" data-instant>
-				<span class="dashicons dashicons-editor-justify"></span>
-				<ul class="navigation">
-				    <li class="nav-item"><a href="https://voiretmanger.fr/">Accueil</a></li>
-				    <li class="nav-item"><a href="https://voiretmanger.fr/archives/">Archives</a></li>
-				    <li class="nav-item"><a href="https://voiretmanger.fr/a-voir/">À voir</a></li>
-				    <li class="nav-item"><a href="https://voiretmanger.fr/a-manger/">À manger</a></li>
-				    <li class="nav-item"><a href="https://voiretmanger.fr/a-lire/">À lire</a></li>
-				    <li class="nav-item"><a href="https://voiretmanger.fr/a-ecouter/">À écouter</a></li>
-				    <li class="nav-item"><a href="https://voiretmanger.fr/a-propos/">À propos</a></li>
-				</ul>
-			</div>
-
-		<hr />
-
+		<div class="logo">
+			<a href="#" onclick="$('#op').prop('checked', false); document.getElementById('search').blur();"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
+			
 			<?php get_search_form( "true" ); ?>
 	</div>
 
