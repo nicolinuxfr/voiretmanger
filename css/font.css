@@ -55,17 +55,6 @@
        url('playfair-display-v10-latin-700italic.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
-/* dorsa-regular - latin */
-@font-face {
-  font-family: 'Dorsa';
-  font-style: normal;
-  font-weight: 400;
-  src: url('dorsa-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('dorsa-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('dorsa-v7-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
-}
-
-
 @font-face {
     font-family: 'Portico Vintage';
     src: url('portico_vintage-webfont.woff2') format('woff2'),
