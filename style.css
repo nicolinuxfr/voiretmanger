@@ -238,12 +238,25 @@ a:hover {
 }
 
 
+/* Logo
+-------------------------------------------------------------- */
+
+header .logo {
+	width: 100px;
+	padding: 1em;
+	opacity: 0.8;
+}
+
+header .logo:hover{
+	opacity: 1;	
+}
+
 
 /* Recherche et menus
 -------------------------------------------------------------- */
 
 header .recherche {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Playfair Display", serif;
 	right: 0;
 	position: absolute;
 }
@@ -251,11 +264,9 @@ header .recherche {
 .overlay {
 	visibility: hidden;
 	position: fixed;
-	width: 100%;
-	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(0,0,0,0.9);
+	background: rgba(255, 255, 255, 0.95);
 }
 
 header .recherche .case {
@@ -263,13 +274,15 @@ header .recherche .case {
 	font-size: 5em;
 	margin: 1em auto 0.5em auto;
 	border: none;
-	color: white;
+	color: rgba(197, 31, 22, 1);
 	background: none;
 	outline: 0;
+	text-align:center;
+	max-width:100%;
 }
 
 header #results {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Playfair Display", serif;
 	font-size: 1.5em;
 	list-style: none;
 	margin: 0;
@@ -303,11 +316,11 @@ input[type="checkbox"] {
 
 #rechercher {
 	cursor: pointer;
-	color: rgba(0, 0, 0, 0.3);
+	color: rgba(197, 31, 22, 0.6);
 }
 
 #rechercher:hover {
-	color: black;
+	color: rgba(197, 31, 22, 1);
 }
 
 .lower .dashicons.dashicons-search {
@@ -319,11 +332,7 @@ input[type="checkbox"] {
 	top: 3em;
 	right: 3em;
 	cursor: pointer;
-	color: white;
-}
-
-label .dashicons.dashicons-no-alt {
-	font-size: 4em;
+	color: rgba(197, 31, 22, 1);
 }
 
 .overlay nav {
@@ -334,14 +343,14 @@ label .dashicons.dashicons-no-alt {
 .overlay ul a {
 	font-weight: 300;
 	display: block;
-	color: white;
+	color: rgba(197, 31, 22, 0.8);
 	text-decoration: none;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
 
 .overlay ul a:hover, .overlay ul a:focus {
-	color: rgba(132, 132, 132, 1);
+	color: rgba(197, 31, 22, 1);
 }
 
 .lower~.overlay-hugeinc {
@@ -366,21 +375,6 @@ body.scroll {
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 	z-index: 99;
-}
-
-#op:checked~.overlay-hugeinc nav ul {
-	opacity: 1;
-	-webkit-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-}
-
-#op:not(:checked)~.overlay-hugeinc nav ul {
-	-webkit-transform: translateY(25%) rotateX(-35deg);
-	transform: translateY(25%) rotateX(-35deg);
-}
-
-.overlay hr {
-	width: 50%;
 }
 
 .menu {
@@ -428,6 +422,42 @@ body.scroll {
 
 footer {
 	clear: both;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+footer hr{
+	margin: -1em 3em 2em 3em;
+	border: 1px solid rgba(197, 31, 22, 1);
+}
+
+footer .menu{
+	font-size: 4vw;
+	text-align: center;
+	margin: 0.3em 0 1em 0;
+}
+
+footer .menu a{
+	font-family: 'Portico Vintage', sans-serif;
+	color: rgba(197, 31, 22, 1);
+}
+
+footer .menu a:hover{
+	font-family: 'Portico Layer', sans-serif;
+}
+
+footer .menu a:first-child{
+	margin-right:1em;
+}
+
+footer .menu a:last-child{
+	margin-left:1em;
+}
+
+.copyright {
+	font-size: 1em;
+	padding: 1em;
+	text-align: center;
+	font-style: italic;
 }
 
 .algolia{
@@ -441,12 +471,6 @@ footer {
 	padding:1em;
 }
 
-.copyright {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1em;
-	text-align: center;
-	padding: 1em;
-}
 
 #nav-below {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -477,6 +501,14 @@ footer {
 	font-weight: 700;
 }
 
+.nav-home a {
+ color: rgba(197, 31, 22, 0.8)   
+}
+
+.nav-home a:hover {
+ color: rgba(197, 31, 22, 1)   
+}
+
 
 /* ==========================================================================
    PAGE D'ACCUEIL
@@ -491,29 +523,45 @@ footer {
 	position: relative;
 	padding: 0;
 	margin: auto;
-	font-family: 'Dorsa', sans-serif;
 	width: 100%;
+
 }
 
 .site-title {
-	padding: 0.1em;
-	font-size: 20em;
-	line-height: 1em;
-	text-transform: uppercase;
+	padding: 0.3em;
+	font-size: 9vw;
+	line-height: 0.8em;
 	text-align: center;
-	font-weight: 400;
 	margin: auto;
+	font-weight: normal;
+	font-family: 'Portico Vintage', sans-serif;
 }
 
-.site-description {
-	display: none;
-	padding: 0 8px;
-	margin: 0;
-	font-size: 4em;
-	line-height: 1em;
-	font-family: 'Dorsa', sans-serif;
+.site-title .site-menu{
+    font-size: 5vw;
+	margin: -0.1em;
 }
 
+.site-title > a:first-child{
+	font-size: 17vw;
+	margin-left: -0.13em;
+}
+
+.site-title .site-menu a:first-child{
+    margin-right: 0.3em;
+}
+
+.site-title .site-menu a:last-child{
+    margin-left: 0.3em;
+}
+
+.site-title a{
+    color: rgba(197, 31, 22, 1);
+}
+
+.site-title a:hover{
+    font-family: 'Portico Layer', sans-serif;
+}
 
 /* ==========================================================================
    LISTES
@@ -662,15 +710,6 @@ footer {
 	font-size: 4em;
 }
 
-.header-post #rechercher {
-	cursor: pointer;
-	color: rgba(255, 255, 255, 0.7);
-}
-
-.header-post #rechercher:hover {
-	color: white;
-}
-
 
 /* Titre et image
 -------------------------------------------------------------- */
@@ -691,6 +730,7 @@ footer {
 
 .page .single .post-header {
 	height: auto;
+	margin: 0;
 }
 
 .single .post-header > .flou {
@@ -876,6 +916,19 @@ article .amazon a {
 	text-decoration: none !important;
 }
 
+.azindex h2 a{
+	color: rgba(197, 31, 22, 0.8) !important;
+}
+
+.azindex h2 a:hover{
+	color: rgba(197, 31, 22, 1) !important;
+}
+
+.azindex a:hover,
+.azlinks a:hover{
+    color: rgba(197, 31, 22, 1) !important;
+}
+
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -1048,6 +1101,14 @@ div.canvas {
 	text-align: center;
 }
 
+.post-content.archives h3 a{
+	color: rgba(197, 31, 22, 0.8);
+}
+
+.post-content.archives a:hover{
+	color: rgba(197, 31, 22, 1);
+}
+
 .post-content.archives ul {
 	display: flex;
 	flex-direction: column-reverse;
@@ -1140,9 +1201,14 @@ div.canvas {
 
 @media only screen
 	and (max-width : 790px) {
-	.site-title {
-		font-size: 28vw;
-		margin-top: 3rem;
+	#recherche {
+		top: 0.2em;
+		right: 2em;
+	}
+	
+	header .logo{
+		width: 65px;
+		padding: 0.3em;
 	}
 
 	header .recherche .case {

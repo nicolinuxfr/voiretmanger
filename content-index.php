@@ -6,7 +6,7 @@
 
 
 <?php
-if ( !is_paged() ) { ?> {
+if ( !is_paged() ) { ?>
 	<div class="post-container">
  <?php } else { ?>
 	<div class="fukol-grid">

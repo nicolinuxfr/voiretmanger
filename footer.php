@@ -14,8 +14,9 @@
 
 <?php } ?>
 
-
-<footer class="site-footer">
+<footer class="site-footer">	
+	<section class="menu"><a href="https://voiretmanger.fr/archives/">ARCHIVES</a><a href="https://voiretmanger.fr/a-propos/">À PROPOS</a></section>
+	
 	<section class="copyright">Publié depuis 2008. <a href="https://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
 </footer><!-- #footer -->
 
