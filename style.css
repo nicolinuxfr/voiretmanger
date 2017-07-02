@@ -907,6 +907,10 @@ article .amazon a {
 
 /* Pour les pages avec un index, on aère */
 
+.azindex{
+	font-family:"Playfair Display", serif;
+}
+
 .azindex h2 {
 	margin-top: 1.5em !important;
 }
