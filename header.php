@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <link rel="alternate" hreflang="fr" href="https://voiretmanger.fr" />
 <meta name="apple-mobile-web-app-title" content="Voir et manger" />
-<meta name="viewport" content="initial-scale=1">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta property="fb:pages" content="384298108368" />
 
 <link href='https://voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
@@ -14,6 +16,7 @@
 
 <link rel="pingback" href="https://voiretmanger.fr/xmlrpc.php" />
 <link rel="shortcut icon" href="https://voiretmanger.fr/wp-content/favicon.ico" />
+<link rel="mask-icon" href="https://voiretmanger.fr/wp-content/icon.svg" color="rgb(197, 31, 22)">
 
 <?php if (is_single() ) { ?>
 	<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>
@@ -31,6 +34,10 @@
 <?php if (current_user_can( 'manage_options' )) { ?>
 	<style>header .overlay .logo{margin-top: 3em;}</style>
 <?php } ?>
+
+<script type="text/javascript">
+	(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
+</script>
 
 
 <?php wp_head(); ?>
@@ -61,12 +68,14 @@
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
 	</div>
 
+
 	<div class="overlay overlay-hugeinc">
 		<div class="logo">
 			<a href="#" onclick="$('#op').prop('checked', false); document.getElementById('search').blur();"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
 			
 			<?php get_search_form( "true" ); ?>
 	</div>
+</div>
 
  			</header><!-- #header -->
 
