@@ -7,8 +7,6 @@
 <link rel="alternate" hreflang="fr" href="https://voiretmanger.fr" />
 <meta name="apple-mobile-web-app-title" content="Voir et manger" />
 <meta name="viewport" content="initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta property="fb:pages" content="384298108368" />
 
 <link href='https://voiretmanger.fr/wp-content/themes/voiretmanger/css/font.css' rel='stylesheet' type='text/css'>
@@ -34,10 +32,6 @@
 <?php if (current_user_can( 'manage_options' )) { ?>
 	<style>header .overlay .logo{margin-top: 3em;}</style>
 <?php } ?>
-
-<script type="text/javascript">
-	(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
-</script>
 
 
 <?php wp_head(); ?>
