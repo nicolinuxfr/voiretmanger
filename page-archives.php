@@ -24,7 +24,7 @@
 						<h3 class="archive-year"><a href="<?php bloginfo('url') ?>/<?php echo $month->year; ?>/"><?php echo $month->year; ?></a></h3><ul>
 	
 						<?php } ?>
-						<li><a href="<?php bloginfo('url') ?>/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>"><span class="archive-month"><?php echo ucfirst (date_i18n("F", mktime(0, 0, 0, $month->month, 1, $month->year))); ?> (<?php echo $month->post_count; ?>)</span></a></li>
+						<li><a href="<?php bloginfo('url') ?>/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>/"><span class="archive-month"><?php echo ucfirst (date_i18n("F", mktime(0, 0, 0, $month->month, 1, $month->year))); ?> (<?php echo $month->post_count; ?>)</span></a></li>
 					<?php $year_prev = $year_current;
 
 					endforeach; ?>
