@@ -3,11 +3,8 @@
 
 <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 
-
-		<div id="container" class="af-layout">
-			<div id="content" role="main">
 			
-	<?php query_posts($query_string . '&posts_per_page=50&orderby=slug&order=ASC'); ?>
+	<?php query_posts($query_string ); ?>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -29,15 +26,13 @@
 							echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
 					?>
 				</header>
-				
-<?php
-	rewind_posts();
-	get_template_part('liste', 'archives');
-?>
+		
+	<div class="fukol">	
+		<?php
+			rewind_posts();
+			get_template_part('liste', 'archives');
+		?>
+	</div>	
 			<?php endif; ?>
-
-
-			</div><!-- #content -->
-		</div><!-- #container -->
 
 <?php get_footer(); ?>

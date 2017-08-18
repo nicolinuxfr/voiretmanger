@@ -303,6 +303,27 @@ function modified_column_register_sortable( $columns ) {
 add_filter( 'manage_edit-post_sortable_columns', 'modified_column_register_sortable' );
 add_filter( 'manage_edit-page_sortable_columns', 'modified_column_register_sortable' );
 
+
+
+function voiretmanger_infinite_scroll_init() {
+    add_theme_support( 'infinite-scroll', array(
+	    'container' => 'content',
+	    'footer' => false,
+		'render' => 'voiretmanger_infinite_scroll_render',
+		'posts_per_page' => 8,
+		'wrapper' => false,
+    ) );
+}
+add_action( 'after_setup_theme', 'voiretmanger_infinite_scroll_init' );
+
+
+function voiretmanger_infinite_scroll_render() {
+	get_template_part('liste', 'archives');
+}
+
+add_filter( 'infinite_scroll_query_args', 'jetpack_infinite_scroll_query_args' );
+
+
 // FIN DES AJOUTS PERSOS
 
 /**

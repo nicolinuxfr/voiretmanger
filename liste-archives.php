@@ -32,7 +32,7 @@
 	
 <?php endif; ?>
 
-<div class="fukol-grid">
+<div class="fukol-grid" id="content">
 <?php // Début de la boucle
 	
 	while ( have_posts() ) : the_post(); ?>
@@ -49,10 +49,3 @@
 
 <?php endwhile; // Fin de la boucle ?>
 </div>
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-				<nav id="nav-below" class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Avant', 'autofocus' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Après <span class="meta-nav">&rarr;</span>', 'autofocus' ) ); ?></div>
-				</nav><!-- #nav-below -->
-<?php endif; ?>

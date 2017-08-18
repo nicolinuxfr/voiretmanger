@@ -1087,7 +1087,7 @@ div.canvas {
 }
 
 .fukol-grid {
-	display: flex; /* 1 */
+	/* display: flex; 1 */
 	flex-wrap: wrap; /* 2 */
 	margin: -0em; /* 5 (edit me!) */
 }
@@ -1095,6 +1095,24 @@ div.canvas {
 .fukol-grid > * {
 	flex: 1 0 45em; /* 3 (edit me!) */
 	margin: 0em; /* 4 (edit me!) */
+}
+
+/* Bouton chargement articles */
+
+#infinite-handle span{
+	background:none !important;
+	font-size: 3em !important;
+	margin: 1em auto;
+	padding: 0 !important;
+	width: 100%;
+	float: left;
+	text-align: center;
+	font-family: 'Portico Vintage', sans-serif;
+	color: rgba(197, 31, 22, 1) !important;
+}
+
+#infinite-handle span button:hover{
+	font-family: 'Portico Layer', sans-serif !important;
 }
 
 
