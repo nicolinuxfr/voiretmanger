@@ -164,7 +164,7 @@ function a_new_post( $new_status, $old_status, $post )
 	// ********** Liste des articles
 		$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => -1,
+			'nopaging' => true,
 			'no_found_rows' => true,
 			'update_post_meta_cache' => false,
 			'update_post_term_cache' => false,
