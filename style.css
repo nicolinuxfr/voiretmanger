@@ -220,6 +220,7 @@ h3 {
 }
 
 h4 {
+	font-family: "Playfair Display", serif;
 	margin: 1em 0 0.5em 0;
 }
 
@@ -970,6 +971,44 @@ article .amazon a {
 }
 
 
+.page h4{
+	text-align: center;
+}
+
+.page h4 a{
+	text-decoration: none;
+}
+
+.page h4 a:hover{
+	color: rgba(197, 31, 22, 1) !important;
+}
+
+.responsive-tabs .responsive-tabs__panel{
+	border:none !important;
+}
+
+.responsive-tabs ul.responsive-tabs__list{
+	margin:1em auto !important;
+	display: flex !important;
+	justify-content: center !important;
+	list-style-type: none;
+	
+}
+
+.responsive-tabs .responsive-tabs__list__item{
+	line-height:1em !important;
+	border:none !important;
+	font-family: "Playfair Display", serif !important;
+	font-size:2.5em !important;
+}
+
+
+.responsive-tabs .responsive-tabs__list__item--active,
+.responsive-tabs .responsive-tabs__list__item--active:hover,
+.responsive-tabs .responsive-tabs__list__item:hover {
+	font-style:italic ;
+	color:rgba(197, 31, 22, 1) !important;
+}
 
 /* Partage
 -------------------------------------------------------------- */
