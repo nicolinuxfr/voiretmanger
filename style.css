@@ -1027,6 +1027,7 @@ article .amazon a {
 	width: calc(100% * 1/3);
 	float: left;
 	text-align: center;
+    font: inherit ;
 }
 
 .partage ul {
