@@ -941,6 +941,14 @@ article .amazon a {
     color: rgba(197, 31, 22, 1) !important;
 }
 
+.azindex .desc{
+	margin-bottom: 0.8em;
+}
+
+.page-id-7375 .azindex .head{
+	font-style:italic;
+}
+
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
