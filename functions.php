@@ -341,9 +341,9 @@ function voiretmanger_infinite_scroll_render() {
 //define('VERSION', $version);
 
 // Path constants
-define('TEMPLATE_DIR', get_bloginfo('template_directory'));
-define('STYLESHEET_DIR', get_bloginfo('stylesheet_directory'));
-define('STYLEURL', get_bloginfo('stylesheet_url'));
+//define('TEMPLATE_DIR', get_bloginfo('template_directory'));
+//define('STYLESHEET_DIR', get_bloginfo('stylesheet_directory'));
+//define('STYLEURL', get_bloginfo('stylesheet_url'));
 
 /**
  * Set the content width based on the theme's design and stylesheet.
