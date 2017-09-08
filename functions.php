@@ -321,8 +321,6 @@ function voiretmanger_infinite_scroll_render() {
 	get_template_part('liste', 'archives');
 }
 
-add_filter( 'infinite_scroll_query_args', 'jetpack_infinite_scroll_query_args' );
-
 
 // FIN DES AJOUTS PERSOS
 
