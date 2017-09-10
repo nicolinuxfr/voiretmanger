@@ -1340,6 +1340,11 @@ div.canvas {
 		padding: 10px !important;
 		line-height: 20px !important;
 	}
+	
+	#infinite-handle span{
+		font-size:2em !important;
+	}
+	
 }
 
 
@@ -1367,9 +1372,12 @@ and (max-width : 600px) {
 	.home:not(.paged) #nav-below {
 		height: 3em;
 	}
+	
+	.single .post-title{
+		font-size:4vh;
+	}
 
-	article .post-content p,
-	article .post-content li {
+	article .post-content p {
 		font-size: 0.8em;
 		line-height: 1.4em;
 	}
@@ -1399,10 +1407,13 @@ and (max-width : 600px) {
 -------------------------------------------------------------- */
 
 @media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 568px) {
+	and (max-width : 320px) {
 	.home article header .post-title, .home article:first-child header .post-title, .archive article header .post-title {
 		font-size: 2em;
+	}
+	
+	#infinite-handle span{
+		font-size:1em !important;
 	}
 }
 
