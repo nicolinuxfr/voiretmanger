@@ -4,7 +4,9 @@ var results = [];
 $ = jQuery.noConflict();
 
 jQuery(document).ready(function($) {
-	Search.getSearchIndex();
+	$('#recherche').click(function() {
+		Search.getSearchIndex();
+	})
 	$('#search').keyup(function() {
 			// get search term
 			var search_term = jQuery(this).val().toLowerCase();
