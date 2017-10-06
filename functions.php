@@ -19,18 +19,6 @@ function create_my_taxonomies() {
 
 }
 
-
-// Retrait des query string pour les ressources statiques.
-
-function _remove_script_version( $src ){
-$parts = explode( '?ver', $src );
-return $parts[0];
-}
-
-add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
-add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
-
-
 // Prise en charge des sticky posts et pagination corrigée (source http://wordpress.stackexchange.com/questions/180005/include-sticky-post-in-page-posts-count/180021#180021)
 add_action( 'pre_get_posts', function ( $q )
 {
@@ -66,7 +54,7 @@ add_filter( 'found_posts', function ( $found_posts, $q )
     }
     return $found_posts;
 
-}, 10, 2 ); 
+}, 10, 2 );   
 
 // Algolia : pas d’indexation des pages
 function exclude_post_types( $should_index, WP_Post $post )
@@ -94,7 +82,7 @@ add_filter( 'algolia_searchable_post_shared_attributes', 'my_post_attributes', 1
 
 // Algolia : retrait du nom de l’auteur, puisque je suis le seul auteur.
 function my_post_shared_attributes( array $shared_attributes, WP_Post $post) {
-
+  
   if ( isset( $shared_attributes['post_author'] ) ) {
     unset( $shared_attributes['post_author'] );
   }
@@ -249,7 +237,7 @@ function remove_xmlrpc_pingback_ping( $methods ) {
 // Code YouTube responsive
 
 // Référence : <div class="video-container"><iframe class="aligncenter" src="URL" frameborder="0" allowfullscreen></iframe></div>
-
+	
 add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
 
 function wrap_embed_with_div($html, $url, $attr) {

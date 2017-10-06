@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<?php
+	<?php 
 	// Loop de la page d'accueil
 	$args = array (
 		'ignore_sticky_posts'    => false,
@@ -12,6 +12,5 @@
 
 	get_template_part( 'content', 'index' );
 	
-
 	?>
 <?php get_footer(); ?>
