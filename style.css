@@ -1377,7 +1377,8 @@ and (max-width : 600px) {
 		font-size:4vh;
 	}
 
-	article .post-content p {
+	article .post-content p,
+	article .post-content li {
 		font-size: 0.8em;
 		line-height: 1.4em;
 	}
@@ -1392,7 +1393,7 @@ and (max-width : 600px) {
 
 	article .post-content h2,
 	article .post-content h3 {
-		font-size: 1.4em;
+		font-size: 1.2em;
 		margin: 0.5em auto
 	}
 
