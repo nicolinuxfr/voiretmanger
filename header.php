@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<link rel="alternate" hreflang="fr" href="https://voiretmanger.fr" />
+<link rel="alternate" href="<?php echo home_url( $wp->request ); ?>" hreflang="fr" />
 <meta name="apple-mobile-web-app-title" content="Voir et manger" />
 <meta name="viewport" content="initial-scale=1.0">
 <meta property="fb:pages" content="384298108368" />
