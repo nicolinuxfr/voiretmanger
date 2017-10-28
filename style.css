@@ -968,6 +968,7 @@ article .amazon a {
 
 .tiled-gallery {
 	width: 950px;
+	max-width: 100%;
 	margin: auto !important;
 }
 
