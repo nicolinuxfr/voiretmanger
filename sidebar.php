@@ -105,13 +105,13 @@
 			?>
 		<?php
 			 if( has_tag('theatre') ) { ?>
-				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Th&eacute;&acirc;tre</strong> : ') ?></li>
-				<li><?php echo get_the_term_list( $post->ID, 'metteurenscene', '<strong>Metteur en sc&egrave;ne</strong> : ', ', ') ?></li>
+				<?php echo get_the_term_list( $post->ID, 'lieu', '<li><strong>Th&eacute;&acirc;tre</strong> : ', ', ', '</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'metteurenscene', '<li><strong>Metteur en sc&egrave;ne</strong> : ', ', ', '</li>') ?>
 			<?php } elseif ( has_tag('concert') ) { ?>
-				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Salle</strong> : ') ?></li>
+				<?php echo get_the_term_list( $post->ID, 'lieu', '<li><strong>Salle</strong> : ', ', ','</li>') ?>
 			<?php } elseif ( has_tag('opera') ) { ?>
-				<li><?php echo get_the_term_list( $post->ID, 'lieu', '<strong>Op&eacute;ra</strong> : ') ?></li>
-				<li><?php echo get_the_term_list( $post->ID, 'metteurenscene', '<strong>Metteur en sc&egrave;ne</strong> : ', ', ') ?></li>
+				<?php echo get_the_term_list( $post->ID, 'lieu', '<li><strong>Op&eacute;ra</strong> : ', ', ','</li>') ?>
+				<?php echo get_the_term_list( $post->ID, 'metteurenscene', '<li><strong>Metteur en sc&egrave;ne</strong> : ', ', ', '</li>') ?>
 			<?php } else { ?>
 				<?php echo get_the_term_list( $post->ID, 'lieu', '<li><strong>Salle</strong> : ', ', ','</li>') ?>
 			<?php } ?>
