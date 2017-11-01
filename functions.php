@@ -178,6 +178,7 @@ function a_new_post( $new_status, $old_status, $post )
 			'post_type' => 'post',
 			'nopaging' => true,
 			'no_found_rows' => true,
+			'cat' => '-1818',
 			'update_post_meta_cache' => false,
 			'update_post_term_cache' => false,
 			'fields' => 'ids');
