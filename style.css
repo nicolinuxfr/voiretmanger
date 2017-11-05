@@ -1374,7 +1374,8 @@ and (max-width : 600px) {
 		height: 3em;
 	}
 	
-	.single .post-title{
+	.single .post-header .post-title,
+    .single .post-header .post-title em {
 		font-size:4vh;
 	}
 
