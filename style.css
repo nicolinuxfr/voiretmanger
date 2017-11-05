@@ -1436,3 +1436,30 @@ and (max-width : 600px) {
 		padding: 1em 0;
 	}
 }
+
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape)  {
+
+	.azindex,
+	.single .post-title,
+	article .post-content p,
+	article .post-content li,
+	article .post-content h3,
+	article .post-content h2,
+	article .amazon,
+	article .footnotes,
+	article blockquote {
+		padding-left: constant(safe-area-inset-left);
+		padding-right: constant(safe-area-inset-right);	
+	}
+
+	footer .post-meta,
+	header #results li {
+		padding-left: constant(safe-area-inset-left);
+		padding-right: constant(safe-area-inset-right);	
+		width: auto;
+	}
+ }
