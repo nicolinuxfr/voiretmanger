@@ -1095,12 +1095,9 @@ article .amazon a {
 }
 
 .post-meta ul {
-	-webkit-column-count: 2;
-	column-count: 2;
 	columns: 2;
 	margin: 0 auto;
 	list-style-type: none;
-	padding: 0;
 	max-width: 1000px;
 }
 
