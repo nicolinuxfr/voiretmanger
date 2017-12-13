@@ -79,10 +79,7 @@
 			$terms = get_the_terms( $post->ID, 'acteur' );
                          
 			if ( $terms && ! is_wp_error( $terms ) ) {
-				if (count($terms) < 9){
-					echo get_the_term_list( $post->ID, 'acteur', '<li class="acteurs"><strong>Acteurs</strong> : ', ', ','</li>'); 
-				}
-				else {
+				if ( ( count($terms) > 9 ) && ( has_tag('serie') ) ) {
 					// On trie par ordre de popularité
 					$popular_terms = wp_get_object_terms( $post->ID, 'acteur', array( 
 						'orderby' => 'count',
@@ -100,6 +97,9 @@
 							echo '</li>';
 						}
 					}
+				}
+				else {
+					echo get_the_term_list( $post->ID, 'acteur', '<li class="acteurs"><strong>Acteurs</strong> : ', ', ','</li>'); 
 				}	
 			} 
 			?>
