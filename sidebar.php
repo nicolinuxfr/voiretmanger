@@ -130,7 +130,7 @@
 			$u_modified_time = get_the_modified_time('U');
 		?>	
 		
-		Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> <?php 	if ($u_modified_time >= $u_time + 86400) { echo "(derni&egrave;re modification le " .  the_modified_date('', '', '', FALSE) . ")"; } ?></span>
+		Article publi&eacute; le <span style="display:inline;"> <?php echo get_the_date(); ?> <?php 	if ($u_modified_time >= $u_time + 604800) { echo "(derni&egrave;re modification le " .  the_modified_date('', '', '', FALSE) . ")"; } ?></span>
 	</time>
 		
 </section>
