@@ -28,6 +28,18 @@
 					<?php $year_prev = $year_current;
 
 					endforeach; ?>
+					</ul>
+
+					<hr />
+					<h3 class="archive-year">Catégories</h3>
+					<?php $args = array(
+						'orderby'            => 'name',
+						'order'              => 'ASC',
+						'show_count'         => 1,
+						'title_li'           => 0
+					);
+					wp_list_categories($args);
+					?>
 				
 					</section>
 				</article>
