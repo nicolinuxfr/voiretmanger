@@ -1199,6 +1199,10 @@ div.canvas {
 	text-align: center;
 }
 
+.post-content.archives .etapes li {
+	text-align:left;
+	list-style-type: circle; 
+}
 
 .recherche-404{
 	width: 400px;
