@@ -8,7 +8,7 @@
 					</header>
 
 					<section class="post-content archives">
-					
+					<div class="yearly">
 					<?php
 					global $wpdb;
 					$limit = 0;
@@ -29,9 +29,10 @@
 
 					endforeach; ?>
 					</ul>
+					</div>
 
 					<hr />
-					<h3 class="archive-year">Catégories</h3>
+					<h3>Catégories</h3>
 					<?php $args = array(
 						'orderby'            => 'name',
 						'order'              => 'ASC',
@@ -40,7 +41,9 @@
 					);
 					wp_list_categories($args);
 					?>
-				
+
+					<?php the_content(); ?>
+	
 					</section>
 				</article>
 
