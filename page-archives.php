@@ -33,6 +33,7 @@
 
 					<hr />
 					<h3>Catégories</h3>
+					<ul>
 					<?php $args = array(
 						'orderby'            => 'name',
 						'order'              => 'ASC',
@@ -41,6 +42,7 @@
 					);
 					wp_list_categories($args);
 					?>
+					</ul>
 
 					<?php the_content(); ?>
 	
