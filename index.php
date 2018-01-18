@@ -5,6 +5,7 @@
 		'ignore_sticky_posts'    => false,
 		'update_post_meta_cache' => false,
 		'update_post_term_cache' => false,
+		'post_type' => array( 'post', 'post_maj' ),
 		'paged' => $paged
 	);
 
