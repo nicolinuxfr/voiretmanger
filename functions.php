@@ -19,7 +19,7 @@ function create_my_taxonomies() {
 
 }
 
-// Register Custom Post Type
+// Création Custom Post Type pour les mises à jour d'article
 function vm_maj_post_type() {
 
 	$labels = array(
@@ -76,6 +76,7 @@ function vm_maj_post_type() {
 }
 add_action( 'init', 'vm_maj_post_type', 0 );
 
+// Ajout des mises à jour d'article dans le flux RSS (source : http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-post-types-to-your-main-wordpress-rss-feed/)
 function vm_maj_post_type_rss($qv) {
     if (isset($qv['feed']) && !isset($qv['post_type']))
         $qv['post_type'] = array('post', 'post_maj');
