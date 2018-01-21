@@ -55,7 +55,7 @@ function vm_maj_post_type() {
 		'label'                 => __( 'Mise à jour', 'text_domain' ),
 		'description'           => __( 'Mises à jour d\'anciens articles', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail' ),
+		'supports'              => array( 'title', 'thumbnail', 'publicize', 'custom-fields' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
