@@ -813,6 +813,7 @@ article .post-content {
 article .post-content p, article .post-content ul, article .post-content h3, article blockquote, article img, article .amazon {
 	max-width: 850px;
 	margin: auto;
+	padding: 0;
 }
 
 article .post-content p,
