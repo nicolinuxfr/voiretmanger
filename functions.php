@@ -87,7 +87,7 @@ add_filter('request', 'vm_maj_post_type_rss');
 add_action('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
   if($query->is_main_query()
-    && ( is_archive() )) {
+    && ( is_archive() && !is_admin() )) {
         $query->set( 'post_type', array('post','post_maj') );
   }
 }
