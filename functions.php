@@ -76,7 +76,7 @@ function vm_maj_post_type() {
 }
 add_action( 'init', 'vm_maj_post_type', 0 );
 
-// Ajout des mises à jour d'article dans le flux RSS (source : http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-post-types-to-your-main-wordpress-rss-feed/)
+// Ajout des mises à jour d'articles dans le flux RSS (source : http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-post-types-to-your-main-wordpress-rss-feed/)
 function vm_maj_post_type_rss($qv) {
     if (isset($qv['feed']) && !isset($qv['post_type']))
         $qv['post_type'] = array('post', 'post_maj');
@@ -84,6 +84,7 @@ function vm_maj_post_type_rss($qv) {
 }
 add_filter('request', 'vm_maj_post_type_rss');
 
+// Ajout des mises à jour d'articles dans les archives de date (source : https://wordpress.stackexchange.com/questions/179023/adding-custom-post-types-to-archive-php)
 add_action('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
   if($query->is_main_query()
