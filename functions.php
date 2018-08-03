@@ -65,7 +65,7 @@ function vm_maj_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => false,
+		'has_archive'           => true,
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -83,6 +83,14 @@ function vm_maj_post_type_rss($qv) {
     return $qv;
 }
 add_filter('request', 'vm_maj_post_type_rss');
+
+add_action('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if($query->is_main_query()
+    && ( is_archive() )) {
+        $query->set( 'post_type', array('post','post_maj') );
+  }
+}
 
 // Retrait des query string pour les ressources statiques.
 

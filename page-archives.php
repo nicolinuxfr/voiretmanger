@@ -18,7 +18,7 @@
 					global $wpdb;
 					$limit = 0;
 					$year_prev = null;
-					$months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,	YEAR( post_date ) AS year, COUNT( id ) as post_count FROM $wpdb->posts WHERE post_status = 'publish' and post_date <= now( ) and post_type = 'post' GROUP BY month , year ORDER BY post_date DESC");
+					$months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,	YEAR( post_date ) AS year, COUNT( id ) as post_count FROM $wpdb->posts WHERE post_status = 'publish' and post_date <= now( ) and post_type = 'post' or post_type = 'post_maj' GROUP BY month , year ORDER BY post_date DESC");
 					foreach($months as $month) :
 						$year_current = $month->year;
 						if ($year_current != $year_prev){
