@@ -430,6 +430,16 @@ function cpad_at_glance_content_table_end() {
     }
 }
 
+// source : https://gist.github.com/douglasanro/2f41b0a198f4822508c4a1694c4e3bf1
+add_filter( 'dashboard_recent_posts_query_args', 'add_page_to_dashboard_activity' );
+function add_page_to_dashboard_activity( $query_args ) {
+	$query_args['post_type'] = array( 'post', 'post_maj' );
+	if ( $query_args['post_status'] == 'publish' ) {
+		$query_args['posts_per_page'] = 10;
+	}
+	return $query_args;
+}
+
 
 // FIN DES AJOUTS PERSOS
 
