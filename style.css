@@ -1470,10 +1470,10 @@ and (orientation : landscape)  {
 	html, .overlay{
 		background-color: #24292e;
 	}
-	.responsive-tabs .responsive-tabs__panel{
+	.responsive-tabs .responsive-tabs__panel, .responsive-tabs .responsive-tabs__list__item--active, .responsive-tabs .responsive-tabs__list__item--active:hover{
 		background: #24292e !important;
 	}
-	body, a, article .post-content, article .post-content h3, article .post-content a, .single .post-title{
+	body, a, article .post-content, article .post-content h3, article .post-content a, .single .post-title, .home article header .post-title{
 		color: rgba(255, 255, 255, 0.78);
 	}
 	.site-title a,.nav-home a, footer .menu a, footer hr, .overlay ul a:hover, .overlay ul a:focus, #rechercher:hover, header .recherche .case, .copyright a:hover {
