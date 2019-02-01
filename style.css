@@ -1473,7 +1473,7 @@ and (orientation : landscape)  {
 	.responsive-tabs .responsive-tabs__panel{
 		background: #24292e !important;
 	}
-	body, a, article .post-content, article .post-content h3, article .post-content a{
+	body, a, article .post-content, article .post-content h3, article .post-content a, .single .post-title{
 		color: rgba(255, 255, 255, 0.78);
 	}
 	.site-title a,.nav-home a, footer .menu a, footer hr, .overlay ul a:hover, .overlay ul a:focus, #rechercher:hover, header .recherche .case, .copyright a:hover {
