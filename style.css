@@ -469,6 +469,10 @@ footer .menu a:last-child{
 	font-style: italic;
 }
 
+.copyright a:hover{
+	color: rgba(197, 31, 22, 1);
+}
+
 .algolia{
 	margin:auto;
 	text-align:center;
@@ -1462,11 +1466,17 @@ and (orientation : landscape)  {
  }
 
 
- @media (prefers-dark-interface){
-	html{
+ @media (prefers-color-scheme: dark){
+	html, .overlay{
 		background-color: #24292e;
 	}
-	body, a, a:hover, article .post-content, article .post-content h3{
-		color: #fff;
+	.responsive-tabs .responsive-tabs__panel{
+		background: #24292e !important;
+	}
+	body, a, article .post-content, article .post-content h3, article .post-content a{
+		color: rgba(255, 255, 255, 0.78);
+	}
+	.site-title a,.nav-home a, footer .menu a, footer hr, .overlay ul a:hover, .overlay ul a:focus, #rechercher:hover, header .recherche .case, .copyright a:hover {
+		color: rgba(197, 31, 22, 0.8);
 	}
  }
