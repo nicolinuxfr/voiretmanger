@@ -870,7 +870,7 @@ article .post-content img {
 }
 
 article .post-content img.big {
-	max-width: 1300px;
+	max-width: 1500px;
 }
 
 article figcaption {
@@ -963,7 +963,7 @@ article .amazon a {
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
-	max-width: 1300px;
+	max-width: 2000px;
 	margin: auto;
 	overflow: hidden;
 }
