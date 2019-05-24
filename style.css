@@ -1479,4 +1479,7 @@ and (orientation : landscape)  {
 	.site-title a,.nav-home a, footer .menu a, footer hr, .overlay ul a:hover, .overlay ul a:focus, #rechercher:hover, header .recherche .case, .copyright a:hover {
 		color: rgba(197, 31, 22, 0.8);
 	}
+	.bigfoot-footnote__content{
+		background:  #24292e !important;
+	}
  }
