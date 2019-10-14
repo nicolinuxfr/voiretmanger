@@ -440,6 +440,9 @@ function add_page_to_dashboard_activity( $query_args ) {
 	return $query_args;
 }
 
+// Suppression de la fonction de redimensionnement des images de WordPress 5.3 https://make.wordpress.org/core/2019/10/09/introducing-handling-of-big-images-in-wordpress-5-3/
+add_filter( 'big_image_size_threshold', '__return_false' );
+
 
 // FIN DES AJOUTS PERSOS
 
