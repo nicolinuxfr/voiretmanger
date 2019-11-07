@@ -213,6 +213,7 @@ body {
 	text-rendering: optimizeLegibility;
 	font-family: "Latin Modern", serif;
 	overflow-x: hidden;
+	font-display: swap;
 }
 
 h2,
@@ -672,6 +673,13 @@ footer .menu a:last-child{
 .home article:hover header, .archive article:hover header, .search article:hover header {
 	opacity: 1;
 	transition: all 0.5s ease;
+}
+
+@media (hover: none){
+	.home article header, .archive article header, .search article header {
+		opacity: 1;
+	}
+
 }
 
 .home article header .post-title, .archive article header .post-title, .search article header .post-title {
