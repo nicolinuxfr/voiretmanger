@@ -887,6 +887,10 @@ article blockquote p {
 	padding: 0 1.5em;
 }
 
+article blockquote p em{
+	font-style: normal;
+}
+
 article blockquote cite {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-style: normal;
@@ -895,6 +899,10 @@ article blockquote cite {
 	text-align: right;
 	display: block;
 	padding: 0.5em;
+}
+
+article blockquote cite em{
+	font-style: italic;
 }
 
 article .footnotes {
