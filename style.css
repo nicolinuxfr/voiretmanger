@@ -604,7 +604,7 @@ footer .menu a:last-child{
 .archive article, .home article, .search article {
 	display: block;
 	width: 50%;
-	height: 45vh;
+	height: 55vh;
 	float: left;
 	position: relative;
 	overflow: hidden;
