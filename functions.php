@@ -177,26 +177,6 @@ function my_post_shared_attributes( array $shared_attributes, WP_Post $post) {
 add_filter( 'algolia_post_shared_attributes', 'my_post_shared_attributes', 10, 2 );
 
 
-function jeherve_use_custom_colors( $colors_css, $color, $contrast ) {
-    $post_id = get_the_ID();
-
-    $tonesque = get_post_meta( $post_id, '_post_colors', true );
-    extract( $tonesque );
-
-    $colors_css = "article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: #{$color};}
-        .partage ul li, .partage h4 {background-color: #{$color};}";
-
-    return $colors_css;
-}
-add_filter( 'colorposts_css_output', 'jeherve_use_custom_colors', 10, 3 );
-
-function jeherve_custom_colors_default_img( $the_image ) {
-    $the_image = 'https://voiretmanger.fr/wp-content/2017/02/10-cloverfield-lane-mary-elizabeth-winstead.jpg';
-    return esc_url( $the_image );
-}
-add_filter( 'jetpack_open_graph_image_default', 'jeherve_custom_colors_default_img' );
-
-
 // TRI PAR TAXONOMIES
 //allows queries to be sorted by taxonomy term name (http://www.jrnielsen.com/wp-query-orderby-taxonomy-term-name/)
 add_filter('posts_clauses', 'posts_clauses_with_tax', 10, 2);

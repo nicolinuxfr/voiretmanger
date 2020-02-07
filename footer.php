@@ -20,12 +20,59 @@
 	<section class="copyright">Publié depuis 2008. <a href="https://voiretmanger.fr/mentions-legales/">Tous droits réservés</a>.</section>
 </footer><!-- #footer -->
 
-	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
+	<script type='text/javascript' src='https://voiretmanger.fr/wp-content/themes/voiretmanger/js/search.js'></script>
 
-<?php if (is_single()) { ?>
+<?php if (is_single()) { 
+	$featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>
+	<script type='text/javascript' src='https://voiretmanger.fr/wp-content/themes/voiretmanger/js/color-thief.umd.js'></script>
 
-	<script type='text/javascript' src='//voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
-		<link rel="stylesheet" media="all" href="//voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
+	<script>
+		var imageUrl = "<?php echo $featuredImage[0]; ?>";
+		var image = new Image(360, 360);
+
+		image.onload = function(){
+   		 	// Récupération de deux couleurs à partir de l'image
+    		var colorThief = new ColorThief();          
+    		var color = colorThief.getPalette(image, 2);
+			
+			// comparaison des deux couleurs pour connaître la plus foncée (algorithme via https://stackoverflow.com/a/3732007)
+			var color1 = color[0][0] * 2 + color[0][1] * 3 + color[0][2]
+			var color2 = color[1][0] * 2 + color[1][1] * 3 + color[1][2]
+			
+			// création des couleurs CSS en fonction du résultat
+			if (color1 > color2)
+				{
+					var colorStandard = "rgb(" + color[1][0] + "," + color[1][1] + "," + color[1][2] + ")"
+					var colorDark = "rgb(" + color[0][0] + "," + color[0][1] + "," + color[0][2] + ")"
+				}
+			else
+				{
+					var colorStandard = "rgb(" + color[0][0] + "," + color[0][1] + "," + color[0][2] + ")"
+					var colorDark = "rgb(" + color[1][0] + "," + color[1][1] + "," + color[1][2] + ")"
+				}
+			
+			// changement des styles
+			// article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color:  rgb(227,200,179);}
+			//.partage ul li, .partage h4 {background-color: rgb(227,200,179);}
+			
+			var style = document.createElement('style');
+			style.innerHTML = '.partage ul li, .partage h4 {background-color:' + colorStandard + ';}' +
+				'article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: ' + colorStandard + ';}' +
+				' @media (prefers-color-scheme: dark){' +
+					'.partage ul li, .partage h4 {background-color:' + colorDark + ';}' +
+					'article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: ' + colorDark + ';}' +
+				'}';
+			
+			document.getElementsByTagName("head")[0].appendChild( style );
+
+			};
+		image.src = imageUrl;
+
+	</script>
+
+
+	<script type='text/javascript' src='https://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
+	<link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
 	<script type="text/javascript">
 		$ = jQuery.noConflict();
 		$.bigfoot({actionOriginalFN: "ignore"});
