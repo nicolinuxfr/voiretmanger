@@ -213,7 +213,6 @@ body {
 	text-rendering: optimizeLegibility;
 	font-family: "Latin Modern", serif;
 	overflow-x: hidden;
-	font-display: swap;
 }
 
 h2,
