@@ -71,9 +71,9 @@
 	</script>
 
 
-	<script type='text/javascript' src='https://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js'></script>
+	<script type="application/javascript" src="https://voiretmanger.fr/wp-content/themes/voiretmanger/js/bigfoot.min.js"></script>
 	<link rel="stylesheet" media="all" href="https://voiretmanger.fr/wp-content/themes/voiretmanger/css/bigfoot-default.css" />
-	<script type="text/javascript">
+	<script type="application/javascript">
 		$ = jQuery.noConflict();
 		$.bigfoot({actionOriginalFN: "ignore"});
 	</script>
