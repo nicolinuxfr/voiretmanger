@@ -57,10 +57,10 @@
 			
 			var style = document.createElement('style');
 			style.innerHTML = '.partage ul li, .partage h4 {background-color:' + colorStandard + ';}' +
-				'article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: ' + colorStandard + ';}' +
+				'article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: ' + colorStandard + ';}' + '.partage a {color:' + colorDark + ';}' +
 				' @media (prefers-color-scheme: dark){' +
 					'.partage ul li, .partage h4 {background-color:' + colorDark + ';}' +
-					'article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: ' + colorDark + ';}' +
+					'article .post-content a:hover, .post-meta ul a:hover, .post-meta .resto a:hover, .post-meta ul strong {color: ' + colorDark + ';}' + '.partage a {color:' + colorStandard + ';}'
 				'}';
 			
 			document.getElementsByTagName("head")[0].appendChild( style );
