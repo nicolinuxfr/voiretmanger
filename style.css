@@ -1,4 +1,4 @@
-parta/*
+/*
 Theme Name: À voir et à manger
 
 	==========================================================================
@@ -1374,7 +1374,8 @@ and (max-width : 600px) {
 		max-width: 100vw;
 	}
 
-	.home:not(.paged) article:nth-of-type(n) header .post-title {
+	.home:not(.paged) article:nth-of-type(n) header .post-title,
+	article:nth-of-type(n) header .post-title {
 		font-size: 2em;
 		text-align: left
 	}
