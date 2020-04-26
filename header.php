@@ -1,8 +1,9 @@
 <?php Header("Cache-Control: no-transform");?>
 
 <!DOCTYPE html>
-<head>
+<html lang="fr">
 
+<head>
 <meta charset="UTF-8">
 <link rel="alternate" href="<?php echo home_url( $wp->request ); ?>" hreflang="fr" />
 <meta name="apple-mobile-web-app-title" content="Voir et manger" />
@@ -45,7 +46,7 @@
 	if ( ! is_single() ) { ?>
 		<header class="header-site">
 			<div class="logo">
-				<a href="https://voiretmanger.fr/" title="À voir et à manger" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
+				<a href="https://voiretmanger.fr/" title="À voir et à manger" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
 			<h1 class="site-title"><a href="https://voiretmanger.fr/a-voir/" title="Index des films">VOIR</a><br /><a href="https://voiretmanger.fr/a-manger/" title="Index des restaurants" >MANGER</a>
 			<div class="site-menu"><a href="https://voiretmanger.fr/a-lire/" title="Index des livres">LIRE</a>  <a href="https://voiretmanger.fr/a-ecouter/" title="Index de la musique" >ÉCOUTER</a></div>
 			</h1>
@@ -53,11 +54,11 @@
 	<?php } else { ?>
 		<header class="header-post">
 			<div class="logo">
-				<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
+				<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
 	<?php } ?>
 
 	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
-		<input type="checkbox" id="op"></input>
+		<input type="checkbox" id="op" />
 	<div class="lower">
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
 	</div>
@@ -65,7 +66,7 @@
 
 	<div class="overlay overlay-hugeinc">
 		<div class="logo">
-			<a href="#" onclick="$('#op').prop('checked', false); document.getElementById('search').blur();"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100px" scale="0"></a></div>
+			<a href="#" onclick="$('#op').prop('checked', false); document.getElementById('search').blur();"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
 			
 			<?php get_search_form( "true" ); ?>
 	</div>
