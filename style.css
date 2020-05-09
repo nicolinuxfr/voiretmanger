@@ -627,10 +627,6 @@ footer .menu a:last-child{
 	height: calc(80vh);
 }
 
-.home:not(.paged) article:nth-of-type(2), .home:not(.paged) article:nth-of-type(3) {
-	/* width: 50%; */
-}
-
 .home:not(.paged) article:nth-of-type(4) {
 	width: calc(100% * 2/3);
 }
@@ -1273,6 +1269,7 @@ div.canvas {
 	and (max-width : 900px) {
 	.home:not(.paged) article:nth-of-type(n) header .post-title {
 		font-size: 2.8em;
+		text-align:center;
 	}
 
 	article .post-content p,
@@ -1377,7 +1374,6 @@ and (max-width : 600px) {
 	.home:not(.paged) article:nth-of-type(n) header .post-title,
 	article:nth-of-type(n) header .post-title {
 		font-size: 2em;
-		text-align: left
 	}
 
 	.home article header, .archive article header, .search article header {
