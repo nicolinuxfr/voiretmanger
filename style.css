@@ -1413,6 +1413,10 @@ and (max-width : 600px) {
 		margin: 0.5em auto
 	}
 
+	article .partage{
+		margin: 2em 0;
+	}
+
 	article .amazon {
 		font-size: 0.9em;
 		line-height: 1.3em;
