@@ -57,17 +57,15 @@
 				<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
 	<?php } ?>
 
-	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
+	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus(); document.body.style.overflow='hidden';">
 		<input type="checkbox" id="op" />
 	<div class="lower">
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
 	</div>
 
-
 	<div class="overlay overlay-hugeinc">
-		<div class="logo">
-			<a href="#" onclick="$('#op').prop('checked', false); document.getElementById('search').blur();"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
-			
+		<div class="logo" id="logo" onclick="document.getElementById('op').checked = false; document.body.style.overflow='auto';">
+			<a href="#"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
 			<?php get_search_form( "true" ); ?>
 	</div>
 </div>

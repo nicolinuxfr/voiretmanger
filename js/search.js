@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 	$('#recherche').click(function() {
 		Search.getSearchIndex();
 	})
+
 	$('#search').keyup(function() {
 			// get search term
 			var search_term = jQuery(this).val().toLowerCase();
@@ -15,9 +16,11 @@ jQuery(document).ready(function($) {
 	})
 });
 
-
 jQuery(document).keyup(function(e) {
-  if (e.keyCode == 27) $('#op').prop('checked', false);   // esc
+  if (e.keyCode == 27) { // esc
+	  $('#op').prop('checked', false);
+	  document.body.style.overflow = 'auto';
+    }  
 });
 
 

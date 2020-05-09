@@ -369,14 +369,6 @@ input[type="checkbox"] {
 	transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
-body.noscroll {
-	overflow: hidden;
-	width: 100%;
-}
-
-body.scroll {
-	overflow: initial;
-}
 
 #op:checked~.overlay-hugeinc {
 	opacity: 1;
