@@ -662,7 +662,7 @@ footer .menu a:last-child{
 	transition: all 0.5s ease;
 }
 
-@media (hover: none){
+@media not all and (hover: none) {
 	.home article header, .archive article header, .search article header {
 		opacity: 1;
 	}
