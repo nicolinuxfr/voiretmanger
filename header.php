@@ -57,9 +57,9 @@
 				<a href="https://voiretmanger.fr/" title="Retour à la page d'accueil" rel="home"><img src="https://voiretmanger.fr/wp-content/themes/voiretmanger/logo.svg" alt="" width="100" scale="0"></a></div>
 	<?php } ?>
 
-	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus(); document.body.style.overflow='hidden';">
+	<div class="recherche" id="recherche" onclick="document.getElementById('search').focus();">
 		<input type="checkbox" id="op" />
-	<div class="lower">
+	<div class="lower" onclick="document.body.style.overflow='hidden';">
 		<label id="rechercher" for="op"><span class="dashicons dashicons-search"></span></label>
 	</div>
 

@@ -16,13 +16,13 @@ jQuery(document).ready(function($) {
 	})
 });
 
-jQuery(document).keyup(function(e) {
-  if (e.keyCode == 27) { // esc
-	  $('#op').prop('checked', false);
-	  document.body.style.overflow = 'auto';
-    }  
+document.addEventListener('keydown', function(event) {
+    const key = event.key; 
+    if (key === "Escape") {
+		document.body.style.overflow = 'auto';
+		document.getElementById('op').checked = false;
+    }
 });
-
 
 var Search = {
 	// Load the index file for later use
