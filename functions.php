@@ -275,22 +275,11 @@ return $content;
 
 }
 
-
 add_filter('the_excerpt_rss', 'rss_post_thumbnail');
 add_filter('the_content_feed', 'rss_post_thumbnail');
 
-
-// Retirer les balises p autour des images (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function filter_ptags_on_images($content){
-    return preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '\1', $content);
-}
-
-add_filter('the_content', 'filter_ptags_on_images');
-
-
 // Retrait CSS taxonomy-images
 add_filter( 'taxonomy-images-disable-public-css', '__return_true' );
-
 
 // Arrêt total pingbacks
 add_filter( 'xmlrpc_methods', 'remove_xmlrpc_pingback_ping' );
