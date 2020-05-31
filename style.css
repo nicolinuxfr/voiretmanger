@@ -602,12 +602,11 @@ footer .menu a:last-child{
 	overflow: hidden;
 }
 
-.archive .image, .home .image, .search .image {
-	display: block;
+.home img, .archive img, .search img {
 	width: 100%;
 	height: 100%;
-	background-position: center;
-	background-size: cover;
+	object-fit: cover;
+	object-position: 50% 50%;
 }
 
 .home > .paged article {
@@ -725,7 +724,6 @@ footer .menu a:last-child{
 .single .post-header {
 	position: relative;
 	background-attachment: fixed;
-	display: table;
 	width: 100%;
 	height: 100vh;
 	margin-bottom: 3rem;
@@ -798,6 +796,12 @@ footer .menu a:last-child{
 	color: inherit;
 }
 
+.single .post-header img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+}
 
 /* Contenu
 -------------------------------------------------------------- */
@@ -810,7 +814,7 @@ article .post-content {
 	color: rgba(0, 0, 0, 0.7);
 }
 
-article .post-content p, article .post-content ul, article .post-content h3, article blockquote, article img, article .amazon {
+article .post-content p, article .post-content ul, article .post-content h3, article .post-content blockquote, article .post-content img, article .amazon {
 	max-width: 850px;
 	margin: auto;
 	padding: 0;

@@ -14,7 +14,8 @@ get_header(); ?>
 			
 		<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>		
 		
-		<header class="post-header" style="background-image: url(<?php echo $featuredImage[0]; ?>); <?php if( get_post_meta($post->ID, 'position', true) ) ?> background-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;">
+		<header class="post-header">
+			<img src="<?php echo $featuredImage[0]; ?>" style="<?php if( get_post_meta($post->ID, 'position', true) ) ?> object-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;"> 
 		<div class="flou">
 			<h2 class="post-title"><?php the_title(); ?></h2>
 		</div>

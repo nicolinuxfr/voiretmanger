@@ -41,9 +41,8 @@
 
 		<article id="post-<?php the_ID(); ?>" class="post">
 		<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-			<div class="image" style="background-image: url(<?php echo $featuredImage[0]; ?>); <?php if( get_post_meta($post->ID, 'position', true) ) ?> background-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;">
-				<header><h2 class="post-title"><?php the_title(); ?></h2></header>
-			</div>
+			<img src="<?php echo $featuredImage[0]; ?>" style="<?php if( get_post_meta($post->ID, 'position', true) ) ?> object-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;"> 
+			<header><h2 class="post-title"><?php the_title(); ?></h2></header>
 		</a>
 		</article><!-- #post-## -->
 
