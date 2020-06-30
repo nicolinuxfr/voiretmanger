@@ -310,6 +310,20 @@ function wrap_embed_with_div($html, $url, $attr) {
 	return "<div class=\"video-container\">".$html."</div>";
 }
 
+// YouTube : utilisation du domaine youtube-nocookie.com pour les embeds (source : https://rickylee.com/2018/03/26/youtube-nocookie-gdpr-wordpress/)
+
+function filter_youtube_embed( $cached_html, $url = null ) {
+
+	// Search for youtu to return true for both youtube.com and youtu.be URLs
+	if ( strpos( $url, 'youtu' ) ) {
+		$cached_html = preg_replace( '/youtube\.com\/(v|embed)\//s', 'youtube-nocookie.com/$1/', $cached_html );
+	}
+
+	return $cached_html;
+}
+
+add_filter( 'embed_oembed_html', 'filter_youtube_embed', 10, 2 );
+
 // RICG compression accentuée des images
 function custom_theme_setup() {
     add_theme_support( 'advanced-image-compression' );
