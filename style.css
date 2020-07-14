@@ -846,6 +846,7 @@ article .post-content h2 {
 	text-align: center;
 	line-height: 1em;
 }
+}
 
 article .post-content h2 em {
 	font-weight: 700;
@@ -936,6 +937,11 @@ article .amazon a {
 	font-family:"Playfair Display", serif;
 }
 
+.azindex ul{
+	text-align:left;
+	list-style: none;
+}
+
 .azindex h2 {
 	margin-top: 1.5em !important;
 }
@@ -945,12 +951,15 @@ article .amazon a {
 	text-decoration: none !important;
 }
 
-.azindex h2 a{
+.azindex h2{
 	color: rgba(197, 31, 22, 0.8) !important;
+	scroll-margin-top: 2em;
+	scroll-snap-margin-top: 2em;
 }
 
-.azindex h2 a:hover{
+.azindex h2:hover{
 	color: rgba(197, 31, 22, 1) !important;
+    
 }
 
 .azindex a:hover,
@@ -965,6 +974,33 @@ article .amazon a {
 .page-id-7375 .azindex .head{
 	font-style:italic;
 }
+
+.js-toc {
+    position: sticky;
+    top: 0;
+    background: white;
+	padding: 1em;
+	text-align: center;
+}
+
+.toc-list li {
+    display: inline;
+    padding: 0em 0.5em;
+}
+
+.toc-list a {
+    text-decoration: none !important;
+}
+
+.toc-list a:hover {
+	color: rgba(197, 31, 22, 1) !important;
+	font-weight:700;
+}
+.toc-list .is-active-link {
+	font-weight:700;
+	color: rgba(197, 31, 22, 1);
+}
+
 
 .video-container {
 	position: relative;
@@ -1268,10 +1304,20 @@ div.canvas {
 		text-align:center;
 	}
 
+	.js-toc {
+		padding: 0.3em;
+	}
+
+	.toc-list>li{
+		padding: 0 0.5em;
+	}
+
 	article .post-content p,
 	article .post-content li {
 		padding: 0 0.7em;
 	}
+
+
 
 	article .post-content h3 {
 		margin: 1em auto 0.5em auto;
@@ -1494,5 +1540,9 @@ and (orientation : landscape)  {
 	}
 	.bigfoot-footnote__content{
 		background:  #24292e !important;
+	}
+
+	.js-toc{
+		background-color: #24292e;
 	}
  }

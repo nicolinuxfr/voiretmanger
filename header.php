@@ -31,7 +31,7 @@
 <?php } ?>
 
 <?php if (current_user_can( 'manage_options' )) { ?>
-	<style>header .overlay .logo{margin-top: 3em;}</style>
+	<style>header .overlay .logo{margin-top: 3em;} .js-toc{top:1em;}</style>
 <?php } ?>
 
 

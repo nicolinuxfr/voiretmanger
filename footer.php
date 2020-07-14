@@ -78,7 +78,32 @@
 		$.bigfoot({actionOriginalFN: "ignore"});
 	</script>
 	
-<?php } ?>
+<?php } 
+	
+	if ( is_page( array('a-voir', 3720 ) ) ) {
+		wp_enqueue_style( 'tocbot', get_template_directory_uri() . '/css/tocbot.css',false,'4.3.1','all');
+		wp_enqueue_script( 'tocbot', get_template_directory_uri() . '/js/tocbot.min.js', false, '4.3.1', true);
+	?> 
+
+	<script type="application/javascript">
+		$(document).ready(function(){
+			tocbot.init({
+			// Where to render the table of contents.
+			tocSelector: '.js-toc',
+			// Where to grab the headings to build the table of contents.
+			contentSelector: '.azindex',
+			// Which headings to grab inside of the contentSelector element.
+			headingSelector: 'h2',
+			// For headings inside relative or absolute positioned containers within content.
+			hasInnerContainers: true,
+			});
+		}); 
+	</script>
+
+
+	<?php }	?>
+
+
 
 
 <?php
