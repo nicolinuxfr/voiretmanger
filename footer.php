@@ -81,7 +81,6 @@
 <?php } 
 	
 	if ( is_page( array('a-voir', 3720 ) ) ) {
-		wp_enqueue_style( 'tocbot', get_template_directory_uri() . '/css/tocbot.css',false,'4.3.1','all');
 		wp_enqueue_script( 'tocbot', get_template_directory_uri() . '/js/tocbot.min.js', false, '4.3.1', true);
 	?> 
 

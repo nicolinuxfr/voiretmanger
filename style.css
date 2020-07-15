@@ -926,15 +926,11 @@ article .amazon a {
 	text-decoration: none;
 }
 
-/* Pour les pages avec un index, on aère */
-
-.azlinks{
-	overflow-wrap: break-word;
-	padding: 0em 0.5em;
-}
+/* Pages d'index */
 
 .azindex{
 	font-family:"Playfair Display", serif;
+	width:90%;
 }
 
 .azindex ul{
@@ -944,26 +940,20 @@ article .amazon a {
 
 .azindex h2 {
 	margin-top: 1.5em !important;
-}
-
-.azindex a,
-.azlinks a {
-	text-decoration: none !important;
-}
-
-.azindex h2{
 	color: rgba(197, 31, 22, 0.8) !important;
-	scroll-margin-top: 2em;
-	scroll-snap-margin-top: 2em;
+    outline: none;
+}
+
+.azindex a {
+	text-decoration: none !important;
+	overflow-wrap: break-word;
 }
 
 .azindex h2:hover{
-	color: rgba(197, 31, 22, 1) !important;
-    
+	color: rgba(197, 31, 22, 1) !important; 
 }
 
-.azindex a:hover,
-.azlinks a:hover{
+.azindex a:hover{
     color: rgba(197, 31, 22, 1) !important;
 }
 
@@ -975,32 +965,41 @@ article .amazon a {
 	font-style:italic;
 }
 
+/* Index sur les pages d'index */
+
 .js-toc {
-    position: sticky;
-    top: 0;
-    background: white;
-	padding: 1em;
+	position: sticky;
+	top: 0;
+	float: right;
 	text-align: center;
+	width: 10%;
+}
+
+.toc-list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+    overflow: auto;
 }
 
 .toc-list li {
-    display: inline;
-    padding: 0em 0.5em;
+    list-style-type: none;
+    flex: 1;
+    margin: 0;
 }
 
 .toc-list a {
     text-decoration: none !important;
 }
 
-.toc-list a:hover {
-	color: rgba(197, 31, 22, 1) !important;
-	font-weight:700;
-}
 .toc-list .is-active-link {
 	font-weight:700;
-	color: rgba(197, 31, 22, 1);
+	color: rgba(197, 31, 22, 0.8) !important;
 }
 
+/* Embeds vidéo responsives */
 
 .video-container {
 	position: relative;
@@ -1304,10 +1303,6 @@ div.canvas {
 		text-align:center;
 	}
 
-	.js-toc {
-		padding: 0.3em;
-	}
-
 	.toc-list>li{
 		padding: 0 0.5em;
 	}
@@ -1441,6 +1436,10 @@ and (max-width : 600px) {
 		line-height: 1.4em;
 	}
 
+	.toc-list{
+		font-size: 3vh;
+	}
+
 	article blockquote {
 		font-size: 1em;
 	}
@@ -1541,8 +1540,12 @@ and (orientation : landscape)  {
 	.bigfoot-footnote__content{
 		background:  #24292e !important;
 	}
-
-	.js-toc{
-		background-color: #24292e;
-	}
  }
+
+
+ @media (hover: hover) {
+    .toc-list a:hover {
+		color: rgba(197, 31, 22, 1) !important;
+		font-weight:700;
+	}
+}
