@@ -39,6 +39,8 @@ html {
 body {
 	margin: 0;
 	font-size: 12px;
+	padding-top: env(safe-area-inset-top);
+	padding-bottom: env(safe-area-inset-bottom);
 }
 
 a {
@@ -981,7 +983,8 @@ article .amazon a {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-    overflow: auto;
+	overflow: auto;
+	padding-bottom: env(safe-area-inset-bottom);
 }
 
 .toc-list li {
@@ -1511,14 +1514,14 @@ and (orientation : landscape)  {
 	article .amazon,
 	article .footnotes,
 	article blockquote {
-		padding-left: constant(safe-area-inset-left);
-		padding-right: constant(safe-area-inset-right);	
+		padding-left: env(safe-area-inset-left);
+		padding-right: env(safe-area-inset-right);	
 	}
 
 	footer .post-meta,
 	header #results li {
-		padding-left: constant(safe-area-inset-left);
-		padding-right: constant(safe-area-inset-right);	
+		padding-left: env(safe-area-inset-left);
+		padding-right: env(safe-area-inset-right);	
 		width: auto;
 	}
  }
