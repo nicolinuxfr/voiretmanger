@@ -959,11 +959,13 @@ article .amazon a {
     color: rgba(197, 31, 22, 1) !important;
 }
 
-.azindex .desc{
-	margin-bottom: 0.8em;
+.azindex .desc p{
+	margin: 0 0 1.5em 0;
+	font-size: 80%;
+	padding-left: 1em;
 }
 
-.page-id-7375 .azindex .head{
+.azindex .head{
 	font-style:italic;
 }
 

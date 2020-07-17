@@ -80,7 +80,7 @@
 	
 <?php } 
 	
-	if ( is_page( array('a-voir', 3720 ) ) ) {
+	if ( is_page( array('a-voir', 'a-ecouter', 'a-lire', 'a-manger' ) ) ) {
 		wp_enqueue_script( 'tocbot', get_template_directory_uri() . '/js/tocbot.min.js', false, '4.3.1', true);
 	?> 
 
