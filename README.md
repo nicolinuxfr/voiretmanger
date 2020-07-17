@@ -3,7 +3,7 @@
 
 Thème WordPress du blog [À voir et à manger](http://voiretmanger.fr), inspiré par le thème [Autofocus](http://themesupply.co/themes/autofocus/).
 
-![](https://github.com/nicolinuxfr/voiretmanger/blob/master/screenshot.jpg)
+![](https://github.com/nicolinuxfr/voiretmanger/blob/main/screenshot.jpg)
 
 ### Mises en garde
 
