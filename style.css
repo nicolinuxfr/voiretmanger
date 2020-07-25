@@ -663,7 +663,7 @@ footer .menu a:last-child{
 	transition: all 0.5s ease;
 }
 
-@media not all and (hover: none) {
+@media (hover: none) {
 	.home article header, .archive article header, .search article header {
 		opacity: 1;
 	}
@@ -1002,6 +1002,13 @@ article .amazon a {
 .toc-list .is-active-link {
 	font-weight:700;
 	color: rgba(197, 31, 22, 0.8) !important;
+}
+
+@media (hover: hover) {
+    .toc-list a:hover {
+		color: rgba(197, 31, 22, 1) !important;
+		font-weight:700;
+	}
 }
 
 /* Embeds vidéo responsives */
@@ -1548,9 +1555,3 @@ and (orientation : landscape)  {
  }
 
 
- @media (hover: hover) {
-    .toc-list a:hover {
-		color: rgba(197, 31, 22, 1) !important;
-		font-weight:700;
-	}
-}
