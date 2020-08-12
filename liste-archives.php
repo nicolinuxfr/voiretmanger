@@ -37,11 +37,22 @@
 	
 	while ( have_posts() ) : the_post(); ?>
 		
-		<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "large", true); ?>
-
+		<?php // Image mise en avant
+			$featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "large", true); 
+			
+			if (get_field( "image_focal" )) {
+				$focal_point = get_field( "image_focal" );
+				$position = "style=\"object-position:" . ($focal_point['focal_point']['left'] * 100) . "% " . ($focal_point['focal_point']['top'] * 100) . "%\"";
+			} elseif (get_post_meta($post->ID, 'position', true)) {
+				$position = "style=\"object-position:" . get_post_meta($post->ID, 'position', true) . "\"";
+			} else {
+				$position = false;
+			}
+		?>		
+	
 		<article id="post-<?php the_ID(); ?>" class="post">
 		<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Lien direct vers %s', 'autofocus' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-			<img src="<?php echo $featuredImage[0]; ?>" style="<?php if( get_post_meta($post->ID, 'position', true) ) ?> object-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;"> 
+			<img src="<?php echo $featuredImage[0]; ?>" <?php if( $position ) { echo $position; } ?>> 
 			<header><h2 class="post-title"><?php the_title(); ?></h2></header>
 		</a>
 		</article><!-- #post-## -->

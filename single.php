@@ -12,10 +12,23 @@ get_header(); ?>
 
 	<article id="post-<?php the_ID(); ?>" class="single">
 			
-		<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); ?>		
+		<?php // Image mise en avant
+		
+			$featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), "full", true); 
+			
+			if (get_field( "image_focal" )) {
+				$focal_point = get_field( "image_focal" );
+				$position = "style=\"object-position:" . ($focal_point['focal_point']['left'] * 100) . "% " . ($focal_point['focal_point']['top'] * 100) . "%\"";
+			} elseif (get_post_meta($post->ID, 'position', true)) {
+				$position = "style=\"object-position:" . get_post_meta($post->ID, 'position', true) . "\"";
+			} else {
+				$position = false;
+			}
+
+		?>		
 		
 		<header class="post-header">
-			<img src="<?php echo $featuredImage[0]; ?>" style="<?php if( get_post_meta($post->ID, 'position', true) ) ?> object-position: <?php echo get_post_meta($post->ID, 'position', true); ?> ;"> 
+			<img src="<?php echo $featuredImage[0]; ?>" <?php if( $position ) { echo $position; } ?>> 
 		<div class="flou">
 			<h2 class="post-title"><?php the_title(); ?></h2>
 		</div>
@@ -30,7 +43,6 @@ get_header(); ?>
 		<footer class="post-footer">
 			<?php get_sidebar(); ?>
 		</footer>
-			
 	</article>
 
 <?php endwhile; // end of the loop. ?>
