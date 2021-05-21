@@ -9,10 +9,6 @@
 
 					<section class="post-content archives">
 
-					<?php echo do_shortcode( '[jetpack_subscription_form]' ); ?>
-
-					<hr>
-
 					<div class="yearly">
 					<?php
 					global $wpdb;
